@@ -1,0 +1,121 @@
+python scripts/run_phase1_for_row.py --row-id P001 --m1-json D:\EkaCare\Code\eka_m2_pipeline\M2\m2_pipeline\data\M1.json --partner-patient-id P001 --encounter-id ENC-P001-001 --encounter-date 2026-08-27 --hi-type OPConsultation --dry-run    
+
+python scripts/run_phase1_for_row.py --row-id P001 --m1 "D:\EkaCare\Code\eka_m2_pipeline\M2\m2_pipeline\data\M1.json" --partner-patient-id P001 --encounter-id ENC-P001-001 --encounter-date 2026-08-27 --hi-type OPConsultation    
+
+python scripts/run_phase1_for_row.py --row-id P001 --m1-json "D:\EkaCare\Code\eka_m2_pipeline\M2\m2_pipeline\data\M1.json" --encounter-id ENC-P001-001 --encounter-date 2026-08-27 --hi-type OPConsultation  
+
+
+WORKING COMMANDS:
+===================
+python scripts/run_phase1_for_row.py --row-id P001 --m1-json "D:\EkaCare\Code\eka_m2_pipeline\M2\m2_pipeline\data\M1.json" --encounter-id ENC-P001-001 --encounter-date 2026-08-27 --hi-type OPConsultation
+
+python scripts/run_phase1_for_row.py --row-id P001 --m1-json "D:\EkaCare\Code\eka_m2_pipeline\M2\m2_pipeline\data\M1-sandbox.json" --encounter-id ENC-P001-001 --encounter-date 2026-08-28 --hi-type OPConsultation
+
+python scripts/run_phase1_for_row.py --row-id P001 --m1-json "D:\EkaCare\Code\eka_m2_pipeline\M2\m2_pipeline\data\M1-sandbox.json" --encounter-id ENC-P001-002 --encounter-date 2026-08-28 --hi-type Prescription --dry-run
+
+python scripts/run_phase1_for_row.py --row-id P001 --m1-json "D:\EkaCare\Code\eka_m2_pipeline\M2\m2_pipeline\data\M1-sandbox.json" --encounter-id ENC-P001-004 --encounter-date 2026-08-28 --hi-type Prescription --dry-run
+
+python scripts/run_phase1_for_row.py --row-id P001 --m1-json "D:\EkaCare\Code\eka_m2_pipeline\M2\m2_pipeline\data\M1-sandbox.json" --encounter-id ENC-P001-005 --encounter-date 2026-08-28 --hi-type DiagnosticReport
+
+python scripts/run_phase1_for_row.py --row-id P001 --m1-json "D:\EkaCare\Code\eka_m2_pipeline\M2\m2_pipeline\data\M1-sandbox.json" --encounter-id ENC-P001-006 --encounter-date 2026-08-28 --hi-type DiagnosticReport
+
+python scripts/run_phase1_for_row.py --row-id P001 --m1-json "D:\EkaCare\Code\eka_m2_pipeline\M2\m2_pipeline\data\M1-sandbox.json" --encounter-id ENC-P001-006 --encounter-date 2026-08-28 --hi-type HealthDocumentRecord
+
+=====================================================================================================
+
+Invoke-RestMethod -Uri "https://3f9a-2409-4091-901c-6203-2c1d-c54c-2345-7706.ngrok-free.app/webhooks/eka" -Method POST -ContentType "application/json" -Body '{"event":"abha.link_care_context","data":{"care_context_id":"cc-c7bc407a25744cd3","status":"LINKED","error":null}}'
+
+python scripts/run_phase1_for_row.py --row-id P001 --m1-json "D:\EkaCare\Code\eka_m2_pipeline\M2\m2_pipeline\data\M1-sandbox.json" --encounter-id ENC-P001-002 --encounter-date 2026-08-28 --hi-type OPConsultation
+
+HFR ID = IN3310000176
+================================
+
+{                                       
+  "row_id": "P001",                     
+  "patient_name": "Vijay Kumar",        
+  "gender": "M",                        
+  "year_of_birth": "1998",              
+  "mobile_number": "7483976167",        
+  "abha_address": "91717251383336@abdm",
+  "abha_number": "91-7172-5138-3336",   
+  "eka_patient_id": "178766278389527",  
+  "partner_patient_id": "P001",         
+  "hip_id": "IN3310000176.hip",
+  "clinic_id": "",
+  "source_event_type": "",
+  "encounter_id": "ENC-P001-001",
+  "encounter_date": "2026-08-27",
+  "practitioner_name": "Dr. Test",
+  "symptoms_text": "Mild fever, headache",
+  "symptoms_snomed_code": "386661006",
+  "vitals_bp_systolic": "120",
+  "vitals_bp_diastolic": "80",
+  "vitals_pulse": "78",
+  "vitals_temp_c": "37.5",
+  "vitals_spo2": "98",
+  "examination_notes": "",
+  "diagnosis_text": "Viral fever",
+  "diagnosis_snomed_code": "386661006",
+  "medical_history_text": "",
+  "medication_name": "Paracetamol",
+  "medication_dosage": "500 mg",
+  "medication_frequency": "TDS",
+  "medication_duration_days": "3",
+  "lab_test_name": "",
+  "lab_test_loinc_code": "",
+  "lab_result_value": "",
+  "allergy_text": "",
+  "allergy_category": "",
+  "advice_notes": "",
+  "clinical_notes": "Patient advised rest and adequate fluids.",
+  "follow_up_date": "",
+  "family_history_text": "",
+  "document_type": "",
+  "document_filename": "",
+  "immunization_vaccine_name": "",
+  "immunization_date": "",
+  "hi_type": "OPConsultation",
+  "hi_types_multi": "",
+  "care_context_id": "cc-2bd863f4731ce502",
+  "display": "OP Consultation - 27 Aug 2026",
+  "link_request_status": "ready_to_send",
+  "link_status": "",
+  "link_error": "",
+  "linked_at": "",
+  "consent_status": "",
+  "consent_artifact_id": "",
+  "hiu_id": "",
+  "bundle_created_at": "",
+  "bundle_transfer_status": "",
+  "transfer_error": ""
+}
+
+Link API call failed: Link API call failed with status 500
+HTTP status: 500
+Eka response body: {"error":"HFR not found","code":500}
+
+
+Link API call failed: Link API call failed with status 404
+HTTP status: 404
+Eka response body: {"error":"couldn't find any linked health-id","code":404}
+
+
+
+I can inspect this Eka repository and find:
+
+Where HFR ID is configured
+Where HIP ID is configured
+Whether .hip is required
+How Eka's own implementation calls the Care Context Link API
+How authentication is obtained
+How the webhook is configured
+Whether there is a sandbox/test HIP/HFR
+Whether your current Python request differs from Eka's implementation
+
+
+eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJFQ18xNzczMjIxMTA0ODAyIiwiYi1pZCI6IjcxNzczMjIxMDgwMDAzMzkiLCJjLWlkIjoiRUNfMTc3MzIyMTEwNDgwMiIsImNjIjp7ImNyZCI6ImEiLCJwZXgiOjE4MTYzMDA4MDAsInBzdCI6InRydWUifSwiY3JkIjoiYSIsImV4cCI6MTc4Nzc1NzgxOCwiaWF0IjoxNzg3NzU2MDE4LCJpZHAiOiJhcGkta2V5IiwiaXNzIjoiZW1yLmVrYS5jYXJlIiwib2lkIjoiMTc3MzIyMzM5MjE2MDQzIiwicGV4IjoxODE2MzAwODAwLCJwcyI6IkFQIiwicHN0IjoidHJ1ZSIsInNjcCI6WyJwcjowZiJdLCJ1dWlkIjoiYzAzNGU2MzYtMzZhNy00NTIyLWI4ZmItNTg5NzYzYTg0NTdlIiwidy1pZCI6IjcxNzczMjIxMDgwMDAzMzkiLCJ3LW4iOiJzcm1pc3QgcyJ9.clg3cu0M6819hUyZPgyD4JegOIwtshQP8C_AaBlPkho
+
+
+5d060cad-a93b-4edf-p3ef-bd412f69s400
+
+linked -cc -id = cc-f7184e9e156c4e46

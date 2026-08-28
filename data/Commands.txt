@@ -1,0 +1,9 @@
+WORKING COMMANDS:
+===================
+python scripts/run_phase1_for_row.py --row-id P001 --m1-json "D:\EkaCare\Code\eka_m2_pipeline\M2\m2_pipeline\data\M1.json" --encounter-id ENC-P001-001 --encounter-date 2026-08-27 --hi-type OPConsultation
+
+python scripts/run_phase1_for_row.py --row-id P001 --m1-json "D:\EkaCare\Code\eka_m2_pipeline\M2\m2_pipeline\data\M1-sandbox.json" --encounter-id ENC-P001-002 --encounter-date 2026-08-28 --hi-type Prescription --dry-run
+
+python scripts/run_phase1_for_row.py --row-id P001 --m1-json "D:\EkaCare\Code\eka_m2_pipeline\M2\m2_pipeline\data\M1-sandbox.json" --encounter-id ENC-P001-003 --encounter-date 2026-08-28 --hi-type DiagnosticReport
+
+python scripts/run_phase1_for_row.py --row-id P001 --m1-json "D:\EkaCare\Code\eka_m2_pipeline\M2\m2_pipeline\data\M1-sandbox.json" --encounter-id ENC-P001-004 --encounter-date 2026-08-28 --hi-type HealthDocumentRecord

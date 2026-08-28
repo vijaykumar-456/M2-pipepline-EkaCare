@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>ABHA SDK Test</title>
+
+    <link
+        rel="stylesheet"
+        href="https://unpkg.com/@eka-care/abha/dist/sdk/abha/css/abha.css"
+    />
+
+</head>
+
+<body>
+
+    <h1>ABHA SDK Test</h1>
+
+    <button
+        class="button"
+        onclick="mountABHASDK()">
+        Mount SDK
+    </button>
+
+    <div id="sdk_container"></div>
+
+
+    <!-- Load Eka SDK -->
+    <script
+        type="module"
+        src="https://unpkg.com/@eka-care/abha/dist/sdk/abha/js/abha.js">
+    </script>
+
+
+    <!-- Debug API calls -->
+    <script>
+
+        const originalFetch = window.fetch;
+
+        window.fetch = async function (...args) {
+
+            const url = args[0];
+
+            const response =
+                await originalFetch.apply(this, args);
+
+            if (
+                typeof url === "string" &&
+                (
+                    url.includes("/aadhaar/verify") ||
+                    url.includes("/aadhaar/auto-login")
+                )
+            ) {
+
+                console.log(
+                    "===================================="
+                );
+
+                console.log(
+                    "EKA API:",
+                    url
+                );
+
+                console.log(
+                    "REQUEST:",
+                    args[1]
+                );
+
+                const clone = response.clone();
+
+                try {
+
+                    const data =
+                        await clone.json();
+
+                    console.log(
+                        "RESPONSE:",
+                        data
+                    );
+
+
+console.log(
+                        "RESPONSE Test **************************:",
+                        data.eka.oid
+                    );
+
+                    console.log(
+                        "RESPONSE JSON:",
+                        JSON.stringify(
+                            data,
+                            null,
+                            2
+                        )
+                    );
+
+                }
+                catch (error) {
+
+                    console.error(
+                        "Response parse error:",
+                        error
+                    );
+                }
+
+                console.log(
+                    "===================================="
+                );
+            }
+
+            return response;
+        };
+
+
+        function mountABHASDK() {
+
+            window.initAbhaApp({
+
+                containerId: "sdk_container",
+
+                clientId: "EC_178592308444711",
+
+                theme: {
+                },
+
+                data: {
+
+                    accessToken:
+                        "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJFQ18xNzg1OTIzMDg0NDQ3MTEiLCJiLWlkIjoiNzE3ODU5MjMwNDM0MTUzNCIsImMtaWQiOiJFQ18xNzg1OTIzMDg0NDQ3MTEiLCJjYyI6eyJwZXgiOjE3ODY0OTI4MDAsInBzdCI6ImZhbHNlIn0sImV4cCI6MTc4NzgzNTM0NSwiaWF0IjoxNzg3ODMzNTQ1LCJpZHAiOiJhcGkta2V5IiwiaXNzIjoiZW1yLmVrYS5jYXJlIiwib2lkIjoiMTc4NTk5NDY4MTYxODg4IiwicGV4IjoxNzg2NDkyODAwLCJwcyI6IkFQIiwicHN0IjoiZmFsc2UiLCJzY3AiOlsicHI6MGYiXSwidXVpZCI6ImIyYmUxOTIzLTE2ZjEtNDllYi05NGYwLTNhMDg0NDFkMTQzYSIsInctaWQiOiI3MTc4NTkyMzA0MzQxNTM0Iiwidy1uIjoiU1JNIE1lZGljYWwgQ29sbGVnZSJ9.ktBbcNQ7hLYZCFmT_kKwK-OGrtB1XXFJ2-VSVhvjHzc"
+
+                },
+
+
+                onSuccess: (params) => {
+
+                    console.log(
+                        "========== ON SUCCESS =========="
+                    );
+
+                    console.log(
+                        "Raw params:",
+                        params
+                    );
+
+                    console.log(
+                        "JSON:",
+                        JSON.stringify(
+                            params,
+                            null,
+                            2
+                        )
+                    );
+
+                    console.log(
+                        "txn_id:",
+                        params?.txn_id
+                    );
+
+                    console.log(
+                        "hint:",
+                        params?.hint
+                    );
+
+                    console.log(
+                        "skip_state:",
+                        params?.skip_state
+                    );
+
+                    console.log(
+                        "profile:",
+                        params?.profile
+                    );
+
+                    console.log(
+                        "ABHA Address:",
+                        params?.profile?.abha_address
+                    );
+
+                    console.log(
+                        "ABHA Number:",
+                        params?.profile?.abha_number
+                    );
+
+                    console.log(
+                        "Eka:",
+                        params?.eka
+                    );
+
+                    console.log(
+                        "Eka UUID:",
+                        params?.eka?.uuid
+                    );
+
+                    console.log(
+                        "Eka OID:",
+                        params?.eka?.oid
+                    );
+
+                    console.log(
+                        "Token:",
+                        params?.token
+                            ? "RECEIVED"
+                            : "NOT RECEIVED"
+                    );
+                },
+
+
+                onKYCSuccess: (params) => {
+
+                    console.log(
+                        "========== KYC SUCCESS =========="
+                    );
+
+                    console.log(params);
+
+                },
+
+
+                onConsentSuccess: (params) => {
+
+                    console.log(
+                        "========== CONSENT SUCCESS =========="
+                    );
+
+                    console.log(params);
+
+                },
+
+
+                onAppointmentBookedSuccess: (params) => {
+
+                    console.log(
+                        "========== APPOINTMENT SUCCESS =========="
+                    );
+
+                    console.log(params);
+
+                },
+
+
+                onSkipAbha: (params) => {
+
+                    console.log(
+                        "========== ABHA SKIPPED =========="
+                    );
+
+                    console.log(params);
+
+                },
+
+
+                onAbhaClose: () => {
+
+                    console.log(
+                        "========== ABHA CLOSED =========="
+                    );
+
+                },
+
+
+                onError: (params) => {
+
+                    console.error(
+                        "========== ABHA ERROR =========="
+                    );
+
+                    console.error(params);
+
+                }
+
+            });
+
+        }
+
+    </script>
+
+</body>
+
+</html>

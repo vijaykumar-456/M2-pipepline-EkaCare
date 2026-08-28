@@ -1,0 +1,5 @@
+requests>=2.31
+abdm-ecdh>=1.1.0
+flask>=3.0
+openpyxl
+python-dotenv
