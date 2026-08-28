@@ -6,7 +6,7 @@ This README explains how to run the project from a fresh clone and reach the `ab
 
 ```powershell
 git clone <REPOSITORY_URL>
-cd m2_pipeline
+
 ```
 
 ## 2. Create Python Virtual Environment
