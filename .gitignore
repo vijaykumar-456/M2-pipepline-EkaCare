@@ -25,6 +25,7 @@ data/webhook_last.json
 # Logs
 *.log
 logs/
+ref/
 
 # OS files
 .DS_Store
