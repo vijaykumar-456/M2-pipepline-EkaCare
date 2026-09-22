@@ -1,0 +1,172 @@
+{
+  "resourceType": "Bundle",
+  "id": "Prescription-R092",
+  "meta": {
+    "profile": [
+      "https://nrces.in/ndhm/fhir/r4/StructureDefinition/DocumentBundle"
+    ]
+  },
+  "identifier": {
+    "system": "http://hip.in",
+    "value": "bundle-R092"
+  },
+  "type": "document",
+  "timestamp": "2026-09-10T05:12:37+05:30",
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:59d0eeda-17d8-426e-afc6-82f01e4a192a",
+      "resource": {
+        "resourceType": "Composition",
+        "id": "59d0eeda-17d8-426e-afc6-82f01e4a192a",
+        "meta": {
+          "profile": [
+            "https://nrces.in/ndhm/fhir/r4/StructureDefinition/PrescriptionRecord"
+          ]
+        },
+        "language": "en-IN",
+        "status": "final",
+        "type": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "440545006",
+              "display": "Prescription record"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:7bf43422-4d77-4b5f-8ea2-16d67e366a95"
+        },
+        "date": "2026-09-10T05:12:37+05:30",
+        "title": "Prescription Record",
+        "section": [
+          {
+            "entry": [
+              {
+                "reference": "urn:uuid:b70fa1a2-29a7-4a33-9900-31006d10cd30"
+              },
+              {
+                "reference": "urn:uuid:267c3757-8aad-4f20-baa3-de0ff90a4b90"
+              }
+            ]
+          }
+        ],
+        "author": [
+          {
+            "reference": "urn:uuid:06be37f1-9200-477d-85ca-9440a9915be2"
+          }
+        ],
+        "encounter": {
+          "reference": "urn:uuid:6828b96c-8a4f-45a7-8a29-0ab215a2ddf4"
+        },
+        "custodian": {
+          "reference": "urn:uuid:c7bd4098-cc3c-4cbe-90ca-edfbb7df1e9a"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:7bf43422-4d77-4b5f-8ea2-16d67e366a95",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "7bf43422-4d77-4b5f-8ea2-16d67e366a95",
+        "identifier": [
+          {
+            "system": "https://healthid.ndhm.gov.in",
+            "value": "testinguser23@sbx"
+          },
+          {
+            "system": "https://abdm.gov.in/abha-number",
+            "value": "91-6140-6572-6737"
+          }
+        ],
+        "name": [
+          {
+            "text": "Arjun Nair"
+          }
+        ],
+        "gender": "male",
+        "birthDate": "2023-01-01",
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "9722657734"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:06be37f1-9200-477d-85ca-9440a9915be2",
+      "resource": {
+        "resourceType": "Practitioner",
+        "id": "06be37f1-9200-477d-85ca-9440a9915be2",
+        "name": [
+          {
+            "text": "Dr. Farha Khan"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:c7bd4098-cc3c-4cbe-90ca-edfbb7df1e9a",
+      "resource": {
+        "resourceType": "Organization",
+        "id": "c7bd4098-cc3c-4cbe-90ca-edfbb7df1e9a",
+        "name": "WELLNESS_FAM"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:6828b96c-8a4f-45a7-8a29-0ab215a2ddf4",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "6828b96c-8a4f-45a7-8a29-0ab215a2ddf4",
+        "status": "finished",
+        "class": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code": "AMB",
+          "display": "ambulatory"
+        },
+        "subject": {
+          "reference": "urn:uuid:7bf43422-4d77-4b5f-8ea2-16d67e366a95"
+        },
+        "period": {
+          "start": "2026-09-09T00:00:00+05:30"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:b70fa1a2-29a7-4a33-9900-31006d10cd30",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "id": "b70fa1a2-29a7-4a33-9900-31006d10cd30",
+        "status": "active",
+        "intent": "order",
+        "medicationCodeableConcept": {
+          "text": "Paracetamol"
+        },
+        "subject": {
+          "reference": "urn:uuid:7bf43422-4d77-4b5f-8ea2-16d67e366a95"
+        },
+        "dosageInstruction": [
+          {
+            "text": "500 mg, Twice daily, for 3 days"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:267c3757-8aad-4f20-baa3-de0ff90a4b90",
+      "resource": {
+        "resourceType": "Binary",
+        "id": "267c3757-8aad-4f20-baa3-de0ff90a4b90",
+        "contentType": "image/jpeg",
+        "extension": [
+          {
+            "url": "http://example.org/fhir/StructureDefinition/source-url",
+            "valueUrl": "https://storage.abdm-sandbox.example/178789706328442/prescription_slip_R092.jpg"
+          }
+        ],
+        "data": "PLACEHOLDER_BASE64=="
+      }
+    }
+  ]
+}

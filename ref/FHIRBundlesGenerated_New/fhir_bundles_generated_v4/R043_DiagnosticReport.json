@@ -1,0 +1,191 @@
+{
+  "resourceType": "Bundle",
+  "id": "DiagnosticReport-R043",
+  "meta": {
+    "profile": [
+      "https://nrces.in/ndhm/fhir/r4/StructureDefinition/DocumentBundle"
+    ]
+  },
+  "identifier": {
+    "system": "http://hip.in",
+    "value": "bundle-R043"
+  },
+  "type": "document",
+  "timestamp": "2026-09-10T05:12:37+05:30",
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:776ecf13-e008-42af-95d7-91458d99f903",
+      "resource": {
+        "resourceType": "Composition",
+        "id": "776ecf13-e008-42af-95d7-91458d99f903",
+        "meta": {
+          "profile": [
+            "https://nrces.in/ndhm/fhir/r4/StructureDefinition/DiagnosticReportRecord"
+          ]
+        },
+        "language": "en-IN",
+        "status": "final",
+        "type": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "721981007",
+              "display": "Diagnostic studies report"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:1f13c5da-3ab2-4fc7-a205-7c6ce08c2307"
+        },
+        "date": "2026-09-10T05:12:37+05:30",
+        "title": "DiagnosticReport Record",
+        "section": [
+          {
+            "title": "Investigation",
+            "entry": [
+              {
+                "reference": "urn:uuid:70ba3c8d-cbdf-4587-b71f-6a4376e37726"
+              },
+              {
+                "reference": "urn:uuid:da63eb9b-bb18-4ad1-b3d8-9caf72dd104b"
+              }
+            ],
+            "code": {
+              "coding": [
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "721981007",
+                  "display": "Diagnostic studies report"
+                }
+              ]
+            }
+          }
+        ],
+        "author": [
+          {
+            "reference": "urn:uuid:5fd2d1b1-f80c-4066-b5bd-63b5e6b47f0b"
+          }
+        ],
+        "encounter": {
+          "reference": "urn:uuid:0f26950a-87dc-4bc7-930e-12a8984aae20"
+        },
+        "custodian": {
+          "reference": "urn:uuid:16775f54-8198-49e3-b03f-7cc2103ebcf2"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:1f13c5da-3ab2-4fc7-a205-7c6ce08c2307",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "1f13c5da-3ab2-4fc7-a205-7c6ce08c2307",
+        "identifier": [
+          {
+            "system": "https://healthid.ndhm.gov.in",
+            "value": "testinguser14@sbx"
+          },
+          {
+            "system": "https://abdm.gov.in/abha-number",
+            "value": "91-4943-2486-7955"
+          }
+        ],
+        "name": [
+          {
+            "text": "Lakshmi Iyer"
+          }
+        ],
+        "gender": "male",
+        "birthDate": "1967-01-01",
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "9987825707"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:5fd2d1b1-f80c-4066-b5bd-63b5e6b47f0b",
+      "resource": {
+        "resourceType": "Practitioner",
+        "id": "5fd2d1b1-f80c-4066-b5bd-63b5e6b47f0b",
+        "name": [
+          {
+            "text": "Dr. Neha Kapoor"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:16775f54-8198-49e3-b03f-7cc2103ebcf2",
+      "resource": {
+        "resourceType": "Organization",
+        "id": "16775f54-8198-49e3-b03f-7cc2103ebcf2",
+        "name": "SUNRISE_HOSP"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:0f26950a-87dc-4bc7-930e-12a8984aae20",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "0f26950a-87dc-4bc7-930e-12a8984aae20",
+        "status": "finished",
+        "class": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code": "AMB",
+          "display": "ambulatory"
+        },
+        "subject": {
+          "reference": "urn:uuid:1f13c5da-3ab2-4fc7-a205-7c6ce08c2307"
+        },
+        "period": {
+          "start": "2026-09-07T00:00:00+05:30"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:70ba3c8d-cbdf-4587-b71f-6a4376e37726",
+      "resource": {
+        "resourceType": "DiagnosticReport",
+        "id": "70ba3c8d-cbdf-4587-b71f-6a4376e37726",
+        "meta": {
+          "profile": [
+            "https://nrces.in/ndhm/fhir/r4/StructureDefinition/DiagnosticReportImaging"
+          ]
+        },
+        "status": "final",
+        "code": {
+          "text": "CT"
+        },
+        "subject": {
+          "reference": "urn:uuid:1f13c5da-3ab2-4fc7-a205-7c6ce08c2307"
+        },
+        "issued": "2026-09-07T09:00:00+05:30"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:da63eb9b-bb18-4ad1-b3d8-9caf72dd104b",
+      "resource": {
+        "resourceType": "DocumentReference",
+        "id": "da63eb9b-bb18-4ad1-b3d8-9caf72dd104b",
+        "status": "current",
+        "subject": {
+          "reference": "urn:uuid:1f13c5da-3ab2-4fc7-a205-7c6ce08c2307"
+        },
+        "content": [
+          {
+            "attachment": {
+              "contentType": "image/png",
+              "url": "https://storage.abdm-sandbox.example/178720385970331/ct_scan_images_R043.png",
+              "title": "CT abdomen axial slice export",
+              "size": 9011200
+            }
+          }
+        ],
+        "type": {
+          "text": "CT Scan Images"
+        }
+      }
+    }
+  ]
+}

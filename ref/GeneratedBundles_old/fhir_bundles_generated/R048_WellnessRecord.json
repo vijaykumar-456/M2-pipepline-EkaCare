@@ -1,0 +1,383 @@
+{
+  "resourceType": "Bundle",
+  "id": "WellnessRecord-R048",
+  "meta": {
+    "profile": [
+      "https://nrces.in/ndhm/fhir/r4/StructureDefinition/DocumentBundle"
+    ]
+  },
+  "identifier": {
+    "system": "http://hip.in",
+    "value": "bundle-R048"
+  },
+  "type": "document",
+  "timestamp": "2026-09-10T04:52:40+05:30",
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:fe6cf6b3-f0d5-4f70-b4c3-3fed697d1cf4",
+      "resource": {
+        "resourceType": "Composition",
+        "id": "fe6cf6b3-f0d5-4f70-b4c3-3fed697d1cf4",
+        "meta": {
+          "profile": [
+            "https://nrces.in/ndhm/fhir/r4/StructureDefinition/WellnessRecord"
+          ]
+        },
+        "language": "en-IN",
+        "status": "final",
+        "type": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "410097008",
+              "display": "Wellness assessment"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:5a30032e-1d3c-44b6-aa4e-394faa859787"
+        },
+        "date": "2026-09-10T04:52:40+05:30",
+        "title": "WellnessRecord Record",
+        "section": [
+          {
+            "title": "Vital Signs",
+            "entry": [
+              {
+                "reference": "urn:uuid:11aa6f9d-fb96-490f-932f-8afe9e95c077"
+              },
+              {
+                "reference": "urn:uuid:9f9ff53d-5f6f-41ea-bfb8-cc373ba2917c"
+              },
+              {
+                "reference": "urn:uuid:6a28b88f-484a-41c8-b9af-b80953794e57"
+              },
+              {
+                "reference": "urn:uuid:529e7426-1fbb-467d-8b6b-ef848e535aa6"
+              }
+            ]
+          },
+          {
+            "title": "Body Measurement",
+            "entry": [
+              {
+                "reference": "urn:uuid:6edc6a12-01a5-4476-85f2-392b700e8f89"
+              }
+            ]
+          },
+          {
+            "title": "Physical Activity",
+            "entry": [
+              {
+                "reference": "urn:uuid:9a3ef116-f525-40da-ae6f-240baebb3e5e"
+              }
+            ]
+          },
+          {
+            "title": "Lifestyle",
+            "entry": [
+              {
+                "reference": "urn:uuid:4d8fe8d2-4437-4eb8-ad4f-de7b82b32f25"
+              }
+            ]
+          },
+          {
+            "title": "Other Wellness Records",
+            "entry": [
+              {
+                "reference": "urn:uuid:01fd04d6-309f-4df5-a0ef-f5efba14f7df"
+              }
+            ]
+          }
+        ],
+        "author": [
+          {
+            "reference": "urn:uuid:a2258096-64e5-43ed-9483-0397cfee3952"
+          }
+        ],
+        "encounter": {
+          "reference": "urn:uuid:4967df27-2c3a-4734-9169-426f7838bd31"
+        },
+        "custodian": {
+          "reference": "urn:uuid:954e0ab0-9edf-4b54-b630-210cd69bb843"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:5a30032e-1d3c-44b6-aa4e-394faa859787",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "5a30032e-1d3c-44b6-aa4e-394faa859787",
+        "identifier": [
+          {
+            "system": "https://healthid.ndhm.gov.in",
+            "value": "vikram.d@sbx"
+          },
+          {
+            "system": "https://abdm.gov.in/abha-number",
+            "value": "91-9945-6678-3324"
+          }
+        ],
+        "name": [
+          {
+            "text": "Vikram Desai"
+          }
+        ],
+        "gender": "male",
+        "birthDate": "1965-01-01",
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "9345678901"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:a2258096-64e5-43ed-9483-0397cfee3952",
+      "resource": {
+        "resourceType": "Practitioner",
+        "id": "a2258096-64e5-43ed-9483-0397cfee3952",
+        "name": [
+          {
+            "text": "Dr. Priyanka Iyer"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:954e0ab0-9edf-4b54-b630-210cd69bb843",
+      "resource": {
+        "resourceType": "Organization",
+        "id": "954e0ab0-9edf-4b54-b630-210cd69bb843",
+        "name": "RAINBOW_CHILD"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:4967df27-2c3a-4734-9169-426f7838bd31",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "4967df27-2c3a-4734-9169-426f7838bd31",
+        "status": "finished",
+        "class": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code": "AMB",
+          "display": "ambulatory"
+        },
+        "subject": {
+          "reference": "urn:uuid:5a30032e-1d3c-44b6-aa4e-394faa859787"
+        },
+        "period": {
+          "start": "2026-08-24T00:00:00+05:30"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:11aa6f9d-fb96-490f-932f-8afe9e95c077",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "11aa6f9d-fb96-490f-932f-8afe9e95c077",
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8480-6",
+              "display": "Systolic blood pressure"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:5a30032e-1d3c-44b6-aa4e-394faa859787"
+        },
+        "valueQuantity": {
+          "value": 117.0,
+          "unit": "mmHg"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:9f9ff53d-5f6f-41ea-bfb8-cc373ba2917c",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "9f9ff53d-5f6f-41ea-bfb8-cc373ba2917c",
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8462-4",
+              "display": "Diastolic blood pressure"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:5a30032e-1d3c-44b6-aa4e-394faa859787"
+        },
+        "valueQuantity": {
+          "value": 75.0,
+          "unit": "mmHg"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:6a28b88f-484a-41c8-b9af-b80953794e57",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "6a28b88f-484a-41c8-b9af-b80953794e57",
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8867-4",
+              "display": "Heart rate"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:5a30032e-1d3c-44b6-aa4e-394faa859787"
+        },
+        "valueQuantity": {
+          "value": 85.0,
+          "unit": "beats/min"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:529e7426-1fbb-467d-8b6b-ef848e535aa6",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "529e7426-1fbb-467d-8b6b-ef848e535aa6",
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "59408-5",
+              "display": "Oxygen saturation"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:5a30032e-1d3c-44b6-aa4e-394faa859787"
+        },
+        "valueQuantity": {
+          "value": 97.0,
+          "unit": "%"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:6edc6a12-01a5-4476-85f2-392b700e8f89",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "6edc6a12-01a5-4476-85f2-392b700e8f89",
+        "meta": {
+          "profile": [
+            "https://nrces.in/ndhm/fhir/r4/StructureDefinition/ObservationBodyMeasurement"
+          ]
+        },
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "29463-7",
+              "display": "Body weight"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:5a30032e-1d3c-44b6-aa4e-394faa859787"
+        },
+        "valueQuantity": {
+          "value": 51.0,
+          "unit": "kg"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:9a3ef116-f525-40da-ae6f-240baebb3e5e",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "9a3ef116-f525-40da-ae6f-240baebb3e5e",
+        "meta": {
+          "profile": [
+            "https://nrces.in/ndhm/fhir/r4/StructureDefinition/ObservationPhysicalActivity"
+          ]
+        },
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "55423-8",
+              "display": "Number of steps"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:5a30032e-1d3c-44b6-aa4e-394faa859787"
+        },
+        "valueQuantity": {
+          "value": 8755.0,
+          "unit": "steps"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:4d8fe8d2-4437-4eb8-ad4f-de7b82b32f25",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "4d8fe8d2-4437-4eb8-ad4f-de7b82b32f25",
+        "meta": {
+          "profile": [
+            "https://nrces.in/ndhm/fhir/r4/StructureDefinition/ObservationLifestyle"
+          ]
+        },
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "93832-4",
+              "display": "Sleep duration"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:5a30032e-1d3c-44b6-aa4e-394faa859787"
+        },
+        "valueQuantity": {
+          "value": 7.7,
+          "unit": "h"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:01fd04d6-309f-4df5-a0ef-f5efba14f7df",
+      "resource": {
+        "resourceType": "DocumentReference",
+        "id": "01fd04d6-309f-4df5-a0ef-f5efba14f7df",
+        "status": "current",
+        "subject": {
+          "reference": "urn:uuid:5a30032e-1d3c-44b6-aa4e-394faa859787"
+        },
+        "content": [
+          {
+            "attachment": {
+              "contentType": "text/csv",
+              "url": "https://storage.abdm-sandbox.example/P008/fitness_tracker_export_R048.csv",
+              "title": "Exported wellness/fitness tracker data",
+              "size": 46080
+            }
+          }
+        ],
+        "type": {
+          "text": "Fitness Tracker Export"
+        }
+      }
+    }
+  ]
+}

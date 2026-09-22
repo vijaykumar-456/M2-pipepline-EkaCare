@@ -1,0 +1,456 @@
+{
+  "resourceType": "Bundle",
+  "id": "DischargeSummary-R077",
+  "meta": {
+    "profile": [
+      "https://nrces.in/ndhm/fhir/r4/StructureDefinition/DocumentBundle"
+    ]
+  },
+  "identifier": {
+    "system": "http://hip.in",
+    "value": "bundle-R077"
+  },
+  "type": "document",
+  "timestamp": "2026-09-10T05:12:37+05:30",
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:990af0c9-6e2c-4626-97d1-55eabe11a700",
+      "resource": {
+        "resourceType": "Composition",
+        "id": "990af0c9-6e2c-4626-97d1-55eabe11a700",
+        "meta": {
+          "profile": [
+            "https://nrces.in/ndhm/fhir/r4/StructureDefinition/DischargeSummaryRecord"
+          ]
+        },
+        "language": "en-IN",
+        "status": "final",
+        "type": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "373942005",
+              "display": "Discharge summary"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:9953092b-ff49-4f0a-9b11-93a08c901dfa"
+        },
+        "date": "2026-09-10T05:12:37+05:30",
+        "title": "DischargeSummary Record",
+        "section": [
+          {
+            "title": "Chief Complaints",
+            "entry": [
+              {
+                "reference": "urn:uuid:19d6f6f0-bb9f-4d74-af16-1afb78baa1e9"
+              }
+            ],
+            "code": {
+              "coding": [
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "422843007",
+                  "display": "Chief complaint section"
+                }
+              ]
+            }
+          },
+          {
+            "title": "Physical Examination",
+            "entry": [
+              {
+                "reference": "urn:uuid:e4955270-b2ab-4dfe-942b-c1d15cd0b131"
+              }
+            ],
+            "code": {
+              "coding": [
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "425044008",
+                  "display": "Physical exam section"
+                }
+              ]
+            }
+          },
+          {
+            "title": "Medical History",
+            "entry": [
+              {
+                "reference": "urn:uuid:bd4b7e82-cf3e-4008-a6d7-bb956b5efa21"
+              },
+              {
+                "reference": "urn:uuid:86f75c12-1867-4e7e-8048-163389547054"
+              }
+            ],
+            "code": {
+              "coding": [
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "1003642006",
+                  "display": "History and physical report"
+                }
+              ]
+            }
+          },
+          {
+            "title": "Family History",
+            "entry": [
+              {
+                "reference": "urn:uuid:0c89db31-7d35-40eb-9c2f-f356cc774c0e"
+              }
+            ],
+            "code": {
+              "coding": [
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "422432008",
+                  "display": "Family history section"
+                }
+              ]
+            }
+          },
+          {
+            "title": "Medications",
+            "entry": [
+              {
+                "reference": "urn:uuid:960ddf07-add6-4d6d-8415-166d2f792158"
+              }
+            ],
+            "code": {
+              "coding": [
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "1003606003",
+                  "display": "Medication section"
+                }
+              ]
+            }
+          },
+          {
+            "title": "Procedures",
+            "entry": [
+              {
+                "reference": "urn:uuid:a8e035d9-9da9-4adb-9e2d-d50a9c52e05d"
+              }
+            ],
+            "code": {
+              "coding": [
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "1003640003",
+                  "display": "Procedure section"
+                }
+              ]
+            }
+          },
+          {
+            "title": "Care Plan",
+            "entry": [
+              {
+                "reference": "urn:uuid:c992cdb4-fb65-49df-8ecc-cc70f38b082a"
+              }
+            ],
+            "code": {
+              "coding": [
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "734163000",
+                  "display": "Care plan"
+                }
+              ]
+            }
+          },
+          {
+            "title": "Document Reference",
+            "entry": [
+              {
+                "reference": "urn:uuid:1022d9b3-9d71-4f65-b0be-0d734102366d"
+              }
+            ],
+            "code": {
+              "coding": [
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "373942005",
+                  "display": "Discharge summary"
+                }
+              ]
+            }
+          }
+        ],
+        "author": [
+          {
+            "reference": "urn:uuid:5a9f0577-cdee-40ff-9129-360db569b03a"
+          }
+        ],
+        "encounter": {
+          "reference": "urn:uuid:60cd32f0-a68e-4208-8819-75c0347d3ba7"
+        },
+        "custodian": {
+          "reference": "urn:uuid:d5482963-ea9c-4746-8859-46a2d494e033"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:9953092b-ff49-4f0a-9b11-93a08c901dfa",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "9953092b-ff49-4f0a-9b11-93a08c901dfa",
+        "identifier": [
+          {
+            "system": "https://healthid.ndhm.gov.in",
+            "value": "testinguser48@sbx"
+          },
+          {
+            "system": "https://abdm.gov.in/abha-number",
+            "value": "91-1031-8855-6636"
+          }
+        ],
+        "name": [
+          {
+            "text": "Anjali Desai"
+          }
+        ],
+        "gender": "male",
+        "birthDate": "1970-01-01",
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "9996197331"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:5a9f0577-cdee-40ff-9129-360db569b03a",
+      "resource": {
+        "resourceType": "Practitioner",
+        "id": "5a9f0577-cdee-40ff-9129-360db569b03a",
+        "name": [
+          {
+            "text": "Dr. Neha Kapoor"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:d5482963-ea9c-4746-8859-46a2d494e033",
+      "resource": {
+        "resourceType": "Organization",
+        "id": "d5482963-ea9c-4746-8859-46a2d494e033",
+        "name": "RAINBOW_CHILD"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:60cd32f0-a68e-4208-8819-75c0347d3ba7",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "60cd32f0-a68e-4208-8819-75c0347d3ba7",
+        "status": "finished",
+        "class": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code": "AMB",
+          "display": "ambulatory"
+        },
+        "subject": {
+          "reference": "urn:uuid:9953092b-ff49-4f0a-9b11-93a08c901dfa"
+        },
+        "period": {
+          "start": "2026-08-26T00:00:00+05:30"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:19d6f6f0-bb9f-4d74-af16-1afb78baa1e9",
+      "resource": {
+        "resourceType": "Condition",
+        "id": "19d6f6f0-bb9f-4d74-af16-1afb78baa1e9",
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active"
+            }
+          ]
+        },
+        "code": {
+          "text": "Persistent headache and nausea",
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "25064002",
+              "display": "Persistent headache and nausea"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:9953092b-ff49-4f0a-9b11-93a08c901dfa"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:e4955270-b2ab-4dfe-942b-c1d15cd0b131",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "e4955270-b2ab-4dfe-942b-c1d15cd0b131",
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "425044008",
+              "display": "Physical exam finding"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:9953092b-ff49-4f0a-9b11-93a08c901dfa"
+        },
+        "valueString": "No focal neurological deficit."
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:bd4b7e82-cf3e-4008-a6d7-bb956b5efa21",
+      "resource": {
+        "resourceType": "Condition",
+        "id": "bd4b7e82-cf3e-4008-a6d7-bb956b5efa21",
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active"
+            }
+          ]
+        },
+        "code": {
+          "text": "Migraine without aura",
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "4473006",
+              "display": "Migraine without aura"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:9953092b-ff49-4f0a-9b11-93a08c901dfa"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:86f75c12-1867-4e7e-8048-163389547054",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "86f75c12-1867-4e7e-8048-163389547054",
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "1003642006",
+              "display": "Medical history note"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:9953092b-ff49-4f0a-9b11-93a08c901dfa"
+        },
+        "valueString": "Admitted for management of above condition."
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:0c89db31-7d35-40eb-9c2f-f356cc774c0e",
+      "resource": {
+        "resourceType": "FamilyMemberHistory",
+        "id": "0c89db31-7d35-40eb-9c2f-f356cc774c0e",
+        "status": "completed",
+        "patient": {
+          "reference": "urn:uuid:9953092b-ff49-4f0a-9b11-93a08c901dfa"
+        },
+        "note": [
+          {
+            "text": "Paternal history of coronary artery disease."
+          }
+        ],
+        "relationship": {
+          "text": "Family member"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:960ddf07-add6-4d6d-8415-166d2f792158",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "id": "960ddf07-add6-4d6d-8415-166d2f792158",
+        "status": "active",
+        "intent": "order",
+        "medicationCodeableConcept": {
+          "text": "Amlodipine"
+        },
+        "subject": {
+          "reference": "urn:uuid:9953092b-ff49-4f0a-9b11-93a08c901dfa"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:a8e035d9-9da9-4adb-9e2d-d50a9c52e05d",
+      "resource": {
+        "resourceType": "Procedure",
+        "id": "a8e035d9-9da9-4adb-9e2d-d50a9c52e05d",
+        "status": "completed",
+        "code": {
+          "text": "Wound dressing",
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "18946005",
+              "display": "Wound dressing"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:9953092b-ff49-4f0a-9b11-93a08c901dfa"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:c992cdb4-fb65-49df-8ecc-cc70f38b082a",
+      "resource": {
+        "resourceType": "CarePlan",
+        "id": "c992cdb4-fb65-49df-8ecc-cc70f38b082a",
+        "status": "active",
+        "intent": "plan",
+        "subject": {
+          "reference": "urn:uuid:9953092b-ff49-4f0a-9b11-93a08c901dfa"
+        },
+        "description": "Continue medications as prescribed. Follow-up in 2 weeks."
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:1022d9b3-9d71-4f65-b0be-0d734102366d",
+      "resource": {
+        "resourceType": "DocumentReference",
+        "id": "1022d9b3-9d71-4f65-b0be-0d734102366d",
+        "status": "current",
+        "subject": {
+          "reference": "urn:uuid:9953092b-ff49-4f0a-9b11-93a08c901dfa"
+        },
+        "content": [
+          {
+            "attachment": {
+              "contentType": "application/pdf",
+              "url": "https://storage.abdm-sandbox.example/178793677358773/discharge_summary_scan_R077.pdf",
+              "title": "Signed discharge summary, scanned copy",
+              "size": 348160
+            }
+          }
+        ],
+        "type": {
+          "text": "Discharge Summary Scan"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,191 @@
+{
+  "resourceType": "Bundle",
+  "id": "DiagnosticReport-R019",
+  "meta": {
+    "profile": [
+      "https://nrces.in/ndhm/fhir/r4/StructureDefinition/DocumentBundle"
+    ]
+  },
+  "identifier": {
+    "system": "http://hip.in",
+    "value": "bundle-R019"
+  },
+  "type": "document",
+  "timestamp": "2026-09-10T05:12:37+05:30",
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:87116352-6411-4701-be91-c3825ef8a2fa",
+      "resource": {
+        "resourceType": "Composition",
+        "id": "87116352-6411-4701-be91-c3825ef8a2fa",
+        "meta": {
+          "profile": [
+            "https://nrces.in/ndhm/fhir/r4/StructureDefinition/DiagnosticReportRecord"
+          ]
+        },
+        "language": "en-IN",
+        "status": "final",
+        "type": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "721981007",
+              "display": "Diagnostic studies report"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:7d210f20-9549-48d3-a74b-d2c4a3209338"
+        },
+        "date": "2026-09-10T05:12:37+05:30",
+        "title": "DiagnosticReport Record",
+        "section": [
+          {
+            "title": "Investigation",
+            "entry": [
+              {
+                "reference": "urn:uuid:95e38a2b-e8dd-4524-8ffc-a5b6e01e3f33"
+              },
+              {
+                "reference": "urn:uuid:1904b14a-61b9-4957-a8d7-e7d99f12b23c"
+              }
+            ],
+            "code": {
+              "coding": [
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "721981007",
+                  "display": "Diagnostic studies report"
+                }
+              ]
+            }
+          }
+        ],
+        "author": [
+          {
+            "reference": "urn:uuid:f1528176-f303-4358-83b5-69c9f5143df5"
+          }
+        ],
+        "encounter": {
+          "reference": "urn:uuid:1a599427-2232-4094-b8fb-888072d5dd0b"
+        },
+        "custodian": {
+          "reference": "urn:uuid:341fce54-0c48-4bad-a65f-63e6e9fd4270"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:7d210f20-9549-48d3-a74b-d2c4a3209338",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "7d210f20-9549-48d3-a74b-d2c4a3209338",
+        "identifier": [
+          {
+            "system": "https://healthid.ndhm.gov.in",
+            "value": "testinguser30@sbx"
+          },
+          {
+            "system": "https://abdm.gov.in/abha-number",
+            "value": "91-4780-3472-2359"
+          }
+        ],
+        "name": [
+          {
+            "text": "Neha Pillai"
+          }
+        ],
+        "gender": "male",
+        "birthDate": "1982-01-01",
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "9262455407"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:f1528176-f303-4358-83b5-69c9f5143df5",
+      "resource": {
+        "resourceType": "Practitioner",
+        "id": "f1528176-f303-4358-83b5-69c9f5143df5",
+        "name": [
+          {
+            "text": "Dr. Rajesh Nair"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:341fce54-0c48-4bad-a65f-63e6e9fd4270",
+      "resource": {
+        "resourceType": "Organization",
+        "id": "341fce54-0c48-4bad-a65f-63e6e9fd4270",
+        "name": "SUNRISE_HOSP"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:1a599427-2232-4094-b8fb-888072d5dd0b",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "1a599427-2232-4094-b8fb-888072d5dd0b",
+        "status": "finished",
+        "class": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code": "AMB",
+          "display": "ambulatory"
+        },
+        "subject": {
+          "reference": "urn:uuid:7d210f20-9549-48d3-a74b-d2c4a3209338"
+        },
+        "period": {
+          "start": "2026-08-28T00:00:00+05:30"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:95e38a2b-e8dd-4524-8ffc-a5b6e01e3f33",
+      "resource": {
+        "resourceType": "DiagnosticReport",
+        "id": "95e38a2b-e8dd-4524-8ffc-a5b6e01e3f33",
+        "meta": {
+          "profile": [
+            "https://nrces.in/ndhm/fhir/r4/StructureDefinition/DiagnosticReportImaging"
+          ]
+        },
+        "status": "final",
+        "code": {
+          "text": "X-ray"
+        },
+        "subject": {
+          "reference": "urn:uuid:7d210f20-9549-48d3-a74b-d2c4a3209338"
+        },
+        "issued": "2026-08-28T09:00:00+05:30"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:1904b14a-61b9-4957-a8d7-e7d99f12b23c",
+      "resource": {
+        "resourceType": "DocumentReference",
+        "id": "1904b14a-61b9-4957-a8d7-e7d99f12b23c",
+        "status": "current",
+        "subject": {
+          "reference": "urn:uuid:7d210f20-9549-48d3-a74b-d2c4a3209338"
+        },
+        "content": [
+          {
+            "attachment": {
+              "contentType": "image/jpeg",
+              "url": "https://storage.abdm-sandbox.example/178765337186821/x-ray_image_R019.jpg",
+              "title": "Chest X-ray, PA view",
+              "size": 1484800
+            }
+          }
+        ],
+        "type": {
+          "text": "X-Ray Image"
+        }
+      }
+    }
+  ]
+}

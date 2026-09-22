@@ -1,0 +1,456 @@
+{
+  "resourceType": "Bundle",
+  "id": "DischargeSummary-R013",
+  "meta": {
+    "profile": [
+      "https://nrces.in/ndhm/fhir/r4/StructureDefinition/DocumentBundle"
+    ]
+  },
+  "identifier": {
+    "system": "http://hip.in",
+    "value": "bundle-R013"
+  },
+  "type": "document",
+  "timestamp": "2026-09-10T04:52:40+05:30",
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:46ab2c90-285b-41c2-b3e1-1b9eac5dc63f",
+      "resource": {
+        "resourceType": "Composition",
+        "id": "46ab2c90-285b-41c2-b3e1-1b9eac5dc63f",
+        "meta": {
+          "profile": [
+            "https://nrces.in/ndhm/fhir/r4/StructureDefinition/DischargeSummaryRecord"
+          ]
+        },
+        "language": "en-IN",
+        "status": "final",
+        "type": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "373942005",
+              "display": "Discharge summary"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:8b1f9461-8ec2-4fbd-a5f3-69fe43373384"
+        },
+        "date": "2026-09-10T04:52:40+05:30",
+        "title": "DischargeSummary Record",
+        "section": [
+          {
+            "title": "Chief Complaints",
+            "entry": [
+              {
+                "reference": "urn:uuid:c8662261-44d2-47d1-a77a-6b75daa27c0b"
+              }
+            ],
+            "code": {
+              "coding": [
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "422843007",
+                  "display": "Chief complaint section"
+                }
+              ]
+            }
+          },
+          {
+            "title": "Physical Examination",
+            "entry": [
+              {
+                "reference": "urn:uuid:59adf9f0-0c0a-4e47-a21f-d8cac5cc6c9f"
+              }
+            ],
+            "code": {
+              "coding": [
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "425044008",
+                  "display": "Physical exam section"
+                }
+              ]
+            }
+          },
+          {
+            "title": "Medical History",
+            "entry": [
+              {
+                "reference": "urn:uuid:a2975ada-dcbf-4130-8904-d0448514984c"
+              },
+              {
+                "reference": "urn:uuid:c3d0c979-8633-4d5a-8155-845b0d731e1e"
+              }
+            ],
+            "code": {
+              "coding": [
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "1003642006",
+                  "display": "History and physical report"
+                }
+              ]
+            }
+          },
+          {
+            "title": "Family History",
+            "entry": [
+              {
+                "reference": "urn:uuid:e3344cd3-bc00-4d1c-a85b-1cdd0e484fd5"
+              }
+            ],
+            "code": {
+              "coding": [
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "422432008",
+                  "display": "Family history section"
+                }
+              ]
+            }
+          },
+          {
+            "title": "Medications",
+            "entry": [
+              {
+                "reference": "urn:uuid:12b385dc-7c3a-4f34-9395-924d5ca2b526"
+              }
+            ],
+            "code": {
+              "coding": [
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "1003606003",
+                  "display": "Medication section"
+                }
+              ]
+            }
+          },
+          {
+            "title": "Procedures",
+            "entry": [
+              {
+                "reference": "urn:uuid:4b5c092f-b8db-4bbd-864b-9c6343c419a8"
+              }
+            ],
+            "code": {
+              "coding": [
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "1003640003",
+                  "display": "Procedure section"
+                }
+              ]
+            }
+          },
+          {
+            "title": "Care Plan",
+            "entry": [
+              {
+                "reference": "urn:uuid:1827d585-89e6-442b-9592-e5d76ccc485f"
+              }
+            ],
+            "code": {
+              "coding": [
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "734163000",
+                  "display": "Care plan"
+                }
+              ]
+            }
+          },
+          {
+            "title": "Document Reference",
+            "entry": [
+              {
+                "reference": "urn:uuid:ee24998b-7b3f-4c81-b4d6-74b073d534b4"
+              }
+            ],
+            "code": {
+              "coding": [
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "373942005",
+                  "display": "Discharge summary"
+                }
+              ]
+            }
+          }
+        ],
+        "author": [
+          {
+            "reference": "urn:uuid:56f21011-6625-4e9e-bae8-a760d59f8754"
+          }
+        ],
+        "encounter": {
+          "reference": "urn:uuid:5c7142e4-cd27-4837-834e-bf3336289538"
+        },
+        "custodian": {
+          "reference": "urn:uuid:c55be589-9502-48ed-8811-52536d5e6ddf"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:8b1f9461-8ec2-4fbd-a5f3-69fe43373384",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "8b1f9461-8ec2-4fbd-a5f3-69fe43373384",
+        "identifier": [
+          {
+            "system": "https://healthid.ndhm.gov.in",
+            "value": "lakshmi.p@sbx"
+          },
+          {
+            "system": "https://abdm.gov.in/abha-number",
+            "value": "91-4421-7789-3321"
+          }
+        ],
+        "name": [
+          {
+            "text": "Lakshmi Priya"
+          }
+        ],
+        "gender": "female",
+        "birthDate": "1985-01-01",
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "9123456780"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:56f21011-6625-4e9e-bae8-a760d59f8754",
+      "resource": {
+        "resourceType": "Practitioner",
+        "id": "56f21011-6625-4e9e-bae8-a760d59f8754",
+        "name": [
+          {
+            "text": "Dr. Kunal Mehta"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:c55be589-9502-48ed-8811-52536d5e6ddf",
+      "resource": {
+        "resourceType": "Organization",
+        "id": "c55be589-9502-48ed-8811-52536d5e6ddf",
+        "name": "APEX_DIAG"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:5c7142e4-cd27-4837-834e-bf3336289538",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "5c7142e4-cd27-4837-834e-bf3336289538",
+        "status": "finished",
+        "class": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code": "AMB",
+          "display": "ambulatory"
+        },
+        "subject": {
+          "reference": "urn:uuid:8b1f9461-8ec2-4fbd-a5f3-69fe43373384"
+        },
+        "period": {
+          "start": "2026-09-02T00:00:00+05:30"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:c8662261-44d2-47d1-a77a-6b75daa27c0b",
+      "resource": {
+        "resourceType": "Condition",
+        "id": "c8662261-44d2-47d1-a77a-6b75daa27c0b",
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active"
+            }
+          ]
+        },
+        "code": {
+          "text": "Abdominal pain and vomiting",
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "422400008",
+              "display": "Abdominal pain and vomiting"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:8b1f9461-8ec2-4fbd-a5f3-69fe43373384"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:59adf9f0-0c0a-4e47-a21f-d8cac5cc6c9f",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "59adf9f0-0c0a-4e47-a21f-d8cac5cc6c9f",
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "425044008",
+              "display": "Physical exam finding"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:8b1f9461-8ec2-4fbd-a5f3-69fe43373384"
+        },
+        "valueString": "Epigastric tenderness present."
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:a2975ada-dcbf-4130-8904-d0448514984c",
+      "resource": {
+        "resourceType": "Condition",
+        "id": "a2975ada-dcbf-4130-8904-d0448514984c",
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active"
+            }
+          ]
+        },
+        "code": {
+          "text": "Acute gastritis",
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "4556007",
+              "display": "Acute gastritis"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:8b1f9461-8ec2-4fbd-a5f3-69fe43373384"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:c3d0c979-8633-4d5a-8155-845b0d731e1e",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "c3d0c979-8633-4d5a-8155-845b0d731e1e",
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "1003642006",
+              "display": "Medical history note"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:8b1f9461-8ec2-4fbd-a5f3-69fe43373384"
+        },
+        "valueString": "Admitted for management of above condition."
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:e3344cd3-bc00-4d1c-a85b-1cdd0e484fd5",
+      "resource": {
+        "resourceType": "FamilyMemberHistory",
+        "id": "e3344cd3-bc00-4d1c-a85b-1cdd0e484fd5",
+        "status": "completed",
+        "patient": {
+          "reference": "urn:uuid:8b1f9461-8ec2-4fbd-a5f3-69fe43373384"
+        },
+        "note": [
+          {
+            "text": "No significant family history reported."
+          }
+        ],
+        "relationship": {
+          "text": "Family member"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:12b385dc-7c3a-4f34-9395-924d5ca2b526",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "id": "12b385dc-7c3a-4f34-9395-924d5ca2b526",
+        "status": "active",
+        "intent": "order",
+        "medicationCodeableConcept": {
+          "text": "Amoxicillin"
+        },
+        "subject": {
+          "reference": "urn:uuid:8b1f9461-8ec2-4fbd-a5f3-69fe43373384"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:4b5c092f-b8db-4bbd-864b-9c6343c419a8",
+      "resource": {
+        "resourceType": "Procedure",
+        "id": "4b5c092f-b8db-4bbd-864b-9c6343c419a8",
+        "status": "completed",
+        "code": {
+          "text": "ECG recording",
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "29303009",
+              "display": "ECG recording"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:8b1f9461-8ec2-4fbd-a5f3-69fe43373384"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:1827d585-89e6-442b-9592-e5d76ccc485f",
+      "resource": {
+        "resourceType": "CarePlan",
+        "id": "1827d585-89e6-442b-9592-e5d76ccc485f",
+        "status": "active",
+        "intent": "plan",
+        "subject": {
+          "reference": "urn:uuid:8b1f9461-8ec2-4fbd-a5f3-69fe43373384"
+        },
+        "description": "Continue medications as prescribed. Follow-up in 2 weeks."
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:ee24998b-7b3f-4c81-b4d6-74b073d534b4",
+      "resource": {
+        "resourceType": "DocumentReference",
+        "id": "ee24998b-7b3f-4c81-b4d6-74b073d534b4",
+        "status": "current",
+        "subject": {
+          "reference": "urn:uuid:8b1f9461-8ec2-4fbd-a5f3-69fe43373384"
+        },
+        "content": [
+          {
+            "attachment": {
+              "contentType": "application/pdf",
+              "url": "https://storage.abdm-sandbox.example/P003/discharge_summary_scan_R013.pdf",
+              "title": "Signed discharge summary, scanned copy",
+              "size": 348160
+            }
+          }
+        ],
+        "type": {
+          "text": "Discharge Summary Scan"
+        }
+      }
+    }
+  ]
+}

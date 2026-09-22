@@ -1,0 +1,199 @@
+{
+  "resourceType": "Bundle",
+  "id": "DiagnosticReport-R002",
+  "meta": {
+    "profile": [
+      "https://nrces.in/ndhm/fhir/r4/StructureDefinition/DocumentBundle"
+    ]
+  },
+  "identifier": {
+    "system": "http://hip.in",
+    "value": "bundle-R002"
+  },
+  "type": "document",
+  "timestamp": "2026-09-10T05:12:37+05:30",
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:55454de8-f0ce-48b3-aa48-95b179381be2",
+      "resource": {
+        "resourceType": "Composition",
+        "id": "55454de8-f0ce-48b3-aa48-95b179381be2",
+        "meta": {
+          "profile": [
+            "https://nrces.in/ndhm/fhir/r4/StructureDefinition/DiagnosticReportRecord"
+          ]
+        },
+        "language": "en-IN",
+        "status": "final",
+        "type": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "721981007",
+              "display": "Diagnostic studies report"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:f514a049-4828-459a-b4e7-216142c7b337"
+        },
+        "date": "2026-09-10T05:12:37+05:30",
+        "title": "DiagnosticReport Record",
+        "section": [
+          {
+            "title": "Investigation",
+            "entry": [
+              {
+                "reference": "urn:uuid:9db45154-9b8b-403c-8887-424f3dd5a4b6"
+              },
+              {
+                "reference": "urn:uuid:06623e27-ec4b-419a-96e6-a3f02a4fa634"
+              }
+            ],
+            "code": {
+              "coding": [
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "721981007",
+                  "display": "Diagnostic studies report"
+                }
+              ]
+            }
+          }
+        ],
+        "author": [
+          {
+            "reference": "urn:uuid:1737c25e-819f-4668-bec0-d54123a8c803"
+          }
+        ],
+        "encounter": {
+          "reference": "urn:uuid:7e612953-2887-4ce9-9163-c89ed9498d97"
+        },
+        "custodian": {
+          "reference": "urn:uuid:3ff3ea76-d90b-4dbf-87ae-161e97d760b9"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:f514a049-4828-459a-b4e7-216142c7b337",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "f514a049-4828-459a-b4e7-216142c7b337",
+        "identifier": [
+          {
+            "system": "https://healthid.ndhm.gov.in",
+            "value": "testinguser13@sbx"
+          },
+          {
+            "system": "https://abdm.gov.in/abha-number",
+            "value": "91-9313-4517-1614"
+          }
+        ],
+        "name": [
+          {
+            "text": "Manikandan Nair"
+          }
+        ],
+        "gender": "female",
+        "birthDate": "1971-01-01",
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "9565623510"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:1737c25e-819f-4668-bec0-d54123a8c803",
+      "resource": {
+        "resourceType": "Practitioner",
+        "id": "1737c25e-819f-4668-bec0-d54123a8c803",
+        "name": [
+          {
+            "text": "Dr. Farha Khan"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:3ff3ea76-d90b-4dbf-87ae-161e97d760b9",
+      "resource": {
+        "resourceType": "Organization",
+        "id": "3ff3ea76-d90b-4dbf-87ae-161e97d760b9",
+        "name": "SRM_CHENNAI"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:7e612953-2887-4ce9-9163-c89ed9498d97",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "7e612953-2887-4ce9-9163-c89ed9498d97",
+        "status": "finished",
+        "class": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code": "AMB",
+          "display": "ambulatory"
+        },
+        "subject": {
+          "reference": "urn:uuid:f514a049-4828-459a-b4e7-216142c7b337"
+        },
+        "period": {
+          "start": "2026-08-26T00:00:00+05:30"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:9db45154-9b8b-403c-8887-424f3dd5a4b6",
+      "resource": {
+        "resourceType": "DiagnosticReport",
+        "id": "9db45154-9b8b-403c-8887-424f3dd5a4b6",
+        "meta": {
+          "profile": [
+            "https://nrces.in/ndhm/fhir/r4/StructureDefinition/DiagnosticReportLab"
+          ]
+        },
+        "status": "final",
+        "code": {
+          "text": "Lipid Profile",
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "24331-1",
+              "display": "Lipid Profile"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:f514a049-4828-459a-b4e7-216142c7b337"
+        },
+        "conclusion": "Total cholesterol 210 mg/dL; LDL 130 mg/dL; HDL 42 mg/dL",
+        "issued": "2026-08-26T09:00:00+05:30"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:06623e27-ec4b-419a-96e6-a3f02a4fa634",
+      "resource": {
+        "resourceType": "DocumentReference",
+        "id": "06623e27-ec4b-419a-96e6-a3f02a4fa634",
+        "status": "current",
+        "subject": {
+          "reference": "urn:uuid:f514a049-4828-459a-b4e7-216142c7b337"
+        },
+        "content": [
+          {
+            "attachment": {
+              "contentType": "application/pdf",
+              "url": "https://storage.abdm-sandbox.example/178716798022749/lab_report_R002.pdf",
+              "title": "Laboratory test report (CBC/LFT/lipid panel)",
+              "size": 225280
+            }
+          }
+        ],
+        "type": {
+          "text": "Lab Report"
+        }
+      }
+    }
+  ]
+}

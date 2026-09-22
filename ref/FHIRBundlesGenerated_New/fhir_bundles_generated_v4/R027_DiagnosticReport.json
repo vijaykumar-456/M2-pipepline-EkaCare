@@ -1,0 +1,191 @@
+{
+  "resourceType": "Bundle",
+  "id": "DiagnosticReport-R027",
+  "meta": {
+    "profile": [
+      "https://nrces.in/ndhm/fhir/r4/StructureDefinition/DocumentBundle"
+    ]
+  },
+  "identifier": {
+    "system": "http://hip.in",
+    "value": "bundle-R027"
+  },
+  "type": "document",
+  "timestamp": "2026-09-10T05:12:37+05:30",
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:3878c33a-f0ab-40b5-868c-0c9c5d2aee85",
+      "resource": {
+        "resourceType": "Composition",
+        "id": "3878c33a-f0ab-40b5-868c-0c9c5d2aee85",
+        "meta": {
+          "profile": [
+            "https://nrces.in/ndhm/fhir/r4/StructureDefinition/DiagnosticReportRecord"
+          ]
+        },
+        "language": "en-IN",
+        "status": "final",
+        "type": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "721981007",
+              "display": "Diagnostic studies report"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:b2bc65f3-1675-47f2-8461-b64bb6748b63"
+        },
+        "date": "2026-09-10T05:12:37+05:30",
+        "title": "DiagnosticReport Record",
+        "section": [
+          {
+            "title": "Investigation",
+            "entry": [
+              {
+                "reference": "urn:uuid:896f2edc-0ef8-4bfb-8168-8a3b2a0b78ca"
+              },
+              {
+                "reference": "urn:uuid:a8a60384-def3-4a2d-9790-72ce7fc523ca"
+              }
+            ],
+            "code": {
+              "coding": [
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "721981007",
+                  "display": "Diagnostic studies report"
+                }
+              ]
+            }
+          }
+        ],
+        "author": [
+          {
+            "reference": "urn:uuid:4817a61c-0610-4c29-8521-686e29ebbe49"
+          }
+        ],
+        "encounter": {
+          "reference": "urn:uuid:7598a0c1-4a7a-488e-b9e4-cc0d396207d6"
+        },
+        "custodian": {
+          "reference": "urn:uuid:98dc0404-1783-4171-8261-cd55e1ee6155"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:b2bc65f3-1675-47f2-8461-b64bb6748b63",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "b2bc65f3-1675-47f2-8461-b64bb6748b63",
+        "identifier": [
+          {
+            "system": "https://healthid.ndhm.gov.in",
+            "value": "testinguser38@sbx"
+          },
+          {
+            "system": "https://abdm.gov.in/abha-number",
+            "value": "91-6966-8768-3012"
+          }
+        ],
+        "name": [
+          {
+            "text": "Sunita Desai"
+          }
+        ],
+        "gender": "male",
+        "birthDate": "1974-01-01",
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "9624059081"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:4817a61c-0610-4c29-8521-686e29ebbe49",
+      "resource": {
+        "resourceType": "Practitioner",
+        "id": "4817a61c-0610-4c29-8521-686e29ebbe49",
+        "name": [
+          {
+            "text": "Dr. Farha Khan"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:98dc0404-1783-4171-8261-cd55e1ee6155",
+      "resource": {
+        "resourceType": "Organization",
+        "id": "98dc0404-1783-4171-8261-cd55e1ee6155",
+        "name": "SUNRISE_HOSP"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:7598a0c1-4a7a-488e-b9e4-cc0d396207d6",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "7598a0c1-4a7a-488e-b9e4-cc0d396207d6",
+        "status": "finished",
+        "class": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code": "AMB",
+          "display": "ambulatory"
+        },
+        "subject": {
+          "reference": "urn:uuid:b2bc65f3-1675-47f2-8461-b64bb6748b63"
+        },
+        "period": {
+          "start": "2026-09-11T00:00:00+05:30"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:896f2edc-0ef8-4bfb-8168-8a3b2a0b78ca",
+      "resource": {
+        "resourceType": "DiagnosticReport",
+        "id": "896f2edc-0ef8-4bfb-8168-8a3b2a0b78ca",
+        "meta": {
+          "profile": [
+            "https://nrces.in/ndhm/fhir/r4/StructureDefinition/DiagnosticReportImaging"
+          ]
+        },
+        "status": "final",
+        "code": {
+          "text": "CT"
+        },
+        "subject": {
+          "reference": "urn:uuid:b2bc65f3-1675-47f2-8461-b64bb6748b63"
+        },
+        "issued": "2026-09-11T09:00:00+05:30"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:a8a60384-def3-4a2d-9790-72ce7fc523ca",
+      "resource": {
+        "resourceType": "DocumentReference",
+        "id": "a8a60384-def3-4a2d-9790-72ce7fc523ca",
+        "status": "current",
+        "subject": {
+          "reference": "urn:uuid:b2bc65f3-1675-47f2-8461-b64bb6748b63"
+        },
+        "content": [
+          {
+            "attachment": {
+              "contentType": "image/png",
+              "url": "https://storage.abdm-sandbox.example/178793096405361/ct_scan_images_R027.png",
+              "title": "CT abdomen axial slice export",
+              "size": 9011200
+            }
+          }
+        ],
+        "type": {
+          "text": "CT Scan Images"
+        }
+      }
+    }
+  ]
+}

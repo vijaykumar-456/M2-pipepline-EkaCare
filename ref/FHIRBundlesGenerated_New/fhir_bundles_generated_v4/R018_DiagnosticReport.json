@@ -1,0 +1,199 @@
+{
+  "resourceType": "Bundle",
+  "id": "DiagnosticReport-R018",
+  "meta": {
+    "profile": [
+      "https://nrces.in/ndhm/fhir/r4/StructureDefinition/DocumentBundle"
+    ]
+  },
+  "identifier": {
+    "system": "http://hip.in",
+    "value": "bundle-R018"
+  },
+  "type": "document",
+  "timestamp": "2026-09-10T05:12:37+05:30",
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:38dbd039-94b7-4221-a55a-de4705edd678",
+      "resource": {
+        "resourceType": "Composition",
+        "id": "38dbd039-94b7-4221-a55a-de4705edd678",
+        "meta": {
+          "profile": [
+            "https://nrces.in/ndhm/fhir/r4/StructureDefinition/DiagnosticReportRecord"
+          ]
+        },
+        "language": "en-IN",
+        "status": "final",
+        "type": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "721981007",
+              "display": "Diagnostic studies report"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:91809341-b859-4f1b-a4e9-7d63ea8ef2df"
+        },
+        "date": "2026-09-10T05:12:37+05:30",
+        "title": "DiagnosticReport Record",
+        "section": [
+          {
+            "title": "Investigation",
+            "entry": [
+              {
+                "reference": "urn:uuid:1d9a43e4-452f-437c-bd26-d28562a2ec7d"
+              },
+              {
+                "reference": "urn:uuid:027e086b-1e5e-4c80-b161-7bee4947c84f"
+              }
+            ],
+            "code": {
+              "coding": [
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "721981007",
+                  "display": "Diagnostic studies report"
+                }
+              ]
+            }
+          }
+        ],
+        "author": [
+          {
+            "reference": "urn:uuid:ea106af2-04c2-4de6-95e1-3dc334efe663"
+          }
+        ],
+        "encounter": {
+          "reference": "urn:uuid:81d4726e-2bb7-4c5b-90e7-a7d967dc1975"
+        },
+        "custodian": {
+          "reference": "urn:uuid:0eb8174f-37ba-4e5f-b9cc-cbeb2c34e27e"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:91809341-b859-4f1b-a4e9-7d63ea8ef2df",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "91809341-b859-4f1b-a4e9-7d63ea8ef2df",
+        "identifier": [
+          {
+            "system": "https://healthid.ndhm.gov.in",
+            "value": "testinguser29@sbx"
+          },
+          {
+            "system": "https://abdm.gov.in/abha-number",
+            "value": "91-5552-3243-8053"
+          }
+        ],
+        "name": [
+          {
+            "text": "Sanjay Verma"
+          }
+        ],
+        "gender": "male",
+        "birthDate": "1995-01-01",
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "9858487694"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:ea106af2-04c2-4de6-95e1-3dc334efe663",
+      "resource": {
+        "resourceType": "Practitioner",
+        "id": "ea106af2-04c2-4de6-95e1-3dc334efe663",
+        "name": [
+          {
+            "text": "Dr. Neha Kapoor"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:0eb8174f-37ba-4e5f-b9cc-cbeb2c34e27e",
+      "resource": {
+        "resourceType": "Organization",
+        "id": "0eb8174f-37ba-4e5f-b9cc-cbeb2c34e27e",
+        "name": "WELLNESS_FAM"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:81d4726e-2bb7-4c5b-90e7-a7d967dc1975",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "81d4726e-2bb7-4c5b-90e7-a7d967dc1975",
+        "status": "finished",
+        "class": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code": "AMB",
+          "display": "ambulatory"
+        },
+        "subject": {
+          "reference": "urn:uuid:91809341-b859-4f1b-a4e9-7d63ea8ef2df"
+        },
+        "period": {
+          "start": "2026-09-06T00:00:00+05:30"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:1d9a43e4-452f-437c-bd26-d28562a2ec7d",
+      "resource": {
+        "resourceType": "DiagnosticReport",
+        "id": "1d9a43e4-452f-437c-bd26-d28562a2ec7d",
+        "meta": {
+          "profile": [
+            "https://nrces.in/ndhm/fhir/r4/StructureDefinition/DiagnosticReportLab"
+          ]
+        },
+        "status": "final",
+        "code": {
+          "text": "Liver Function Test",
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "24325-3",
+              "display": "Liver Function Test"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:91809341-b859-4f1b-a4e9-7d63ea8ef2df"
+        },
+        "conclusion": "SGOT 32 U/L; SGPT 28 U/L; Bilirubin 0.8 mg/dL",
+        "issued": "2026-09-06T09:00:00+05:30"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:027e086b-1e5e-4c80-b161-7bee4947c84f",
+      "resource": {
+        "resourceType": "DocumentReference",
+        "id": "027e086b-1e5e-4c80-b161-7bee4947c84f",
+        "status": "current",
+        "subject": {
+          "reference": "urn:uuid:91809341-b859-4f1b-a4e9-7d63ea8ef2df"
+        },
+        "content": [
+          {
+            "attachment": {
+              "contentType": "application/pdf",
+              "url": "https://storage.abdm-sandbox.example/178784739492982/lab_report_R018.pdf",
+              "title": "Laboratory test report (CBC/LFT/lipid panel)",
+              "size": 225280
+            }
+          }
+        ],
+        "type": {
+          "text": "Lab Report"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,199 @@
+{
+  "resourceType": "Bundle",
+  "id": "DiagnosticReport-R058",
+  "meta": {
+    "profile": [
+      "https://nrces.in/ndhm/fhir/r4/StructureDefinition/DocumentBundle"
+    ]
+  },
+  "identifier": {
+    "system": "http://hip.in",
+    "value": "bundle-R058"
+  },
+  "type": "document",
+  "timestamp": "2026-09-10T05:12:37+05:30",
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:a3b750e4-f692-4417-b6fb-acb17abb1904",
+      "resource": {
+        "resourceType": "Composition",
+        "id": "a3b750e4-f692-4417-b6fb-acb17abb1904",
+        "meta": {
+          "profile": [
+            "https://nrces.in/ndhm/fhir/r4/StructureDefinition/DiagnosticReportRecord"
+          ]
+        },
+        "language": "en-IN",
+        "status": "final",
+        "type": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "721981007",
+              "display": "Diagnostic studies report"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:5d858f4b-dbd6-4c57-a25c-76a3ce85be28"
+        },
+        "date": "2026-09-10T05:12:37+05:30",
+        "title": "DiagnosticReport Record",
+        "section": [
+          {
+            "title": "Investigation",
+            "entry": [
+              {
+                "reference": "urn:uuid:f865ba59-6329-4d10-901e-8a69847abd3f"
+              },
+              {
+                "reference": "urn:uuid:d17cad99-4334-444e-a64c-4f11fca510df"
+              }
+            ],
+            "code": {
+              "coding": [
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "721981007",
+                  "display": "Diagnostic studies report"
+                }
+              ]
+            }
+          }
+        ],
+        "author": [
+          {
+            "reference": "urn:uuid:5ca93a6f-fd26-4391-9d37-018833ee0420"
+          }
+        ],
+        "encounter": {
+          "reference": "urn:uuid:455c4086-5b1d-45ca-9406-d265697f34cc"
+        },
+        "custodian": {
+          "reference": "urn:uuid:2567289a-e7cb-4489-9fcd-a486b9607961"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:5d858f4b-dbd6-4c57-a25c-76a3ce85be28",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "5d858f4b-dbd6-4c57-a25c-76a3ce85be28",
+        "identifier": [
+          {
+            "system": "https://healthid.ndhm.gov.in",
+            "value": "testinguser29@sbx"
+          },
+          {
+            "system": "https://abdm.gov.in/abha-number",
+            "value": "91-5552-3243-8053"
+          }
+        ],
+        "name": [
+          {
+            "text": "Sanjay Verma"
+          }
+        ],
+        "gender": "male",
+        "birthDate": "1995-01-01",
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "9858487694"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:5ca93a6f-fd26-4391-9d37-018833ee0420",
+      "resource": {
+        "resourceType": "Practitioner",
+        "id": "5ca93a6f-fd26-4391-9d37-018833ee0420",
+        "name": [
+          {
+            "text": "Dr. Neha Kapoor"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:2567289a-e7cb-4489-9fcd-a486b9607961",
+      "resource": {
+        "resourceType": "Organization",
+        "id": "2567289a-e7cb-4489-9fcd-a486b9607961",
+        "name": "WELLNESS_FAM"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:455c4086-5b1d-45ca-9406-d265697f34cc",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "455c4086-5b1d-45ca-9406-d265697f34cc",
+        "status": "finished",
+        "class": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code": "AMB",
+          "display": "ambulatory"
+        },
+        "subject": {
+          "reference": "urn:uuid:5d858f4b-dbd6-4c57-a25c-76a3ce85be28"
+        },
+        "period": {
+          "start": "2026-08-27T00:00:00+05:30"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:f865ba59-6329-4d10-901e-8a69847abd3f",
+      "resource": {
+        "resourceType": "DiagnosticReport",
+        "id": "f865ba59-6329-4d10-901e-8a69847abd3f",
+        "meta": {
+          "profile": [
+            "https://nrces.in/ndhm/fhir/r4/StructureDefinition/DiagnosticReportLab"
+          ]
+        },
+        "status": "final",
+        "code": {
+          "text": "Lipid Profile",
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "24331-1",
+              "display": "Lipid Profile"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:5d858f4b-dbd6-4c57-a25c-76a3ce85be28"
+        },
+        "conclusion": "Total cholesterol 210 mg/dL; LDL 130 mg/dL; HDL 42 mg/dL",
+        "issued": "2026-08-27T09:00:00+05:30"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:d17cad99-4334-444e-a64c-4f11fca510df",
+      "resource": {
+        "resourceType": "DocumentReference",
+        "id": "d17cad99-4334-444e-a64c-4f11fca510df",
+        "status": "current",
+        "subject": {
+          "reference": "urn:uuid:5d858f4b-dbd6-4c57-a25c-76a3ce85be28"
+        },
+        "content": [
+          {
+            "attachment": {
+              "contentType": "application/pdf",
+              "url": "https://storage.abdm-sandbox.example/178784739492982/lab_report_R058.pdf",
+              "title": "Laboratory test report (CBC/LFT/lipid panel)",
+              "size": 225280
+            }
+          }
+        ],
+        "type": {
+          "text": "Lab Report"
+        }
+      }
+    }
+  ]
+}

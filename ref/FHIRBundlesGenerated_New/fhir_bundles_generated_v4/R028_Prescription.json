@@ -1,0 +1,172 @@
+{
+  "resourceType": "Bundle",
+  "id": "Prescription-R028",
+  "meta": {
+    "profile": [
+      "https://nrces.in/ndhm/fhir/r4/StructureDefinition/DocumentBundle"
+    ]
+  },
+  "identifier": {
+    "system": "http://hip.in",
+    "value": "bundle-R028"
+  },
+  "type": "document",
+  "timestamp": "2026-09-10T05:12:37+05:30",
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:0b511284-3685-47ad-86d7-74ff434a2149",
+      "resource": {
+        "resourceType": "Composition",
+        "id": "0b511284-3685-47ad-86d7-74ff434a2149",
+        "meta": {
+          "profile": [
+            "https://nrces.in/ndhm/fhir/r4/StructureDefinition/PrescriptionRecord"
+          ]
+        },
+        "language": "en-IN",
+        "status": "final",
+        "type": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "440545006",
+              "display": "Prescription record"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:edf38e66-0e75-494c-9dbd-59a3bc0f4104"
+        },
+        "date": "2026-09-10T05:12:37+05:30",
+        "title": "Prescription Record",
+        "section": [
+          {
+            "entry": [
+              {
+                "reference": "urn:uuid:cd4ceef5-ec72-4158-84b3-81e7d212203f"
+              },
+              {
+                "reference": "urn:uuid:71943f0a-0543-4cd6-a473-6e3eb0377d11"
+              }
+            ]
+          }
+        ],
+        "author": [
+          {
+            "reference": "urn:uuid:ae2397f3-380c-4cce-bef1-128f5efadd6b"
+          }
+        ],
+        "encounter": {
+          "reference": "urn:uuid:bc4a3be9-6540-4e3b-9675-6640126c8922"
+        },
+        "custodian": {
+          "reference": "urn:uuid:bb1e82d3-b907-4209-ae01-68b29dae414e"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:edf38e66-0e75-494c-9dbd-59a3bc0f4104",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "edf38e66-0e75-494c-9dbd-59a3bc0f4104",
+        "identifier": [
+          {
+            "system": "https://healthid.ndhm.gov.in",
+            "value": "testinguser39@sbx"
+          },
+          {
+            "system": "https://abdm.gov.in/abha-number",
+            "value": "91-8927-6109-2407"
+          }
+        ],
+        "name": [
+          {
+            "text": "Gopal Verma"
+          }
+        ],
+        "gender": "male",
+        "birthDate": "1978-01-01",
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "9209723116"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:ae2397f3-380c-4cce-bef1-128f5efadd6b",
+      "resource": {
+        "resourceType": "Practitioner",
+        "id": "ae2397f3-380c-4cce-bef1-128f5efadd6b",
+        "name": [
+          {
+            "text": "Dr. Priyanka Iyer"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:bb1e82d3-b907-4209-ae01-68b29dae414e",
+      "resource": {
+        "resourceType": "Organization",
+        "id": "bb1e82d3-b907-4209-ae01-68b29dae414e",
+        "name": "SUNRISE_HOSP"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:bc4a3be9-6540-4e3b-9675-6640126c8922",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "bc4a3be9-6540-4e3b-9675-6640126c8922",
+        "status": "finished",
+        "class": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code": "AMB",
+          "display": "ambulatory"
+        },
+        "subject": {
+          "reference": "urn:uuid:edf38e66-0e75-494c-9dbd-59a3bc0f4104"
+        },
+        "period": {
+          "start": "2026-08-24T00:00:00+05:30"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:cd4ceef5-ec72-4158-84b3-81e7d212203f",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "id": "cd4ceef5-ec72-4158-84b3-81e7d212203f",
+        "status": "active",
+        "intent": "order",
+        "medicationCodeableConcept": {
+          "text": "Paracetamol"
+        },
+        "subject": {
+          "reference": "urn:uuid:edf38e66-0e75-494c-9dbd-59a3bc0f4104"
+        },
+        "dosageInstruction": [
+          {
+            "text": "500 mg, Twice daily, for 3 days"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:71943f0a-0543-4cd6-a473-6e3eb0377d11",
+      "resource": {
+        "resourceType": "Binary",
+        "id": "71943f0a-0543-4cd6-a473-6e3eb0377d11",
+        "contentType": "image/jpeg",
+        "extension": [
+          {
+            "url": "http://example.org/fhir/StructureDefinition/source-url",
+            "valueUrl": "https://storage.abdm-sandbox.example/178776425918935/prescription_slip_R028.jpg"
+          }
+        ],
+        "data": "PLACEHOLDER_BASE64=="
+      }
+    }
+  ]
+}

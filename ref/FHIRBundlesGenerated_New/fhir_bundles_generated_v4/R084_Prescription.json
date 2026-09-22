@@ -1,0 +1,172 @@
+{
+  "resourceType": "Bundle",
+  "id": "Prescription-R084",
+  "meta": {
+    "profile": [
+      "https://nrces.in/ndhm/fhir/r4/StructureDefinition/DocumentBundle"
+    ]
+  },
+  "identifier": {
+    "system": "http://hip.in",
+    "value": "bundle-R084"
+  },
+  "type": "document",
+  "timestamp": "2026-09-10T05:12:37+05:30",
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:80417877-2162-4082-bc7a-44fbe1c5ab8b",
+      "resource": {
+        "resourceType": "Composition",
+        "id": "80417877-2162-4082-bc7a-44fbe1c5ab8b",
+        "meta": {
+          "profile": [
+            "https://nrces.in/ndhm/fhir/r4/StructureDefinition/PrescriptionRecord"
+          ]
+        },
+        "language": "en-IN",
+        "status": "final",
+        "type": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "440545006",
+              "display": "Prescription record"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:c055c25c-4f9a-4f36-8c54-e91ca6e7794f"
+        },
+        "date": "2026-09-10T05:12:37+05:30",
+        "title": "Prescription Record",
+        "section": [
+          {
+            "entry": [
+              {
+                "reference": "urn:uuid:c0beeee9-4ce0-4364-827c-16825215efb5"
+              },
+              {
+                "reference": "urn:uuid:33557023-a3be-4a55-8c37-1715ec999f88"
+              }
+            ]
+          }
+        ],
+        "author": [
+          {
+            "reference": "urn:uuid:12abfb30-d72c-49f1-b548-5cb68fde6b2b"
+          }
+        ],
+        "encounter": {
+          "reference": "urn:uuid:96d50514-1236-4207-b943-d37c384192d1"
+        },
+        "custodian": {
+          "reference": "urn:uuid:c58aee2f-2f25-4a41-be8e-1b9b8cf28e90"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:c055c25c-4f9a-4f36-8c54-e91ca6e7794f",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "c055c25c-4f9a-4f36-8c54-e91ca6e7794f",
+        "identifier": [
+          {
+            "system": "https://healthid.ndhm.gov.in",
+            "value": "testinguser15@sbx"
+          },
+          {
+            "system": "https://abdm.gov.in/abha-number",
+            "value": "91-4657-2013-7499"
+          }
+        ],
+        "name": [
+          {
+            "text": "Aarav Sharma"
+          }
+        ],
+        "gender": "male",
+        "birthDate": "1966-01-01",
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "9337384804"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:12abfb30-d72c-49f1-b548-5cb68fde6b2b",
+      "resource": {
+        "resourceType": "Practitioner",
+        "id": "12abfb30-d72c-49f1-b548-5cb68fde6b2b",
+        "name": [
+          {
+            "text": "Dr. Neha Kapoor"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:c58aee2f-2f25-4a41-be8e-1b9b8cf28e90",
+      "resource": {
+        "resourceType": "Organization",
+        "id": "c58aee2f-2f25-4a41-be8e-1b9b8cf28e90",
+        "name": "WELLNESS_FAM"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:96d50514-1236-4207-b943-d37c384192d1",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "96d50514-1236-4207-b943-d37c384192d1",
+        "status": "finished",
+        "class": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code": "AMB",
+          "display": "ambulatory"
+        },
+        "subject": {
+          "reference": "urn:uuid:c055c25c-4f9a-4f36-8c54-e91ca6e7794f"
+        },
+        "period": {
+          "start": "2026-08-21T00:00:00+05:30"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:c0beeee9-4ce0-4364-827c-16825215efb5",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "id": "c0beeee9-4ce0-4364-827c-16825215efb5",
+        "status": "active",
+        "intent": "order",
+        "medicationCodeableConcept": {
+          "text": "Salbutamol Inhaler"
+        },
+        "subject": {
+          "reference": "urn:uuid:c055c25c-4f9a-4f36-8c54-e91ca6e7794f"
+        },
+        "dosageInstruction": [
+          {
+            "text": "100 mcg, As needed, for 30 days"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:33557023-a3be-4a55-8c37-1715ec999f88",
+      "resource": {
+        "resourceType": "Binary",
+        "id": "33557023-a3be-4a55-8c37-1715ec999f88",
+        "contentType": "image/jpeg",
+        "extension": [
+          {
+            "url": "http://example.org/fhir/StructureDefinition/source-url",
+            "valueUrl": "https://storage.abdm-sandbox.example/178725313507023/prescription_slip_R084.jpg"
+          }
+        ],
+        "data": "PLACEHOLDER_BASE64=="
+      }
+    }
+  ]
+}

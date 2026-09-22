@@ -1,0 +1,306 @@
+{
+  "resourceType": "Bundle",
+  "meta": {
+    "profile": [
+      "https://nrces.in/ndhm/fhir/r4/StructureDefinition/DocumentBundle"
+    ]
+  },
+  "identifier": {
+    "system": "https://nrces.in/ndhm/fhir/r4/identifier",
+    "value": "cc-d6d7ca05c042413f"
+  },
+  "type": "document",
+  "timestamp": "2026-09-07T06:32:31.745898+00:00",
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:e0443aa7-25f7-4add-8e53-ee480b3dd366",
+      "resource": {
+        "resourceType": "Composition",
+        "meta": {
+          "profile": [
+            "https://nrces.in/ndhm/fhir/r4/StructureDefinition/DiagnosticReportRecord"
+          ]
+        },
+        "language": "en-IN",
+        "status": "final",
+        "type": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "721981007",
+              "display": "Diagnostic studies report"
+            }
+          ],
+          "text": "Diagnostic studies report"
+        },
+        "subject": {
+          "reference": "urn:uuid:82df7cf3-ae5f-48d0-b27e-e010b9a6e5a1",
+          "type": "Patient"
+        },
+        "encounter": {
+          "reference": "urn:uuid:ccbb10bc-e48e-4fc4-88e9-289c97514331",
+          "type": "Encounter"
+        },
+        "date": "2026-09-07T06:32:31.745898+00:00",
+        "author": [
+          {
+            "reference": "urn:uuid:59548b64-b5b9-4834-8db4-273855b35c39",
+            "type": "Practitioner"
+          }
+        ],
+        "title": "Diagnostic Report",
+        "section": [
+          {
+            "title": "Diagnostic Report",
+            "text": {
+              "status": "generated",
+              "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Section</b></p><p>Diagnostic report with interpretation and supporting document.</p></div>"
+            },
+            "entry": [
+              {
+                "reference": "urn:uuid:52b6ec0f-a3d7-4cec-adaf-71a8c9d36dc3"
+              }
+            ],
+            "code": {
+              "coding": [
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "721981007",
+                  "display": "Diagnostic studies report"
+                }
+              ],
+              "text": "Diagnostic Report"
+            }
+          }
+        ],
+        "custodian": {
+          "reference": "urn:uuid:fd644248-ef13-41ef-91a0-3c01a99e5435",
+          "type": "Organization"
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Composition</b></p><p>Diagnostic Report - 07 Sep 2026</p></div>"
+        },
+        "id": "e0443aa7-25f7-4add-8e53-ee480b3dd366"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:82df7cf3-ae5f-48d0-b27e-e010b9a6e5a1",
+      "resource": {
+        "resourceType": "Patient",
+        "meta": {
+          "profile": [
+            "https://nrces.in/ndhm/fhir/r4/StructureDefinition/Patient"
+          ]
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Patient</b></p><p>K Manikandan</p></div>"
+        },
+        "name": [
+          {
+            "text": "K Manikandan"
+          }
+        ],
+        "identifier": [
+          {
+            "type": {
+              "coding": [
+                {
+                  "system": "https://nrces.in/ndhm/fhir/r4/CodeSystem/ndhm-identifier-type-code",
+                  "code": "ABHA",
+                  "display": "Ayushman Bharat Health Account (ABHA) ID"
+                }
+              ]
+            },
+            "value": "testingmani@sbx"
+          },
+          {
+            "value": "91-3385-4230-7057"
+          }
+        ],
+        "gender": "male",
+        "birthDate": "2001-01-01",
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "6382769129",
+            "use": "mobile"
+          }
+        ],
+        "id": "82df7cf3-ae5f-48d0-b27e-e010b9a6e5a1"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:59548b64-b5b9-4834-8db4-273855b35c39",
+      "resource": {
+        "resourceType": "Practitioner",
+        "meta": {
+          "profile": [
+            "https://nrces.in/ndhm/fhir/r4/StructureDefinition/Practitioner"
+          ]
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Practitioner</b></p><p>Practitioner</p></div>"
+        },
+        "name": [
+          {
+            "text": "Practitioner"
+          }
+        ],
+        "id": "59548b64-b5b9-4834-8db4-273855b35c39"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:fd644248-ef13-41ef-91a0-3c01a99e5435",
+      "resource": {
+        "resourceType": "Organization",
+        "meta": {
+          "profile": [
+            "https://nrces.in/ndhm/fhir/r4/StructureDefinition/Organization"
+          ]
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Organization</b></p><p>SRM_CHENNAI</p></div>"
+        },
+        "name": "SRM_CHENNAI",
+        "identifier": [
+          {
+            "value": "SRM_CHENNAI"
+          }
+        ],
+        "id": "fd644248-ef13-41ef-91a0-3c01a99e5435"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:1a417f8d-5ebd-4ac0-b8ac-64752290521b",
+      "resource": {
+        "resourceType": "PractitionerRole",
+        "meta": {
+          "profile": [
+            "https://nrces.in/ndhm/fhir/r4/StructureDefinition/PractitionerRole"
+          ]
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>PractitionerRole</b></p><p>Healthcare practitioner</p></div>"
+        },
+        "practitioner": {
+          "reference": "urn:uuid:59548b64-b5b9-4834-8db4-273855b35c39",
+          "type": "Practitioner"
+        },
+        "organization": {
+          "reference": "urn:uuid:fd644248-ef13-41ef-91a0-3c01a99e5435",
+          "type": "Organization"
+        },
+        "code": [
+          {
+            "text": "Healthcare practitioner"
+          }
+        ],
+        "id": "1a417f8d-5ebd-4ac0-b8ac-64752290521b"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:ccbb10bc-e48e-4fc4-88e9-289c97514331",
+      "resource": {
+        "resourceType": "Encounter",
+        "meta": {
+          "profile": [
+            "https://nrces.in/ndhm/fhir/r4/StructureDefinition/Encounter"
+          ]
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Encounter</b></p><p>ENC-P002-002</p></div>"
+        },
+        "status": "finished",
+        "class": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code": "AMB",
+          "display": "ambulatory"
+        },
+        "subject": {
+          "reference": "urn:uuid:82df7cf3-ae5f-48d0-b27e-e010b9a6e5a1",
+          "type": "Patient"
+        },
+        "identifier": [
+          {
+            "value": "ENC-P002-002"
+          }
+        ],
+        "period": {
+          "start": "2026-09-07"
+        },
+        "participant": [
+          {
+            "individual": {
+              "reference": "urn:uuid:59548b64-b5b9-4834-8db4-273855b35c39",
+              "type": "Practitioner"
+            }
+          }
+        ],
+        "serviceProvider": {
+          "reference": "urn:uuid:fd644248-ef13-41ef-91a0-3c01a99e5435",
+          "type": "Organization"
+        },
+        "id": "ccbb10bc-e48e-4fc4-88e9-289c97514331"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:52b6ec0f-a3d7-4cec-adaf-71a8c9d36dc3",
+      "resource": {
+        "resourceType": "DiagnosticReport",
+        "meta": {
+          "profile": [
+            "https://nrces.in/ndhm/fhir/r4/StructureDefinition/DiagnosticReportLab"
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/v2-0074",
+                "code": "LAB",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "text": "Laboratory diagnostic report"
+        },
+        "subject": {
+          "reference": "urn:uuid:82df7cf3-ae5f-48d0-b27e-e010b9a6e5a1",
+          "type": "Patient"
+        },
+        "encounter": {
+          "reference": "urn:uuid:ccbb10bc-e48e-4fc4-88e9-289c97514331",
+          "type": "Encounter"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:fd644248-ef13-41ef-91a0-3c01a99e5435",
+            "type": "Organization"
+          }
+        ],
+        "resultsInterpreter": [
+          {
+            "reference": "urn:uuid:59548b64-b5b9-4834-8db4-273855b35c39",
+            "type": "Practitioner"
+          }
+        ],
+        "effectiveDateTime": "2026-09-07T00:00:00+05:30",
+        "issued": "2026-09-07T06:32:31.745898+00:00",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>DiagnosticReport</b></p><p>Laboratory diagnostic report</p></div>"
+        },
+        "id": "52b6ec0f-a3d7-4cec-adaf-71a8c9d36dc3"
+      }
+    }
+  ]
+}

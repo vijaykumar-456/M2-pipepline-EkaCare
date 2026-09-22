@@ -1,0 +1,199 @@
+{
+  "resourceType": "Bundle",
+  "id": "DiagnosticReport-R010",
+  "meta": {
+    "profile": [
+      "https://nrces.in/ndhm/fhir/r4/StructureDefinition/DocumentBundle"
+    ]
+  },
+  "identifier": {
+    "system": "http://hip.in",
+    "value": "bundle-R010"
+  },
+  "type": "document",
+  "timestamp": "2026-09-10T04:52:40+05:30",
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:c9f3f570-54aa-4cfe-b321-13e1655fc482",
+      "resource": {
+        "resourceType": "Composition",
+        "id": "c9f3f570-54aa-4cfe-b321-13e1655fc482",
+        "meta": {
+          "profile": [
+            "https://nrces.in/ndhm/fhir/r4/StructureDefinition/DiagnosticReportRecord"
+          ]
+        },
+        "language": "en-IN",
+        "status": "final",
+        "type": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "721981007",
+              "display": "Diagnostic studies report"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:909a4cbe-e0b2-4b24-b251-50f10a9bba46"
+        },
+        "date": "2026-09-10T04:52:40+05:30",
+        "title": "DiagnosticReport Record",
+        "section": [
+          {
+            "title": "Investigation",
+            "entry": [
+              {
+                "reference": "urn:uuid:9ded8a5e-8ce5-45e6-a00e-36c7f251c0ce"
+              },
+              {
+                "reference": "urn:uuid:592a6aea-8b8c-4600-835d-755cb87e0bc5"
+              }
+            ],
+            "code": {
+              "coding": [
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "721981007",
+                  "display": "Diagnostic studies report"
+                }
+              ]
+            }
+          }
+        ],
+        "author": [
+          {
+            "reference": "urn:uuid:c524909b-700b-4df9-a900-f2505431d010"
+          }
+        ],
+        "encounter": {
+          "reference": "urn:uuid:4058e0cf-9dab-4aa5-98f8-7eace92c5062"
+        },
+        "custodian": {
+          "reference": "urn:uuid:36c52e86-f430-4472-94b6-440985fa02be"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:909a4cbe-e0b2-4b24-b251-50f10a9bba46",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "909a4cbe-e0b2-4b24-b251-50f10a9bba46",
+        "identifier": [
+          {
+            "system": "https://healthid.ndhm.gov.in",
+            "value": "rohan.s@sbx"
+          },
+          {
+            "system": "https://abdm.gov.in/abha-number",
+            "value": "91-2167-8890-5546"
+          }
+        ],
+        "name": [
+          {
+            "text": "Rohan Sharma"
+          }
+        ],
+        "gender": "male",
+        "birthDate": "1988-01-01",
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "9567891234"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:c524909b-700b-4df9-a900-f2505431d010",
+      "resource": {
+        "resourceType": "Practitioner",
+        "id": "c524909b-700b-4df9-a900-f2505431d010",
+        "name": [
+          {
+            "text": "Dr. Kunal Mehta"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:36c52e86-f430-4472-94b6-440985fa02be",
+      "resource": {
+        "resourceType": "Organization",
+        "id": "36c52e86-f430-4472-94b6-440985fa02be",
+        "name": "APEX_DIAG"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:4058e0cf-9dab-4aa5-98f8-7eace92c5062",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "4058e0cf-9dab-4aa5-98f8-7eace92c5062",
+        "status": "finished",
+        "class": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code": "AMB",
+          "display": "ambulatory"
+        },
+        "subject": {
+          "reference": "urn:uuid:909a4cbe-e0b2-4b24-b251-50f10a9bba46"
+        },
+        "period": {
+          "start": "2026-09-06T00:00:00+05:30"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:9ded8a5e-8ce5-45e6-a00e-36c7f251c0ce",
+      "resource": {
+        "resourceType": "DiagnosticReport",
+        "id": "9ded8a5e-8ce5-45e6-a00e-36c7f251c0ce",
+        "meta": {
+          "profile": [
+            "https://nrces.in/ndhm/fhir/r4/StructureDefinition/DiagnosticReportLab"
+          ]
+        },
+        "status": "final",
+        "code": {
+          "text": "HbA1c",
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "4548-4",
+              "display": "HbA1c"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:909a4cbe-e0b2-4b24-b251-50f10a9bba46"
+        },
+        "conclusion": "HbA1c 6.8%",
+        "issued": "2026-09-06T09:00:00+05:30"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:592a6aea-8b8c-4600-835d-755cb87e0bc5",
+      "resource": {
+        "resourceType": "DocumentReference",
+        "id": "592a6aea-8b8c-4600-835d-755cb87e0bc5",
+        "status": "current",
+        "subject": {
+          "reference": "urn:uuid:909a4cbe-e0b2-4b24-b251-50f10a9bba46"
+        },
+        "content": [
+          {
+            "attachment": {
+              "contentType": "application/pdf",
+              "url": "https://storage.abdm-sandbox.example/P010/lab_report_R010.pdf",
+              "title": "Laboratory test report (CBC/LFT/lipid panel)",
+              "size": 225280
+            }
+          }
+        ],
+        "type": {
+          "text": "Lab Report"
+        }
+      }
+    }
+  ]
+}

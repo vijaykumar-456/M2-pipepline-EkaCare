@@ -1,0 +1,270 @@
+{
+  "resourceType": "Bundle",
+  "type": "document",
+  "identifier": {
+    "system": "https://ndhm.in/phr",
+    "value": "cc-f52d7656ae88466a"
+  },
+  "timestamp": "2026-09-08T07:56:13.351026+00:00",
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:2d8cf224-c2c9-4a1d-9649-c69c8729b41e",
+      "resource": {
+        "resourceType": "Composition",
+        "meta": {
+          "profile": [
+            "https://nrces.in/ndhm/fhir/r4/StructureDefinition/HealthDocumentRecord"
+          ]
+        },
+        "language": "en-IN",
+        "status": "final",
+        "type": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "419891008",
+              "display": "Record artifact"
+            }
+          ],
+          "text": "Record artifact"
+        },
+        "subject": {
+          "reference": "urn:uuid:a710199d-2229-4bb6-bf0f-4dab00799325"
+        },
+        "encounter": {
+          "reference": "urn:uuid:58ab16fc-fac9-42ac-a001-b9f258905bfb"
+        },
+        "date": "2026-09-08T07:56:13.351026+00:00",
+        "author": [
+          {
+            "reference": "urn:uuid:7cc3b222-1b8d-43db-870f-7797b6b25df4"
+          }
+        ],
+        "title": "Health Document Record",
+        "section": [
+          {
+            "title": "Document Reference",
+            "entry": [
+              {
+                "reference": "urn:uuid:c9b9eb25-978c-4f34-8fae-246074e56d01"
+              }
+            ],
+            "code": {
+              "text": "Document Reference"
+            }
+          },
+          {
+            "title": "Clinical Notes",
+            "entry": [
+              {
+                "reference": "urn:uuid:1cd5caa1-6986-4a8f-9bbb-9948d129c5ef"
+              }
+            ],
+            "code": {
+              "text": "Clinical Notes"
+            }
+          }
+        ],
+        "custodian": {
+          "reference": "urn:uuid:dab6fa67-3d4c-49b1-8ba2-df4fdf99b9a1"
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Composition</b></p><p>Health Document - 07 Sep 2026</p></div>"
+        },
+        "id": "2d8cf224-c2c9-4a1d-9649-c69c8729b41e"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:a710199d-2229-4bb6-bf0f-4dab00799325",
+      "resource": {
+        "resourceType": "Patient",
+        "meta": {
+          "profile": [
+            "https://nrces.in/ndhm/fhir/r4/StructureDefinition/Patient"
+          ]
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Patient</b></p><p>Vijay Kumar</p></div>"
+        },
+        "identifier": [
+          {
+            "type": {
+              "coding": [
+                {
+                  "system": "https://nrces.in/ndhm/fhir/r4/CodeSystem/ndhm-identifier-type-code",
+                  "code": "ABHA",
+                  "display": "Ayushman Bharat Health Account (ABHA) ID"
+                }
+              ]
+            },
+            "value": "testinguser12@sbx"
+          },
+          {
+            "value": "91-5510-3107-6211"
+          }
+        ],
+        "name": [
+          {
+            "text": "Vijay Kumar"
+          }
+        ],
+        "gender": "male",
+        "birthDate": "1998-01-01",
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "7483976167",
+            "use": "mobile"
+          }
+        ],
+        "id": "a710199d-2229-4bb6-bf0f-4dab00799325"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:7cc3b222-1b8d-43db-870f-7797b6b25df4",
+      "resource": {
+        "resourceType": "Practitioner",
+        "meta": {
+          "profile": [
+            "https://nrces.in/ndhm/fhir/r4/StructureDefinition/Practitioner"
+          ]
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Practitioner</b></p><p>Dr. Arun Kumar</p></div>"
+        },
+        "name": [
+          {
+            "text": "Dr. Arun Kumar"
+          }
+        ],
+        "id": "7cc3b222-1b8d-43db-870f-7797b6b25df4"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:dab6fa67-3d4c-49b1-8ba2-df4fdf99b9a1",
+      "resource": {
+        "resourceType": "Organization",
+        "meta": {
+          "profile": [
+            "https://nrces.in/ndhm/fhir/r4/StructureDefinition/Organization"
+          ]
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Organization</b></p><p>SRM_CHENNAI</p></div>"
+        },
+        "identifier": [
+          {
+            "value": "SRM_CHENNAI"
+          }
+        ],
+        "name": "SRM_CHENNAI",
+        "id": "dab6fa67-3d4c-49b1-8ba2-df4fdf99b9a1"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:58ab16fc-fac9-42ac-a001-b9f258905bfb",
+      "resource": {
+        "resourceType": "Encounter",
+        "meta": {
+          "profile": [
+            "https://nrces.in/ndhm/fhir/r4/StructureDefinition/Encounter"
+          ]
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Encounter</b></p><p>ENC-P001-012</p></div>"
+        },
+        "identifier": [
+          {
+            "value": "ENC-P001-012"
+          }
+        ],
+        "status": "finished",
+        "class": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code": "AMB",
+          "display": "ambulatory"
+        },
+        "subject": {
+          "reference": "urn:uuid:a710199d-2229-4bb6-bf0f-4dab00799325"
+        },
+        "period": {
+          "start": "2026-09-07"
+        },
+        "participant": [
+          {
+            "individual": {
+              "reference": "urn:uuid:7cc3b222-1b8d-43db-870f-7797b6b25df4"
+            }
+          }
+        ],
+        "serviceProvider": {
+          "reference": "urn:uuid:dab6fa67-3d4c-49b1-8ba2-df4fdf99b9a1"
+        },
+        "id": "58ab16fc-fac9-42ac-a001-b9f258905bfb"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:c9b9eb25-978c-4f34-8fae-246074e56d01",
+      "resource": {
+        "resourceType": "DocumentReference",
+        "meta": {
+          "profile": [
+            "https://nrces.in/ndhm/fhir/r4/StructureDefinition/DocumentReference"
+          ]
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>DocumentReference</b></p><p>Health Document</p></div>"
+        },
+        "status": "current",
+        "type": {
+          "text": "Health Document"
+        },
+        "subject": {
+          "reference": "urn:uuid:a710199d-2229-4bb6-bf0f-4dab00799325"
+        },
+        "date": "2026-09-07T00:00:00+05:30",
+        "content": [
+          {
+            "attachment": {
+              "contentType": "application/octet-stream"
+            }
+          }
+        ],
+        "context": {
+          "encounter": [
+            {
+              "reference": "urn:uuid:58ab16fc-fac9-42ac-a001-b9f258905bfb"
+            }
+          ]
+        },
+        "id": "c9b9eb25-978c-4f34-8fae-246074e56d01"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:1cd5caa1-6986-4a8f-9bbb-9948d129c5ef",
+      "resource": {
+        "resourceType": "CarePlan",
+        "status": "active",
+        "intent": "proposal",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>CarePlan</b></p><p>Patient evaluated during outpatient consultation.</p></div>"
+        },
+        "description": "Patient evaluated during outpatient consultation.",
+        "subject": {
+          "reference": "urn:uuid:a710199d-2229-4bb6-bf0f-4dab00799325"
+        },
+        "encounter": {
+          "reference": "urn:uuid:58ab16fc-fac9-42ac-a001-b9f258905bfb"
+        },
+        "id": "1cd5caa1-6986-4a8f-9bbb-9948d129c5ef"
+      }
+    }
+  ]
+}

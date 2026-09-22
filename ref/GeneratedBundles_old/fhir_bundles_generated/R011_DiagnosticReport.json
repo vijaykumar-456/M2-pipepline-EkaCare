@@ -1,0 +1,191 @@
+{
+  "resourceType": "Bundle",
+  "id": "DiagnosticReport-R011",
+  "meta": {
+    "profile": [
+      "https://nrces.in/ndhm/fhir/r4/StructureDefinition/DocumentBundle"
+    ]
+  },
+  "identifier": {
+    "system": "http://hip.in",
+    "value": "bundle-R011"
+  },
+  "type": "document",
+  "timestamp": "2026-09-10T04:52:40+05:30",
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:710f8fcc-4748-4a46-b08b-da78eea86ddc",
+      "resource": {
+        "resourceType": "Composition",
+        "id": "710f8fcc-4748-4a46-b08b-da78eea86ddc",
+        "meta": {
+          "profile": [
+            "https://nrces.in/ndhm/fhir/r4/StructureDefinition/DiagnosticReportRecord"
+          ]
+        },
+        "language": "en-IN",
+        "status": "final",
+        "type": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "721981007",
+              "display": "Diagnostic studies report"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:e67b140d-c7bd-4fd6-923a-ef215b56bbfc"
+        },
+        "date": "2026-09-10T04:52:40+05:30",
+        "title": "DiagnosticReport Record",
+        "section": [
+          {
+            "title": "Investigation",
+            "entry": [
+              {
+                "reference": "urn:uuid:b603fe32-5ad9-4c27-af74-a4ed9e1d4b89"
+              },
+              {
+                "reference": "urn:uuid:e314db63-718d-40cd-a498-b8c7758fd309"
+              }
+            ],
+            "code": {
+              "coding": [
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "721981007",
+                  "display": "Diagnostic studies report"
+                }
+              ]
+            }
+          }
+        ],
+        "author": [
+          {
+            "reference": "urn:uuid:91eca89d-91f1-47bd-bc37-9a030c5ebe46"
+          }
+        ],
+        "encounter": {
+          "reference": "urn:uuid:697aeb18-a8cd-442c-9bed-ef2cce9b4fd2"
+        },
+        "custodian": {
+          "reference": "urn:uuid:f0b6aa31-76bd-47cf-ae1d-97b18bc50caf"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:e67b140d-c7bd-4fd6-923a-ef215b56bbfc",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "e67b140d-c7bd-4fd6-923a-ef215b56bbfc",
+        "identifier": [
+          {
+            "system": "https://healthid.ndhm.gov.in",
+            "value": "testinguser12@sbx"
+          },
+          {
+            "system": "https://abdm.gov.in/abha-number",
+            "value": "91-5510-3107-5125"
+          }
+        ],
+        "name": [
+          {
+            "text": "Vijay Kumar"
+          }
+        ],
+        "gender": "male",
+        "birthDate": "1998-01-01",
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "9876543210"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:91eca89d-91f1-47bd-bc37-9a030c5ebe46",
+      "resource": {
+        "resourceType": "Practitioner",
+        "id": "91eca89d-91f1-47bd-bc37-9a030c5ebe46",
+        "name": [
+          {
+            "text": "Dr. Priyanka Iyer"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:f0b6aa31-76bd-47cf-ae1d-97b18bc50caf",
+      "resource": {
+        "resourceType": "Organization",
+        "id": "f0b6aa31-76bd-47cf-ae1d-97b18bc50caf",
+        "name": "RAINBOW_CHILD"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:697aeb18-a8cd-442c-9bed-ef2cce9b4fd2",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "697aeb18-a8cd-442c-9bed-ef2cce9b4fd2",
+        "status": "finished",
+        "class": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code": "AMB",
+          "display": "ambulatory"
+        },
+        "subject": {
+          "reference": "urn:uuid:e67b140d-c7bd-4fd6-923a-ef215b56bbfc"
+        },
+        "period": {
+          "start": "2026-08-31T00:00:00+05:30"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:b603fe32-5ad9-4c27-af74-a4ed9e1d4b89",
+      "resource": {
+        "resourceType": "DiagnosticReport",
+        "id": "b603fe32-5ad9-4c27-af74-a4ed9e1d4b89",
+        "meta": {
+          "profile": [
+            "https://nrces.in/ndhm/fhir/r4/StructureDefinition/DiagnosticReportImaging"
+          ]
+        },
+        "status": "final",
+        "code": {
+          "text": "CT"
+        },
+        "subject": {
+          "reference": "urn:uuid:e67b140d-c7bd-4fd6-923a-ef215b56bbfc"
+        },
+        "issued": "2026-08-31T09:00:00+05:30"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:e314db63-718d-40cd-a498-b8c7758fd309",
+      "resource": {
+        "resourceType": "DocumentReference",
+        "id": "e314db63-718d-40cd-a498-b8c7758fd309",
+        "status": "current",
+        "subject": {
+          "reference": "urn:uuid:e67b140d-c7bd-4fd6-923a-ef215b56bbfc"
+        },
+        "content": [
+          {
+            "attachment": {
+              "contentType": "image/png",
+              "url": "https://storage.abdm-sandbox.example/P001/ct_scan_images_R011.png",
+              "title": "CT abdomen axial slice export",
+              "size": 9011200
+            }
+          }
+        ],
+        "type": {
+          "text": "CT Scan Images"
+        }
+      }
+    }
+  ]
+}

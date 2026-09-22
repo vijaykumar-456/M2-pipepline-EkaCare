@@ -1,0 +1,158 @@
+{
+  "resourceType": "Bundle",
+  "id": "HealthDocumentRecord-R062",
+  "meta": {
+    "profile": [
+      "https://nrces.in/ndhm/fhir/r4/StructureDefinition/DocumentBundle"
+    ]
+  },
+  "identifier": {
+    "system": "http://hip.in",
+    "value": "bundle-R062"
+  },
+  "type": "document",
+  "timestamp": "2026-09-10T05:12:37+05:30",
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:26f6dd3a-b2de-4755-a734-82ed0c6b4873",
+      "resource": {
+        "resourceType": "Composition",
+        "id": "26f6dd3a-b2de-4755-a734-82ed0c6b4873",
+        "meta": {
+          "profile": [
+            "https://nrces.in/ndhm/fhir/r4/StructureDefinition/HealthDocumentRecord"
+          ]
+        },
+        "language": "en-IN",
+        "status": "final",
+        "type": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "419891008",
+              "display": "Record artifact"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:c28dbb6a-138d-4377-9356-c118966a04ef"
+        },
+        "date": "2026-09-10T05:12:37+05:30",
+        "title": "HealthDocumentRecord Record",
+        "section": [
+          {
+            "entry": [
+              {
+                "reference": "urn:uuid:301fb8b0-5bff-4c2c-a2d0-9394ae2dc04f"
+              }
+            ]
+          }
+        ],
+        "author": [
+          {
+            "reference": "urn:uuid:37d216de-b889-432b-888f-4d944d5a681c"
+          }
+        ],
+        "encounter": {
+          "reference": "urn:uuid:38c87b79-745d-4010-a1d6-78ff6cbd9a32"
+        },
+        "custodian": {
+          "reference": "urn:uuid:ad881a82-4f7a-4d3f-b71c-8f0a73ab734c"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:c28dbb6a-138d-4377-9356-c118966a04ef",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "c28dbb6a-138d-4377-9356-c118966a04ef",
+        "identifier": [
+          {
+            "system": "https://healthid.ndhm.gov.in",
+            "value": "testinguser33@sbx"
+          },
+          {
+            "system": "https://abdm.gov.in/abha-number",
+            "value": "91-1884-8481-7428"
+          }
+        ],
+        "name": [
+          {
+            "text": "Rahul Nair"
+          }
+        ],
+        "gender": "male",
+        "birthDate": "2010-01-01",
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "9528400257"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:37d216de-b889-432b-888f-4d944d5a681c",
+      "resource": {
+        "resourceType": "Practitioner",
+        "id": "37d216de-b889-432b-888f-4d944d5a681c",
+        "name": [
+          {
+            "text": "Dr. Kunal Mehta"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:ad881a82-4f7a-4d3f-b71c-8f0a73ab734c",
+      "resource": {
+        "resourceType": "Organization",
+        "id": "ad881a82-4f7a-4d3f-b71c-8f0a73ab734c",
+        "name": "SUNRISE_HOSP"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:38c87b79-745d-4010-a1d6-78ff6cbd9a32",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "38c87b79-745d-4010-a1d6-78ff6cbd9a32",
+        "status": "finished",
+        "class": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code": "AMB",
+          "display": "ambulatory"
+        },
+        "subject": {
+          "reference": "urn:uuid:c28dbb6a-138d-4377-9356-c118966a04ef"
+        },
+        "period": {
+          "start": "2026-08-22T00:00:00+05:30"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:301fb8b0-5bff-4c2c-a2d0-9394ae2dc04f",
+      "resource": {
+        "resourceType": "DocumentReference",
+        "id": "301fb8b0-5bff-4c2c-a2d0-9394ae2dc04f",
+        "status": "current",
+        "subject": {
+          "reference": "urn:uuid:c28dbb6a-138d-4377-9356-c118966a04ef"
+        },
+        "content": [
+          {
+            "attachment": {
+              "contentType": "image/jpeg",
+              "url": "https://storage.abdm-sandbox.example/178782409721010/prescription_slip_R062.jpg",
+              "title": "Photograph of handwritten prescription slip",
+              "size": 624640
+            }
+          }
+        ],
+        "type": {
+          "text": "Prescription Slip"
+        }
+      }
+    }
+  ]
+}

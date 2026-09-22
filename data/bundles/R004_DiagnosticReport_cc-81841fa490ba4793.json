@@ -1,0 +1,289 @@
+{
+  "resourceType": "Bundle",
+  "type": "document",
+  "identifier": {
+    "system": "https://ndhm.in/phr",
+    "value": "cc-81841fa490ba4793"
+  },
+  "timestamp": "2026-08-31T07:26:47.082312+00:00",
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:ab13762f-0499-47d3-b4ae-e0dea7f37c22",
+      "resource": {
+        "resourceType": "Composition",
+        "meta": {
+          "profile": [
+            "https://nrces.in/ndhm/fhir/r4/StructureDefinition/DiagnosticReportRecord"
+          ]
+        },
+        "language": "en-IN",
+        "status": "final",
+        "type": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "721981007",
+              "display": "Diagnostic report - laboratory"
+            }
+          ],
+          "text": "Diagnostic report - laboratory"
+        },
+        "subject": {
+          "reference": "urn:uuid:23bd80c6-cd56-4921-9086-2b593410c66e"
+        },
+        "encounter": {
+          "reference": "urn:uuid:6bc306d7-b70c-40b9-bc00-e3f383c270ee"
+        },
+        "date": "2026-08-31T07:26:47.082312+00:00",
+        "author": [
+          {
+            "reference": "urn:uuid:e7398cc1-a9be-490a-9e2f-ce3abfd51a74"
+          }
+        ],
+        "title": "Diagnostic Report",
+        "section": [
+          {
+            "title": "Diagnostic Report",
+            "entry": [
+              {
+                "reference": "urn:uuid:362b36ef-6a1c-47d6-a4d2-840923d182cf"
+              }
+            ],
+            "code": {
+              "text": "Diagnostic Report"
+            }
+          },
+          {
+            "title": "Supporting Document",
+            "entry": [
+              {
+                "reference": "urn:uuid:7ab68b68-47d2-46ef-932a-89adb85088dc"
+              }
+            ],
+            "code": {
+              "text": "Supporting Document"
+            }
+          }
+        ],
+        "custodian": {
+          "reference": "urn:uuid:7ea42cf9-fcbb-4a78-a92a-9336da76cca9"
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Composition</b></p><p>Diagnostic Report - 28 Aug 2026</p></div>"
+        },
+        "id": "ab13762f-0499-47d3-b4ae-e0dea7f37c22"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:23bd80c6-cd56-4921-9086-2b593410c66e",
+      "resource": {
+        "resourceType": "Patient",
+        "meta": {
+          "profile": [
+            "https://nrces.in/ndhm/fhir/r4/StructureDefinition/Patient"
+          ]
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Patient</b></p><p>Vijay Kumar</p></div>"
+        },
+        "identifier": [
+          {
+            "type": {
+              "coding": [
+                {
+                  "system": "https://nrces.in/ndhm/fhir/r4/CodeSystem/ndhm-identifier-type-code",
+                  "code": "ABHA",
+                  "display": "Ayushman Bharat Health Account (ABHA) ID"
+                }
+              ]
+            },
+            "value": "testinguser12@sbx"
+          },
+          {
+            "value": "91-5510-3107-6211"
+          }
+        ],
+        "name": [
+          {
+            "text": "Vijay Kumar"
+          }
+        ],
+        "gender": "male",
+        "birthDate": "1998-01-01",
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "7483976167",
+            "use": "mobile"
+          }
+        ],
+        "id": "23bd80c6-cd56-4921-9086-2b593410c66e"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:e7398cc1-a9be-490a-9e2f-ce3abfd51a74",
+      "resource": {
+        "resourceType": "Practitioner",
+        "meta": {
+          "profile": [
+            "https://nrces.in/ndhm/fhir/r4/StructureDefinition/Practitioner"
+          ]
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Practitioner</b></p><p>Dr. Arun Kumar</p></div>"
+        },
+        "name": [
+          {
+            "text": "Dr. Arun Kumar"
+          }
+        ],
+        "id": "e7398cc1-a9be-490a-9e2f-ce3abfd51a74"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:7ea42cf9-fcbb-4a78-a92a-9336da76cca9",
+      "resource": {
+        "resourceType": "Organization",
+        "meta": {
+          "profile": [
+            "https://nrces.in/ndhm/fhir/r4/StructureDefinition/Organization"
+          ]
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Organization</b></p><p>SRM_CHENNAI</p></div>"
+        },
+        "identifier": [
+          {
+            "value": "SRM_CHENNAI"
+          }
+        ],
+        "name": "SRM_CHENNAI",
+        "id": "7ea42cf9-fcbb-4a78-a92a-9336da76cca9"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:6bc306d7-b70c-40b9-bc00-e3f383c270ee",
+      "resource": {
+        "resourceType": "Encounter",
+        "meta": {
+          "profile": [
+            "https://nrces.in/ndhm/fhir/r4/StructureDefinition/Encounter"
+          ]
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Encounter</b></p><p>ENC-P001-005</p></div>"
+        },
+        "identifier": [
+          {
+            "value": "ENC-P001-005"
+          }
+        ],
+        "status": "finished",
+        "class": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code": "AMB",
+          "display": "ambulatory"
+        },
+        "subject": {
+          "reference": "urn:uuid:23bd80c6-cd56-4921-9086-2b593410c66e"
+        },
+        "period": {
+          "start": "28-08-2026"
+        },
+        "participant": [
+          {
+            "individual": {
+              "reference": "urn:uuid:e7398cc1-a9be-490a-9e2f-ce3abfd51a74"
+            }
+          }
+        ],
+        "serviceProvider": {
+          "reference": "urn:uuid:7ea42cf9-fcbb-4a78-a92a-9336da76cca9"
+        },
+        "id": "6bc306d7-b70c-40b9-bc00-e3f383c270ee"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:362b36ef-6a1c-47d6-a4d2-840923d182cf",
+      "resource": {
+        "resourceType": "DiagnosticReport",
+        "meta": {
+          "profile": [
+            "https://nrces.in/ndhm/fhir/r4/StructureDefinition/DiagnosticReportLab"
+          ]
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>DiagnosticReport</b></p><p>Laboratory diagnostic report</p></div>"
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/v2-0074",
+                "code": "LAB",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "text": "Laboratory diagnostic report"
+        },
+        "subject": {
+          "reference": "urn:uuid:23bd80c6-cd56-4921-9086-2b593410c66e"
+        },
+        "encounter": {
+          "reference": "urn:uuid:6bc306d7-b70c-40b9-bc00-e3f383c270ee"
+        },
+        "effectiveDateTime": "28-08-2026T00:00:00+05:30",
+        "issued": "2026-08-31T07:26:47.082312+00:00",
+        "id": "362b36ef-6a1c-47d6-a4d2-840923d182cf"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:7ab68b68-47d2-46ef-932a-89adb85088dc",
+      "resource": {
+        "resourceType": "DocumentReference",
+        "meta": {
+          "profile": [
+            "https://nrces.in/ndhm/fhir/r4/StructureDefinition/DocumentReference"
+          ]
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>DocumentReference</b></p><p>Diagnostic Report</p></div>"
+        },
+        "status": "current",
+        "type": {
+          "text": "Diagnostic Report"
+        },
+        "subject": {
+          "reference": "urn:uuid:23bd80c6-cd56-4921-9086-2b593410c66e"
+        },
+        "date": "28-08-2026T00:00:00+05:30",
+        "content": [
+          {
+            "attachment": {
+              "contentType": "application/octet-stream"
+            }
+          }
+        ],
+        "context": {
+          "encounter": [
+            {
+              "reference": "urn:uuid:6bc306d7-b70c-40b9-bc00-e3f383c270ee"
+            }
+          ]
+        },
+        "id": "7ab68b68-47d2-46ef-932a-89adb85088dc"
+      }
+    }
+  ]
+}

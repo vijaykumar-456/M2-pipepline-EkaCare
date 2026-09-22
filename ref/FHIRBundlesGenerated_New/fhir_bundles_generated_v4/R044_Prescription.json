@@ -1,0 +1,154 @@
+{
+  "resourceType": "Bundle",
+  "id": "Prescription-R044",
+  "meta": {
+    "profile": [
+      "https://nrces.in/ndhm/fhir/r4/StructureDefinition/DocumentBundle"
+    ]
+  },
+  "identifier": {
+    "system": "http://hip.in",
+    "value": "bundle-R044"
+  },
+  "type": "document",
+  "timestamp": "2026-09-10T05:12:37+05:30",
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:cf5a821b-818d-4a11-a1fa-51c14cb47307",
+      "resource": {
+        "resourceType": "Composition",
+        "id": "cf5a821b-818d-4a11-a1fa-51c14cb47307",
+        "meta": {
+          "profile": [
+            "https://nrces.in/ndhm/fhir/r4/StructureDefinition/PrescriptionRecord"
+          ]
+        },
+        "language": "en-IN",
+        "status": "final",
+        "type": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "440545006",
+              "display": "Prescription record"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:77e13bb7-0580-4973-b1e5-876583a25415"
+        },
+        "date": "2026-09-10T05:12:37+05:30",
+        "title": "Prescription Record",
+        "section": [
+          {
+            "entry": [
+              {
+                "reference": "urn:uuid:93c319d7-f3eb-43ea-ae5b-85114382d403"
+              }
+            ]
+          }
+        ],
+        "author": [
+          {
+            "reference": "urn:uuid:4dbc899d-90e3-4c1f-890e-4d54b8e1b458"
+          }
+        ],
+        "encounter": {
+          "reference": "urn:uuid:bc47741a-0776-4cef-b6a0-33551f616398"
+        },
+        "custodian": {
+          "reference": "urn:uuid:633c5175-8a48-4cae-8554-34f5566cf4e0"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:77e13bb7-0580-4973-b1e5-876583a25415",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "77e13bb7-0580-4973-b1e5-876583a25415",
+        "identifier": [
+          {
+            "system": "https://healthid.ndhm.gov.in",
+            "value": "testinguser15@sbx"
+          },
+          {
+            "system": "https://abdm.gov.in/abha-number",
+            "value": "91-4657-2013-7499"
+          }
+        ],
+        "name": [
+          {
+            "text": "Aarav Sharma"
+          }
+        ],
+        "gender": "male",
+        "birthDate": "1966-01-01",
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "9337384804"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:4dbc899d-90e3-4c1f-890e-4d54b8e1b458",
+      "resource": {
+        "resourceType": "Practitioner",
+        "id": "4dbc899d-90e3-4c1f-890e-4d54b8e1b458",
+        "name": [
+          {
+            "text": "Dr. Arun Kumar"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:633c5175-8a48-4cae-8554-34f5566cf4e0",
+      "resource": {
+        "resourceType": "Organization",
+        "id": "633c5175-8a48-4cae-8554-34f5566cf4e0",
+        "name": "WELLNESS_FAM"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:bc47741a-0776-4cef-b6a0-33551f616398",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "bc47741a-0776-4cef-b6a0-33551f616398",
+        "status": "finished",
+        "class": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code": "AMB",
+          "display": "ambulatory"
+        },
+        "subject": {
+          "reference": "urn:uuid:77e13bb7-0580-4973-b1e5-876583a25415"
+        },
+        "period": {
+          "start": "2026-09-04T00:00:00+05:30"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:93c319d7-f3eb-43ea-ae5b-85114382d403",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "id": "93c319d7-f3eb-43ea-ae5b-85114382d403",
+        "status": "active",
+        "intent": "order",
+        "medicationCodeableConcept": {
+          "text": "Ibuprofen"
+        },
+        "subject": {
+          "reference": "urn:uuid:77e13bb7-0580-4973-b1e5-876583a25415"
+        },
+        "dosageInstruction": [
+          {
+            "text": "400 mg, Twice daily, for 5 days"
+          }
+        ]
+      }
+    }
+  ]
+}

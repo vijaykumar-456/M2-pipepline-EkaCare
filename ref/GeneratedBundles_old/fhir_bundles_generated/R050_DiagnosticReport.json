@@ -1,0 +1,199 @@
+{
+  "resourceType": "Bundle",
+  "id": "DiagnosticReport-R050",
+  "meta": {
+    "profile": [
+      "https://nrces.in/ndhm/fhir/r4/StructureDefinition/DocumentBundle"
+    ]
+  },
+  "identifier": {
+    "system": "http://hip.in",
+    "value": "bundle-R050"
+  },
+  "type": "document",
+  "timestamp": "2026-09-10T04:52:40+05:30",
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:2c179b39-9101-4768-82c7-9e0b45a57b78",
+      "resource": {
+        "resourceType": "Composition",
+        "id": "2c179b39-9101-4768-82c7-9e0b45a57b78",
+        "meta": {
+          "profile": [
+            "https://nrces.in/ndhm/fhir/r4/StructureDefinition/DiagnosticReportRecord"
+          ]
+        },
+        "language": "en-IN",
+        "status": "final",
+        "type": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "721981007",
+              "display": "Diagnostic studies report"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:7742bc97-a7fc-4b2f-825d-63d86fc9bb0a"
+        },
+        "date": "2026-09-10T04:52:40+05:30",
+        "title": "DiagnosticReport Record",
+        "section": [
+          {
+            "title": "Investigation",
+            "entry": [
+              {
+                "reference": "urn:uuid:223f9226-e83c-441b-9628-55bb27fd5b24"
+              },
+              {
+                "reference": "urn:uuid:bff10da7-5f6d-4345-8f37-0eaea3b5fea7"
+              }
+            ],
+            "code": {
+              "coding": [
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "721981007",
+                  "display": "Diagnostic studies report"
+                }
+              ]
+            }
+          }
+        ],
+        "author": [
+          {
+            "reference": "urn:uuid:de0f938b-bdc5-4c9e-a2b5-c3d3795cabd1"
+          }
+        ],
+        "encounter": {
+          "reference": "urn:uuid:f7115404-b2be-4a83-a609-5a2e28e1d193"
+        },
+        "custodian": {
+          "reference": "urn:uuid:2885a047-2eaf-4bf8-ad70-57ba97a615c2"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:7742bc97-a7fc-4b2f-825d-63d86fc9bb0a",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "7742bc97-a7fc-4b2f-825d-63d86fc9bb0a",
+        "identifier": [
+          {
+            "system": "https://healthid.ndhm.gov.in",
+            "value": "rohan.s@sbx"
+          },
+          {
+            "system": "https://abdm.gov.in/abha-number",
+            "value": "91-2167-8890-5546"
+          }
+        ],
+        "name": [
+          {
+            "text": "Rohan Sharma"
+          }
+        ],
+        "gender": "male",
+        "birthDate": "1988-01-01",
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "9567891234"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:de0f938b-bdc5-4c9e-a2b5-c3d3795cabd1",
+      "resource": {
+        "resourceType": "Practitioner",
+        "id": "de0f938b-bdc5-4c9e-a2b5-c3d3795cabd1",
+        "name": [
+          {
+            "text": "Dr. Neha Kapoor"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:2885a047-2eaf-4bf8-ad70-57ba97a615c2",
+      "resource": {
+        "resourceType": "Organization",
+        "id": "2885a047-2eaf-4bf8-ad70-57ba97a615c2",
+        "name": "SRM_CHENNAI"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:f7115404-b2be-4a83-a609-5a2e28e1d193",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "f7115404-b2be-4a83-a609-5a2e28e1d193",
+        "status": "finished",
+        "class": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code": "AMB",
+          "display": "ambulatory"
+        },
+        "subject": {
+          "reference": "urn:uuid:7742bc97-a7fc-4b2f-825d-63d86fc9bb0a"
+        },
+        "period": {
+          "start": "2026-08-31T00:00:00+05:30"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:223f9226-e83c-441b-9628-55bb27fd5b24",
+      "resource": {
+        "resourceType": "DiagnosticReport",
+        "id": "223f9226-e83c-441b-9628-55bb27fd5b24",
+        "meta": {
+          "profile": [
+            "https://nrces.in/ndhm/fhir/r4/StructureDefinition/DiagnosticReportLab"
+          ]
+        },
+        "status": "final",
+        "code": {
+          "text": "HbA1c",
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "4548-4",
+              "display": "HbA1c"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:7742bc97-a7fc-4b2f-825d-63d86fc9bb0a"
+        },
+        "conclusion": "HbA1c 6.8%",
+        "issued": "2026-08-31T09:00:00+05:30"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:bff10da7-5f6d-4345-8f37-0eaea3b5fea7",
+      "resource": {
+        "resourceType": "DocumentReference",
+        "id": "bff10da7-5f6d-4345-8f37-0eaea3b5fea7",
+        "status": "current",
+        "subject": {
+          "reference": "urn:uuid:7742bc97-a7fc-4b2f-825d-63d86fc9bb0a"
+        },
+        "content": [
+          {
+            "attachment": {
+              "contentType": "application/pdf",
+              "url": "https://storage.abdm-sandbox.example/P010/lab_report_R050.pdf",
+              "title": "Laboratory test report (CBC/LFT/lipid panel)",
+              "size": 225280
+            }
+          }
+        ],
+        "type": {
+          "text": "Lab Report"
+        }
+      }
+    }
+  ]
+}

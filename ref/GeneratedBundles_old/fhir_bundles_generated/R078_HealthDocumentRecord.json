@@ -1,0 +1,158 @@
+{
+  "resourceType": "Bundle",
+  "id": "HealthDocumentRecord-R078",
+  "meta": {
+    "profile": [
+      "https://nrces.in/ndhm/fhir/r4/StructureDefinition/DocumentBundle"
+    ]
+  },
+  "identifier": {
+    "system": "http://hip.in",
+    "value": "bundle-R078"
+  },
+  "type": "document",
+  "timestamp": "2026-09-10T04:52:40+05:30",
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:48fb554a-b27f-4453-a726-aff89e6b9aed",
+      "resource": {
+        "resourceType": "Composition",
+        "id": "48fb554a-b27f-4453-a726-aff89e6b9aed",
+        "meta": {
+          "profile": [
+            "https://nrces.in/ndhm/fhir/r4/StructureDefinition/HealthDocumentRecord"
+          ]
+        },
+        "language": "en-IN",
+        "status": "final",
+        "type": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "419891008",
+              "display": "Record artifact"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:b2a2c78f-c913-4696-ae6a-571fe19b8718"
+        },
+        "date": "2026-09-10T04:52:40+05:30",
+        "title": "HealthDocumentRecord Record",
+        "section": [
+          {
+            "entry": [
+              {
+                "reference": "urn:uuid:15135987-7f72-4d79-9c33-b3a17c61071a"
+              }
+            ]
+          }
+        ],
+        "author": [
+          {
+            "reference": "urn:uuid:875a8641-90d2-4ed8-be10-565a66e86f15"
+          }
+        ],
+        "encounter": {
+          "reference": "urn:uuid:67c16dbf-6a72-4c5a-9886-3d3ab0e2b569"
+        },
+        "custodian": {
+          "reference": "urn:uuid:a3c6ae12-76a9-49e7-99e2-909720230392"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:b2a2c78f-c913-4696-ae6a-571fe19b8718",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "b2a2c78f-c913-4696-ae6a-571fe19b8718",
+        "identifier": [
+          {
+            "system": "https://healthid.ndhm.gov.in",
+            "value": "vikram.d@sbx"
+          },
+          {
+            "system": "https://abdm.gov.in/abha-number",
+            "value": "91-9945-6678-3324"
+          }
+        ],
+        "name": [
+          {
+            "text": "Vikram Desai"
+          }
+        ],
+        "gender": "male",
+        "birthDate": "1965-01-01",
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "9345678901"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:875a8641-90d2-4ed8-be10-565a66e86f15",
+      "resource": {
+        "resourceType": "Practitioner",
+        "id": "875a8641-90d2-4ed8-be10-565a66e86f15",
+        "name": [
+          {
+            "text": "Dr. Neha Kapoor"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:a3c6ae12-76a9-49e7-99e2-909720230392",
+      "resource": {
+        "resourceType": "Organization",
+        "id": "a3c6ae12-76a9-49e7-99e2-909720230392",
+        "name": "SRM_CHENNAI"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:67c16dbf-6a72-4c5a-9886-3d3ab0e2b569",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "67c16dbf-6a72-4c5a-9886-3d3ab0e2b569",
+        "status": "finished",
+        "class": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code": "AMB",
+          "display": "ambulatory"
+        },
+        "subject": {
+          "reference": "urn:uuid:b2a2c78f-c913-4696-ae6a-571fe19b8718"
+        },
+        "period": {
+          "start": "2026-08-20T00:00:00+05:30"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:15135987-7f72-4d79-9c33-b3a17c61071a",
+      "resource": {
+        "resourceType": "DocumentReference",
+        "id": "15135987-7f72-4d79-9c33-b3a17c61071a",
+        "status": "current",
+        "subject": {
+          "reference": "urn:uuid:b2a2c78f-c913-4696-ae6a-571fe19b8718"
+        },
+        "content": [
+          {
+            "attachment": {
+              "contentType": "video/mp4",
+              "url": "https://storage.abdm-sandbox.example/P008/echocardiogram_video_R078.mp4",
+              "title": "Echocardiogram cine loop export",
+              "size": 22835200
+            }
+          }
+        ],
+        "type": {
+          "text": "Echocardiogram Video"
+        }
+      }
+    }
+  ]
+}

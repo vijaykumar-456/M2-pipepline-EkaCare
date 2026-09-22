@@ -1,0 +1,199 @@
+{
+  "resourceType": "Bundle",
+  "id": "DiagnosticReport-R082",
+  "meta": {
+    "profile": [
+      "https://nrces.in/ndhm/fhir/r4/StructureDefinition/DocumentBundle"
+    ]
+  },
+  "identifier": {
+    "system": "http://hip.in",
+    "value": "bundle-R082"
+  },
+  "type": "document",
+  "timestamp": "2026-09-10T05:12:37+05:30",
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:18a9251a-3b8f-4eef-a02d-00e790339b81",
+      "resource": {
+        "resourceType": "Composition",
+        "id": "18a9251a-3b8f-4eef-a02d-00e790339b81",
+        "meta": {
+          "profile": [
+            "https://nrces.in/ndhm/fhir/r4/StructureDefinition/DiagnosticReportRecord"
+          ]
+        },
+        "language": "en-IN",
+        "status": "final",
+        "type": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "721981007",
+              "display": "Diagnostic studies report"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:06d78dc8-8681-4a14-8e80-c7ccae0f79da"
+        },
+        "date": "2026-09-10T05:12:37+05:30",
+        "title": "DiagnosticReport Record",
+        "section": [
+          {
+            "title": "Investigation",
+            "entry": [
+              {
+                "reference": "urn:uuid:032b470e-c960-42a6-8614-1225f56c7383"
+              },
+              {
+                "reference": "urn:uuid:1eb01744-ab09-49fa-ab4a-4e98a69c994f"
+              }
+            ],
+            "code": {
+              "coding": [
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "721981007",
+                  "display": "Diagnostic studies report"
+                }
+              ]
+            }
+          }
+        ],
+        "author": [
+          {
+            "reference": "urn:uuid:f1757658-2560-4cf1-8140-bb8dd5c33aa6"
+          }
+        ],
+        "encounter": {
+          "reference": "urn:uuid:b62eb8af-b637-4ac9-b16b-f550be47d7d4"
+        },
+        "custodian": {
+          "reference": "urn:uuid:d5375c79-4dd5-4040-8d15-3d3d34888a71"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:06d78dc8-8681-4a14-8e80-c7ccae0f79da",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "06d78dc8-8681-4a14-8e80-c7ccae0f79da",
+        "identifier": [
+          {
+            "system": "https://healthid.ndhm.gov.in",
+            "value": "testinguser13@sbx"
+          },
+          {
+            "system": "https://abdm.gov.in/abha-number",
+            "value": "91-9313-4517-1614"
+          }
+        ],
+        "name": [
+          {
+            "text": "Manikandan Nair"
+          }
+        ],
+        "gender": "female",
+        "birthDate": "1971-01-01",
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "9565623510"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:f1757658-2560-4cf1-8140-bb8dd5c33aa6",
+      "resource": {
+        "resourceType": "Practitioner",
+        "id": "f1757658-2560-4cf1-8140-bb8dd5c33aa6",
+        "name": [
+          {
+            "text": "Dr. Anita Rao"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:d5375c79-4dd5-4040-8d15-3d3d34888a71",
+      "resource": {
+        "resourceType": "Organization",
+        "id": "d5375c79-4dd5-4040-8d15-3d3d34888a71",
+        "name": "SUNRISE_HOSP"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:b62eb8af-b637-4ac9-b16b-f550be47d7d4",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "b62eb8af-b637-4ac9-b16b-f550be47d7d4",
+        "status": "finished",
+        "class": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code": "AMB",
+          "display": "ambulatory"
+        },
+        "subject": {
+          "reference": "urn:uuid:06d78dc8-8681-4a14-8e80-c7ccae0f79da"
+        },
+        "period": {
+          "start": "2026-08-31T00:00:00+05:30"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:032b470e-c960-42a6-8614-1225f56c7383",
+      "resource": {
+        "resourceType": "DiagnosticReport",
+        "id": "032b470e-c960-42a6-8614-1225f56c7383",
+        "meta": {
+          "profile": [
+            "https://nrces.in/ndhm/fhir/r4/StructureDefinition/DiagnosticReportLab"
+          ]
+        },
+        "status": "final",
+        "code": {
+          "text": "Thyroid Function Test",
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "3024-7",
+              "display": "Thyroid Function Test"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:06d78dc8-8681-4a14-8e80-c7ccae0f79da"
+        },
+        "conclusion": "TSH 3.2 mIU/L, within normal range",
+        "issued": "2026-08-31T09:00:00+05:30"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:1eb01744-ab09-49fa-ab4a-4e98a69c994f",
+      "resource": {
+        "resourceType": "DocumentReference",
+        "id": "1eb01744-ab09-49fa-ab4a-4e98a69c994f",
+        "status": "current",
+        "subject": {
+          "reference": "urn:uuid:06d78dc8-8681-4a14-8e80-c7ccae0f79da"
+        },
+        "content": [
+          {
+            "attachment": {
+              "contentType": "application/pdf",
+              "url": "https://storage.abdm-sandbox.example/178716798022749/lab_report_R082.pdf",
+              "title": "Laboratory test report (CBC/LFT/lipid panel)",
+              "size": 225280
+            }
+          }
+        ],
+        "type": {
+          "text": "Lab Report"
+        }
+      }
+    }
+  ]
+}

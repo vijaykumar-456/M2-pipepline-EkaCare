@@ -1,0 +1,484 @@
+{
+  "resourceType": "Bundle",
+  "id": "OPConsultation-R065",
+  "meta": {
+    "profile": [
+      "https://nrces.in/ndhm/fhir/r4/StructureDefinition/DocumentBundle"
+    ]
+  },
+  "identifier": {
+    "system": "http://hip.in",
+    "value": "bundle-R065"
+  },
+  "type": "document",
+  "timestamp": "2026-09-10T04:52:40+05:30",
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:0678d33d-484b-4d3f-a039-7ec8afc541ba",
+      "resource": {
+        "resourceType": "Composition",
+        "id": "0678d33d-484b-4d3f-a039-7ec8afc541ba",
+        "meta": {
+          "profile": [
+            "https://nrces.in/ndhm/fhir/r4/StructureDefinition/OPConsultRecord"
+          ]
+        },
+        "language": "en-IN",
+        "status": "final",
+        "type": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "371530004",
+              "display": "Clinical consultation report"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:3ad81c31-18c0-4886-a5f6-4ca3d758aff0"
+        },
+        "date": "2026-09-10T04:52:40+05:30",
+        "title": "OPConsultation Record",
+        "section": [
+          {
+            "title": "Chief Complaints",
+            "entry": [
+              {
+                "reference": "urn:uuid:f9efe56e-031c-44e1-997f-eb3e0f154b84"
+              }
+            ],
+            "code": {
+              "coding": [
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "422843007",
+                  "display": "Chief complaint section"
+                }
+              ]
+            }
+          },
+          {
+            "title": "Physical Examination",
+            "entry": [
+              {
+                "reference": "urn:uuid:285c01a5-f00b-4f0a-b3ef-254fe87f1776"
+              },
+              {
+                "reference": "urn:uuid:ffe126a0-a5b1-4996-863e-cbae07488068"
+              },
+              {
+                "reference": "urn:uuid:23ce72f6-0727-45c4-b31e-5c706dc78a96"
+              },
+              {
+                "reference": "urn:uuid:176b84fe-64ba-4061-afd1-60f881c5d5bb"
+              },
+              {
+                "reference": "urn:uuid:04a0c5b2-4523-4b12-b294-2a7779cfde79"
+              },
+              {
+                "reference": "urn:uuid:675f7e4a-00b5-4789-8a98-a3cd55b4ec49"
+              }
+            ],
+            "code": {
+              "coding": [
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "425044008",
+                  "display": "Physical exam section"
+                }
+              ]
+            }
+          },
+          {
+            "title": "Medical History",
+            "entry": [
+              {
+                "reference": "urn:uuid:b1f46a87-be45-4abc-baf3-0af1e177e21f"
+              },
+              {
+                "reference": "urn:uuid:c9863798-d483-41a0-ac60-54d3df5191f7"
+              }
+            ],
+            "code": {
+              "coding": [
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "371529009",
+                  "display": "History and physical report"
+                }
+              ]
+            }
+          },
+          {
+            "title": "Family History",
+            "entry": [
+              {
+                "reference": "urn:uuid:3f9e6700-51ee-421f-90c3-96dca6cb0ffc"
+              }
+            ],
+            "code": {
+              "coding": [
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "422432008",
+                  "display": "Family history section"
+                }
+              ]
+            }
+          },
+          {
+            "title": "Follow Up",
+            "entry": [
+              {
+                "reference": "urn:uuid:3a0aad55-2925-45f4-a3b7-6b4c88851b91"
+              }
+            ],
+            "code": {
+              "coding": [
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "390906007",
+                  "display": "Follow-up encounter"
+                }
+              ]
+            }
+          }
+        ],
+        "author": [
+          {
+            "reference": "urn:uuid:f9035d75-722e-479d-81d8-65653f83e351"
+          }
+        ],
+        "encounter": {
+          "reference": "urn:uuid:8135efd6-8dbd-4199-9f06-3f8a7f867456"
+        },
+        "custodian": {
+          "reference": "urn:uuid:55c611cd-f82a-48b3-8c3a-413c453230dc"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:3ad81c31-18c0-4886-a5f6-4ca3d758aff0",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "3ad81c31-18c0-4886-a5f6-4ca3d758aff0",
+        "identifier": [
+          {
+            "system": "https://healthid.ndhm.gov.in",
+            "value": "meera.iyer@sbx"
+          },
+          {
+            "system": "https://abdm.gov.in/abha-number",
+            "value": "91-6612-3345-9981"
+          }
+        ],
+        "name": [
+          {
+            "text": "Meera Iyer"
+          }
+        ],
+        "gender": "female",
+        "birthDate": "1990-01-01",
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "9871122334"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:f9035d75-722e-479d-81d8-65653f83e351",
+      "resource": {
+        "resourceType": "Practitioner",
+        "id": "f9035d75-722e-479d-81d8-65653f83e351",
+        "name": [
+          {
+            "text": "Dr. Rajesh Nair"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:55c611cd-f82a-48b3-8c3a-413c453230dc",
+      "resource": {
+        "resourceType": "Organization",
+        "id": "55c611cd-f82a-48b3-8c3a-413c453230dc",
+        "name": "SRM_CHENNAI"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:8135efd6-8dbd-4199-9f06-3f8a7f867456",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "8135efd6-8dbd-4199-9f06-3f8a7f867456",
+        "status": "finished",
+        "class": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code": "AMB",
+          "display": "ambulatory"
+        },
+        "subject": {
+          "reference": "urn:uuid:3ad81c31-18c0-4886-a5f6-4ca3d758aff0"
+        },
+        "period": {
+          "start": "2026-08-27T00:00:00+05:30"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:f9efe56e-031c-44e1-997f-eb3e0f154b84",
+      "resource": {
+        "resourceType": "Condition",
+        "id": "f9efe56e-031c-44e1-997f-eb3e0f154b84",
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active"
+            }
+          ]
+        },
+        "code": {
+          "text": "Increased thirst and frequent urination",
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "17173007",
+              "display": "Increased thirst and frequent urination"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:3ad81c31-18c0-4886-a5f6-4ca3d758aff0"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:285c01a5-f00b-4f0a-b3ef-254fe87f1776",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "285c01a5-f00b-4f0a-b3ef-254fe87f1776",
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8480-6",
+              "display": "Systolic blood pressure"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:3ad81c31-18c0-4886-a5f6-4ca3d758aff0"
+        },
+        "valueQuantity": {
+          "value": 139.0,
+          "unit": "mmHg"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:ffe126a0-a5b1-4996-863e-cbae07488068",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "ffe126a0-a5b1-4996-863e-cbae07488068",
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8462-4",
+              "display": "Diastolic blood pressure"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:3ad81c31-18c0-4886-a5f6-4ca3d758aff0"
+        },
+        "valueQuantity": {
+          "value": 73.0,
+          "unit": "mmHg"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:23ce72f6-0727-45c4-b31e-5c706dc78a96",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "23ce72f6-0727-45c4-b31e-5c706dc78a96",
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8867-4",
+              "display": "Heart rate"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:3ad81c31-18c0-4886-a5f6-4ca3d758aff0"
+        },
+        "valueQuantity": {
+          "value": 79.0,
+          "unit": "beats/min"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:176b84fe-64ba-4061-afd1-60f881c5d5bb",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "176b84fe-64ba-4061-afd1-60f881c5d5bb",
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8310-5",
+              "display": "Body temperature"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:3ad81c31-18c0-4886-a5f6-4ca3d758aff0"
+        },
+        "valueQuantity": {
+          "value": 36.8,
+          "unit": "Cel"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:04a0c5b2-4523-4b12-b294-2a7779cfde79",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "04a0c5b2-4523-4b12-b294-2a7779cfde79",
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "59408-5",
+              "display": "Oxygen saturation"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:3ad81c31-18c0-4886-a5f6-4ca3d758aff0"
+        },
+        "valueQuantity": {
+          "value": 99.0,
+          "unit": "%"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:675f7e4a-00b5-4789-8a98-a3cd55b4ec49",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "675f7e4a-00b5-4789-8a98-a3cd55b4ec49",
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "425044008",
+              "display": "Physical exam finding"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:3ad81c31-18c0-4886-a5f6-4ca3d758aff0"
+        },
+        "valueString": "Random glucose elevated."
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:b1f46a87-be45-4abc-baf3-0af1e177e21f",
+      "resource": {
+        "resourceType": "Condition",
+        "id": "b1f46a87-be45-4abc-baf3-0af1e177e21f",
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active"
+            }
+          ]
+        },
+        "code": {
+          "text": "Type 2 Diabetes Mellitus",
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "44054006",
+              "display": "Type 2 Diabetes Mellitus"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:3ad81c31-18c0-4886-a5f6-4ca3d758aff0"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:c9863798-d483-41a0-ac60-54d3df5191f7",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "c9863798-d483-41a0-ac60-54d3df5191f7",
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "1003642006",
+              "display": "Medical history note"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:3ad81c31-18c0-4886-a5f6-4ca3d758aff0"
+        },
+        "valueString": "Previous appendectomy in 2015"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:3f9e6700-51ee-421f-90c3-96dca6cb0ffc",
+      "resource": {
+        "resourceType": "FamilyMemberHistory",
+        "id": "3f9e6700-51ee-421f-90c3-96dca6cb0ffc",
+        "status": "completed",
+        "patient": {
+          "reference": "urn:uuid:3ad81c31-18c0-4886-a5f6-4ca3d758aff0"
+        },
+        "note": [
+          {
+            "text": "No significant family history reported."
+          }
+        ],
+        "relationship": {
+          "text": "Family member"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:3a0aad55-2925-45f4-a3b7-6b4c88851b91",
+      "resource": {
+        "resourceType": "Appointment",
+        "id": "3a0aad55-2925-45f4-a3b7-6b4c88851b91",
+        "status": "booked",
+        "start": "2026-09-23T10:00:00+05:30",
+        "participant": [
+          {
+            "actor": {
+              "reference": "urn:uuid:3ad81c31-18c0-4886-a5f6-4ca3d758aff0"
+            },
+            "status": "accepted"
+          }
+        ]
+      }
+    }
+  ]
+}

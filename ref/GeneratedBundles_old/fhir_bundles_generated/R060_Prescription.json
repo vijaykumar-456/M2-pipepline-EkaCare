@@ -1,0 +1,172 @@
+{
+  "resourceType": "Bundle",
+  "id": "Prescription-R060",
+  "meta": {
+    "profile": [
+      "https://nrces.in/ndhm/fhir/r4/StructureDefinition/DocumentBundle"
+    ]
+  },
+  "identifier": {
+    "system": "http://hip.in",
+    "value": "bundle-R060"
+  },
+  "type": "document",
+  "timestamp": "2026-09-10T04:52:40+05:30",
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:fc8a26b1-cd1e-4afc-87a0-8d846f175269",
+      "resource": {
+        "resourceType": "Composition",
+        "id": "fc8a26b1-cd1e-4afc-87a0-8d846f175269",
+        "meta": {
+          "profile": [
+            "https://nrces.in/ndhm/fhir/r4/StructureDefinition/PrescriptionRecord"
+          ]
+        },
+        "language": "en-IN",
+        "status": "final",
+        "type": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "440545006",
+              "display": "Prescription record"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:0bb1726b-55c8-4ed4-9b93-af20db2d71b8"
+        },
+        "date": "2026-09-10T04:52:40+05:30",
+        "title": "Prescription Record",
+        "section": [
+          {
+            "entry": [
+              {
+                "reference": "urn:uuid:6fe58cad-71a0-4ebc-9503-fa9b9b78ebd2"
+              },
+              {
+                "reference": "urn:uuid:3d2ef29f-b057-416a-9b5f-1e6e199d2d63"
+              }
+            ]
+          }
+        ],
+        "author": [
+          {
+            "reference": "urn:uuid:8835d49a-30c8-4374-b5a1-0e1e12537af0"
+          }
+        ],
+        "encounter": {
+          "reference": "urn:uuid:8f92b1df-d992-4ce6-9355-bbdfff58c733"
+        },
+        "custodian": {
+          "reference": "urn:uuid:9c521bee-ea90-4174-8969-ed5f8bed0431"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:0bb1726b-55c8-4ed4-9b93-af20db2d71b8",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "0bb1726b-55c8-4ed4-9b93-af20db2d71b8",
+        "identifier": [
+          {
+            "system": "https://healthid.ndhm.gov.in",
+            "value": "rohan.s@sbx"
+          },
+          {
+            "system": "https://abdm.gov.in/abha-number",
+            "value": "91-2167-8890-5546"
+          }
+        ],
+        "name": [
+          {
+            "text": "Rohan Sharma"
+          }
+        ],
+        "gender": "male",
+        "birthDate": "1988-01-01",
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "9567891234"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:8835d49a-30c8-4374-b5a1-0e1e12537af0",
+      "resource": {
+        "resourceType": "Practitioner",
+        "id": "8835d49a-30c8-4374-b5a1-0e1e12537af0",
+        "name": [
+          {
+            "text": "Dr. Anita Rao"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:9c521bee-ea90-4174-8969-ed5f8bed0431",
+      "resource": {
+        "resourceType": "Organization",
+        "id": "9c521bee-ea90-4174-8969-ed5f8bed0431",
+        "name": "SUNRISE_HOSP"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:8f92b1df-d992-4ce6-9355-bbdfff58c733",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "8f92b1df-d992-4ce6-9355-bbdfff58c733",
+        "status": "finished",
+        "class": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code": "AMB",
+          "display": "ambulatory"
+        },
+        "subject": {
+          "reference": "urn:uuid:0bb1726b-55c8-4ed4-9b93-af20db2d71b8"
+        },
+        "period": {
+          "start": "2026-09-10T00:00:00+05:30"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:6fe58cad-71a0-4ebc-9503-fa9b9b78ebd2",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "id": "6fe58cad-71a0-4ebc-9503-fa9b9b78ebd2",
+        "status": "active",
+        "intent": "order",
+        "medicationCodeableConcept": {
+          "text": "Cetirizine"
+        },
+        "subject": {
+          "reference": "urn:uuid:0bb1726b-55c8-4ed4-9b93-af20db2d71b8"
+        },
+        "dosageInstruction": [
+          {
+            "text": "10 mg, Once daily, for 5 days"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:3d2ef29f-b057-416a-9b5f-1e6e199d2d63",
+      "resource": {
+        "resourceType": "Binary",
+        "id": "3d2ef29f-b057-416a-9b5f-1e6e199d2d63",
+        "contentType": "image/jpeg",
+        "extension": [
+          {
+            "url": "http://example.org/fhir/StructureDefinition/source-url",
+            "valueUrl": "https://storage.abdm-sandbox.example/P010/prescription_slip_R060.jpg"
+          }
+        ],
+        "data": "PLACEHOLDER_BASE64=="
+      }
+    }
+  ]
+}

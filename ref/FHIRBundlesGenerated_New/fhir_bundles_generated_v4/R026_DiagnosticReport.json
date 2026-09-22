@@ -1,0 +1,199 @@
+{
+  "resourceType": "Bundle",
+  "id": "DiagnosticReport-R026",
+  "meta": {
+    "profile": [
+      "https://nrces.in/ndhm/fhir/r4/StructureDefinition/DocumentBundle"
+    ]
+  },
+  "identifier": {
+    "system": "http://hip.in",
+    "value": "bundle-R026"
+  },
+  "type": "document",
+  "timestamp": "2026-09-10T05:12:37+05:30",
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:029b6836-696f-46d4-8994-53e45ba8e326",
+      "resource": {
+        "resourceType": "Composition",
+        "id": "029b6836-696f-46d4-8994-53e45ba8e326",
+        "meta": {
+          "profile": [
+            "https://nrces.in/ndhm/fhir/r4/StructureDefinition/DiagnosticReportRecord"
+          ]
+        },
+        "language": "en-IN",
+        "status": "final",
+        "type": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "721981007",
+              "display": "Diagnostic studies report"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:732d4d41-e2c5-4db6-8693-291b65a77ef6"
+        },
+        "date": "2026-09-10T05:12:37+05:30",
+        "title": "DiagnosticReport Record",
+        "section": [
+          {
+            "title": "Investigation",
+            "entry": [
+              {
+                "reference": "urn:uuid:26722277-71b7-4946-a5c1-2525439fe7a7"
+              },
+              {
+                "reference": "urn:uuid:0731e01b-3415-41d1-bf59-bfc5cdd7a434"
+              }
+            ],
+            "code": {
+              "coding": [
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "721981007",
+                  "display": "Diagnostic studies report"
+                }
+              ]
+            }
+          }
+        ],
+        "author": [
+          {
+            "reference": "urn:uuid:4ab4d102-feba-4112-b772-0e3918a6e686"
+          }
+        ],
+        "encounter": {
+          "reference": "urn:uuid:4c13292c-e0cb-4e14-80a4-72de55380c67"
+        },
+        "custodian": {
+          "reference": "urn:uuid:d4f9d43f-921b-4e38-b017-0ac0b61526a0"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:732d4d41-e2c5-4db6-8693-291b65a77ef6",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "732d4d41-e2c5-4db6-8693-291b65a77ef6",
+        "identifier": [
+          {
+            "system": "https://healthid.ndhm.gov.in",
+            "value": "testinguser37@sbx"
+          },
+          {
+            "system": "https://abdm.gov.in/abha-number",
+            "value": "91-2152-4407-7164"
+          }
+        ],
+        "name": [
+          {
+            "text": "Manoj Rao"
+          }
+        ],
+        "gender": "female",
+        "birthDate": "1979-01-01",
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "9781192097"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:4ab4d102-feba-4112-b772-0e3918a6e686",
+      "resource": {
+        "resourceType": "Practitioner",
+        "id": "4ab4d102-feba-4112-b772-0e3918a6e686",
+        "name": [
+          {
+            "text": "Dr. Priyanka Iyer"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:d4f9d43f-921b-4e38-b017-0ac0b61526a0",
+      "resource": {
+        "resourceType": "Organization",
+        "id": "d4f9d43f-921b-4e38-b017-0ac0b61526a0",
+        "name": "RAINBOW_CHILD"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:4c13292c-e0cb-4e14-80a4-72de55380c67",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "4c13292c-e0cb-4e14-80a4-72de55380c67",
+        "status": "finished",
+        "class": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code": "AMB",
+          "display": "ambulatory"
+        },
+        "subject": {
+          "reference": "urn:uuid:732d4d41-e2c5-4db6-8693-291b65a77ef6"
+        },
+        "period": {
+          "start": "2026-09-11T00:00:00+05:30"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:26722277-71b7-4946-a5c1-2525439fe7a7",
+      "resource": {
+        "resourceType": "DiagnosticReport",
+        "id": "26722277-71b7-4946-a5c1-2525439fe7a7",
+        "meta": {
+          "profile": [
+            "https://nrces.in/ndhm/fhir/r4/StructureDefinition/DiagnosticReportLab"
+          ]
+        },
+        "status": "final",
+        "code": {
+          "text": "Fasting Blood Sugar",
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "1558-6",
+              "display": "Fasting Blood Sugar"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:732d4d41-e2c5-4db6-8693-291b65a77ef6"
+        },
+        "conclusion": "Fasting glucose 118 mg/dL",
+        "issued": "2026-09-11T09:00:00+05:30"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:0731e01b-3415-41d1-bf59-bfc5cdd7a434",
+      "resource": {
+        "resourceType": "DocumentReference",
+        "id": "0731e01b-3415-41d1-bf59-bfc5cdd7a434",
+        "status": "current",
+        "subject": {
+          "reference": "urn:uuid:732d4d41-e2c5-4db6-8693-291b65a77ef6"
+        },
+        "content": [
+          {
+            "attachment": {
+              "contentType": "application/pdf",
+              "url": "https://storage.abdm-sandbox.example/178712635981472/lab_report_R026.pdf",
+              "title": "Laboratory test report (CBC/LFT/lipid panel)",
+              "size": 225280
+            }
+          }
+        ],
+        "type": {
+          "text": "Lab Report"
+        }
+      }
+    }
+  ]
+}

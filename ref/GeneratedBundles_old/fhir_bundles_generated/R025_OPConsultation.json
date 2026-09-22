@@ -1,0 +1,525 @@
+{
+  "resourceType": "Bundle",
+  "id": "OPConsultation-R025",
+  "meta": {
+    "profile": [
+      "https://nrces.in/ndhm/fhir/r4/StructureDefinition/DocumentBundle"
+    ]
+  },
+  "identifier": {
+    "system": "http://hip.in",
+    "value": "bundle-R025"
+  },
+  "type": "document",
+  "timestamp": "2026-09-10T04:52:40+05:30",
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:6dba5d75-b1ff-482d-9b5b-15e5708f2d0e",
+      "resource": {
+        "resourceType": "Composition",
+        "id": "6dba5d75-b1ff-482d-9b5b-15e5708f2d0e",
+        "meta": {
+          "profile": [
+            "https://nrces.in/ndhm/fhir/r4/StructureDefinition/OPConsultRecord"
+          ]
+        },
+        "language": "en-IN",
+        "status": "final",
+        "type": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "371530004",
+              "display": "Clinical consultation report"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:6fdb2063-0654-4295-8e4a-41463d729ac3"
+        },
+        "date": "2026-09-10T04:52:40+05:30",
+        "title": "OPConsultation Record",
+        "section": [
+          {
+            "title": "Chief Complaints",
+            "entry": [
+              {
+                "reference": "urn:uuid:452949f7-e452-4d82-bbb5-439ebd9de75f"
+              }
+            ],
+            "code": {
+              "coding": [
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "422843007",
+                  "display": "Chief complaint section"
+                }
+              ]
+            }
+          },
+          {
+            "title": "Physical Examination",
+            "entry": [
+              {
+                "reference": "urn:uuid:63c9a286-0c1f-43af-90f0-262f2da7bae4"
+              },
+              {
+                "reference": "urn:uuid:8525100b-efe8-42dc-8649-1a2bfe9815f5"
+              },
+              {
+                "reference": "urn:uuid:6ae36bab-9d51-48d2-b2b3-ea3d73f90d02"
+              },
+              {
+                "reference": "urn:uuid:2b044bc9-be11-47da-a4b3-bc44ab8131ea"
+              },
+              {
+                "reference": "urn:uuid:6b95029a-0eaf-44ae-b11a-8e909313a7ce"
+              },
+              {
+                "reference": "urn:uuid:561c6d6f-5856-4f1d-aa54-c29b234f9261"
+              }
+            ],
+            "code": {
+              "coding": [
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "425044008",
+                  "display": "Physical exam section"
+                }
+              ]
+            }
+          },
+          {
+            "title": "Medical History",
+            "entry": [
+              {
+                "reference": "urn:uuid:1424cf44-e086-4f2b-81de-defb44e0c752"
+              },
+              {
+                "reference": "urn:uuid:743716a6-5d59-4660-87e5-66ce170fcac3"
+              }
+            ],
+            "code": {
+              "coding": [
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "371529009",
+                  "display": "History and physical report"
+                }
+              ]
+            }
+          },
+          {
+            "title": "Family History",
+            "entry": [
+              {
+                "reference": "urn:uuid:82559ccd-c0a3-429d-93cf-c7fd4fa4aec5"
+              }
+            ],
+            "code": {
+              "coding": [
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "422432008",
+                  "display": "Family history section"
+                }
+              ]
+            }
+          },
+          {
+            "title": "Follow Up",
+            "entry": [
+              {
+                "reference": "urn:uuid:56a1803c-22c9-49df-b600-a5ea5254d124"
+              }
+            ],
+            "code": {
+              "coding": [
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "390906007",
+                  "display": "Follow-up encounter"
+                }
+              ]
+            }
+          },
+          {
+            "title": "Document Reference",
+            "entry": [
+              {
+                "reference": "urn:uuid:1515f288-94fb-4a56-8142-aee6704489c5"
+              }
+            ],
+            "code": {
+              "coding": [
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "371530004",
+                  "display": "Clinical consultation report"
+                }
+              ]
+            }
+          }
+        ],
+        "author": [
+          {
+            "reference": "urn:uuid:c15a1486-f5c9-4727-891d-237d6abd9f7e"
+          }
+        ],
+        "encounter": {
+          "reference": "urn:uuid:498dbafd-8154-4167-b5c4-4004d8ce144e"
+        },
+        "custodian": {
+          "reference": "urn:uuid:3f790f74-5971-4704-9ab1-405451abcd9a"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:6fdb2063-0654-4295-8e4a-41463d729ac3",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "6fdb2063-0654-4295-8e4a-41463d729ac3",
+        "identifier": [
+          {
+            "system": "https://healthid.ndhm.gov.in",
+            "value": "meera.iyer@sbx"
+          },
+          {
+            "system": "https://abdm.gov.in/abha-number",
+            "value": "91-6612-3345-9981"
+          }
+        ],
+        "name": [
+          {
+            "text": "Meera Iyer"
+          }
+        ],
+        "gender": "female",
+        "birthDate": "1990-01-01",
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "9871122334"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:c15a1486-f5c9-4727-891d-237d6abd9f7e",
+      "resource": {
+        "resourceType": "Practitioner",
+        "id": "c15a1486-f5c9-4727-891d-237d6abd9f7e",
+        "name": [
+          {
+            "text": "Dr. Rajesh Nair"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:3f790f74-5971-4704-9ab1-405451abcd9a",
+      "resource": {
+        "resourceType": "Organization",
+        "id": "3f790f74-5971-4704-9ab1-405451abcd9a",
+        "name": "APEX_DIAG"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:498dbafd-8154-4167-b5c4-4004d8ce144e",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "498dbafd-8154-4167-b5c4-4004d8ce144e",
+        "status": "finished",
+        "class": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code": "AMB",
+          "display": "ambulatory"
+        },
+        "subject": {
+          "reference": "urn:uuid:6fdb2063-0654-4295-8e4a-41463d729ac3"
+        },
+        "period": {
+          "start": "2026-09-14T00:00:00+05:30"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:452949f7-e452-4d82-bbb5-439ebd9de75f",
+      "resource": {
+        "resourceType": "Condition",
+        "id": "452949f7-e452-4d82-bbb5-439ebd9de75f",
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active"
+            }
+          ]
+        },
+        "code": {
+          "text": "Lower back pain radiating to leg",
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "279039007",
+              "display": "Lower back pain radiating to leg"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:6fdb2063-0654-4295-8e4a-41463d729ac3"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:63c9a286-0c1f-43af-90f0-262f2da7bae4",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "63c9a286-0c1f-43af-90f0-262f2da7bae4",
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8480-6",
+              "display": "Systolic blood pressure"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:6fdb2063-0654-4295-8e4a-41463d729ac3"
+        },
+        "valueQuantity": {
+          "value": 123.0,
+          "unit": "mmHg"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:8525100b-efe8-42dc-8649-1a2bfe9815f5",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "8525100b-efe8-42dc-8649-1a2bfe9815f5",
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8462-4",
+              "display": "Diastolic blood pressure"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:6fdb2063-0654-4295-8e4a-41463d729ac3"
+        },
+        "valueQuantity": {
+          "value": 76.0,
+          "unit": "mmHg"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:6ae36bab-9d51-48d2-b2b3-ea3d73f90d02",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "6ae36bab-9d51-48d2-b2b3-ea3d73f90d02",
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8867-4",
+              "display": "Heart rate"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:6fdb2063-0654-4295-8e4a-41463d729ac3"
+        },
+        "valueQuantity": {
+          "value": 68.0,
+          "unit": "beats/min"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:2b044bc9-be11-47da-a4b3-bc44ab8131ea",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "2b044bc9-be11-47da-a4b3-bc44ab8131ea",
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8310-5",
+              "display": "Body temperature"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:6fdb2063-0654-4295-8e4a-41463d729ac3"
+        },
+        "valueQuantity": {
+          "value": 36.7,
+          "unit": "Cel"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:6b95029a-0eaf-44ae-b11a-8e909313a7ce",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "6b95029a-0eaf-44ae-b11a-8e909313a7ce",
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "59408-5",
+              "display": "Oxygen saturation"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:6fdb2063-0654-4295-8e4a-41463d729ac3"
+        },
+        "valueQuantity": {
+          "value": 99.0,
+          "unit": "%"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:561c6d6f-5856-4f1d-aa54-c29b234f9261",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "561c6d6f-5856-4f1d-aa54-c29b234f9261",
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "425044008",
+              "display": "Physical exam finding"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:6fdb2063-0654-4295-8e4a-41463d729ac3"
+        },
+        "valueString": "Positive straight leg raise test."
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:1424cf44-e086-4f2b-81de-defb44e0c752",
+      "resource": {
+        "resourceType": "Condition",
+        "id": "1424cf44-e086-4f2b-81de-defb44e0c752",
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active"
+            }
+          ]
+        },
+        "code": {
+          "text": "Lumbar disc prolapse",
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "371077004",
+              "display": "Lumbar disc prolapse"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:6fdb2063-0654-4295-8e4a-41463d729ac3"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:743716a6-5d59-4660-87e5-66ce170fcac3",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "743716a6-5d59-4660-87e5-66ce170fcac3",
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "1003642006",
+              "display": "Medical history note"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:6fdb2063-0654-4295-8e4a-41463d729ac3"
+        },
+        "valueString": "Known hypertensive on treatment"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:82559ccd-c0a3-429d-93cf-c7fd4fa4aec5",
+      "resource": {
+        "resourceType": "FamilyMemberHistory",
+        "id": "82559ccd-c0a3-429d-93cf-c7fd4fa4aec5",
+        "status": "completed",
+        "patient": {
+          "reference": "urn:uuid:6fdb2063-0654-4295-8e4a-41463d729ac3"
+        },
+        "note": [
+          {
+            "text": "Paternal history of coronary artery disease."
+          }
+        ],
+        "relationship": {
+          "text": "Family member"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:56a1803c-22c9-49df-b600-a5ea5254d124",
+      "resource": {
+        "resourceType": "Appointment",
+        "id": "56a1803c-22c9-49df-b600-a5ea5254d124",
+        "status": "booked",
+        "start": "2026-09-21T10:00:00+05:30",
+        "participant": [
+          {
+            "actor": {
+              "reference": "urn:uuid:6fdb2063-0654-4295-8e4a-41463d729ac3"
+            },
+            "status": "accepted"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:1515f288-94fb-4a56-8142-aee6704489c5",
+      "resource": {
+        "resourceType": "DocumentReference",
+        "id": "1515f288-94fb-4a56-8142-aee6704489c5",
+        "status": "current",
+        "subject": {
+          "reference": "urn:uuid:6fdb2063-0654-4295-8e4a-41463d729ac3"
+        },
+        "content": [
+          {
+            "attachment": {
+              "contentType": "audio/mpeg",
+              "url": "https://storage.abdm-sandbox.example/P005/consultation_audio_note_R025.mp3",
+              "title": "Recorded audio summary of teleconsultation",
+              "size": 2150400
+            }
+          }
+        ],
+        "type": {
+          "text": "Consultation Audio Note"
+        }
+      }
+    }
+  ]
+}

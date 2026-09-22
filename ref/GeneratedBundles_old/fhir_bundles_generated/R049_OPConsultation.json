@@ -1,0 +1,522 @@
+{
+  "resourceType": "Bundle",
+  "id": "OPConsultation-R049",
+  "meta": {
+    "profile": [
+      "https://nrces.in/ndhm/fhir/r4/StructureDefinition/DocumentBundle"
+    ]
+  },
+  "identifier": {
+    "system": "http://hip.in",
+    "value": "bundle-R049"
+  },
+  "type": "document",
+  "timestamp": "2026-09-10T04:52:40+05:30",
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:580cbdca-c333-42a3-9f42-aaed3bfd00ea",
+      "resource": {
+        "resourceType": "Composition",
+        "id": "580cbdca-c333-42a3-9f42-aaed3bfd00ea",
+        "meta": {
+          "profile": [
+            "https://nrces.in/ndhm/fhir/r4/StructureDefinition/OPConsultRecord"
+          ]
+        },
+        "language": "en-IN",
+        "status": "final",
+        "type": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "371530004",
+              "display": "Clinical consultation report"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:9ca20f70-a675-48d6-9df6-d0b19411a762"
+        },
+        "date": "2026-09-10T04:52:40+05:30",
+        "title": "OPConsultation Record",
+        "section": [
+          {
+            "title": "Chief Complaints",
+            "entry": [
+              {
+                "reference": "urn:uuid:03c66785-a15f-436f-96e9-6ed3e69b3661"
+              }
+            ],
+            "code": {
+              "coding": [
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "422843007",
+                  "display": "Chief complaint section"
+                }
+              ]
+            }
+          },
+          {
+            "title": "Physical Examination",
+            "entry": [
+              {
+                "reference": "urn:uuid:1b839a21-6d1f-456e-b9e9-ca198afebb29"
+              },
+              {
+                "reference": "urn:uuid:ec601f6c-c454-4212-ad94-77abfa002a2f"
+              },
+              {
+                "reference": "urn:uuid:cf398395-927d-429f-b08d-28e61412c3df"
+              },
+              {
+                "reference": "urn:uuid:7debbd1f-b513-4dec-bd7d-9d80811a04c3"
+              },
+              {
+                "reference": "urn:uuid:8f6c55b9-9a97-4cc8-b3a3-7fa12d22ef6a"
+              },
+              {
+                "reference": "urn:uuid:50daabb0-201d-4f1a-8c53-d26bc2514317"
+              }
+            ],
+            "code": {
+              "coding": [
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "425044008",
+                  "display": "Physical exam section"
+                }
+              ]
+            }
+          },
+          {
+            "title": "Medical History",
+            "entry": [
+              {
+                "reference": "urn:uuid:e82f8311-f16c-471d-b0b8-f7e5060f1bb3"
+              },
+              {
+                "reference": "urn:uuid:c166bb2c-b842-4aab-99cb-588f6907a35f"
+              }
+            ],
+            "code": {
+              "coding": [
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "371529009",
+                  "display": "History and physical report"
+                }
+              ]
+            }
+          },
+          {
+            "title": "Family History",
+            "entry": [
+              {
+                "reference": "urn:uuid:ef08d10b-29de-4e32-9620-4d7131afab72"
+              }
+            ],
+            "code": {
+              "coding": [
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "422432008",
+                  "display": "Family history section"
+                }
+              ]
+            }
+          },
+          {
+            "title": "Procedure",
+            "entry": [
+              {
+                "reference": "urn:uuid:a29504eb-e4d7-465a-9398-373eeba4bcdd"
+              }
+            ],
+            "code": {
+              "coding": [
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "371525003",
+                  "display": "Procedure section"
+                }
+              ]
+            }
+          },
+          {
+            "title": "Follow Up",
+            "entry": [
+              {
+                "reference": "urn:uuid:9451eca9-fc11-4704-9e14-553dece45bab"
+              }
+            ],
+            "code": {
+              "coding": [
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "390906007",
+                  "display": "Follow-up encounter"
+                }
+              ]
+            }
+          }
+        ],
+        "author": [
+          {
+            "reference": "urn:uuid:55457190-21e7-4d12-a50d-0774bb233418"
+          }
+        ],
+        "encounter": {
+          "reference": "urn:uuid:5dc3e11f-4fa0-4b96-b8ec-f605a8582415"
+        },
+        "custodian": {
+          "reference": "urn:uuid:cf682b95-3944-4f09-97bc-7b41f642a5ee"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:9ca20f70-a675-48d6-9df6-d0b19411a762",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "9ca20f70-a675-48d6-9df6-d0b19411a762",
+        "identifier": [
+          {
+            "system": "https://healthid.ndhm.gov.in",
+            "value": "priya.m@sbx"
+          },
+          {
+            "system": "https://abdm.gov.in/abha-number",
+            "value": "91-1056-7789-4435"
+          }
+        ],
+        "name": [
+          {
+            "text": "Priya Menon"
+          }
+        ],
+        "gender": "female",
+        "birthDate": "1998-01-01",
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "9456781230"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:55457190-21e7-4d12-a50d-0774bb233418",
+      "resource": {
+        "resourceType": "Practitioner",
+        "id": "55457190-21e7-4d12-a50d-0774bb233418",
+        "name": [
+          {
+            "text": "Dr. Priyanka Iyer"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:cf682b95-3944-4f09-97bc-7b41f642a5ee",
+      "resource": {
+        "resourceType": "Organization",
+        "id": "cf682b95-3944-4f09-97bc-7b41f642a5ee",
+        "name": "APEX_DIAG"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:5dc3e11f-4fa0-4b96-b8ec-f605a8582415",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "5dc3e11f-4fa0-4b96-b8ec-f605a8582415",
+        "status": "finished",
+        "class": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code": "AMB",
+          "display": "ambulatory"
+        },
+        "subject": {
+          "reference": "urn:uuid:9ca20f70-a675-48d6-9df6-d0b19411a762"
+        },
+        "period": {
+          "start": "2026-08-25T00:00:00+05:30"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:03c66785-a15f-436f-96e9-6ed3e69b3661",
+      "resource": {
+        "resourceType": "Condition",
+        "id": "03c66785-a15f-436f-96e9-6ed3e69b3661",
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active"
+            }
+          ]
+        },
+        "code": {
+          "text": "Joint pain and morning stiffness",
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "57676002",
+              "display": "Joint pain and morning stiffness"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:9ca20f70-a675-48d6-9df6-d0b19411a762"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:1b839a21-6d1f-456e-b9e9-ca198afebb29",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "1b839a21-6d1f-456e-b9e9-ca198afebb29",
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8480-6",
+              "display": "Systolic blood pressure"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:9ca20f70-a675-48d6-9df6-d0b19411a762"
+        },
+        "valueQuantity": {
+          "value": 135.0,
+          "unit": "mmHg"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:ec601f6c-c454-4212-ad94-77abfa002a2f",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "ec601f6c-c454-4212-ad94-77abfa002a2f",
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8462-4",
+              "display": "Diastolic blood pressure"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:9ca20f70-a675-48d6-9df6-d0b19411a762"
+        },
+        "valueQuantity": {
+          "value": 73.0,
+          "unit": "mmHg"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:cf398395-927d-429f-b08d-28e61412c3df",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "cf398395-927d-429f-b08d-28e61412c3df",
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8867-4",
+              "display": "Heart rate"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:9ca20f70-a675-48d6-9df6-d0b19411a762"
+        },
+        "valueQuantity": {
+          "value": 77.0,
+          "unit": "beats/min"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:7debbd1f-b513-4dec-bd7d-9d80811a04c3",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "7debbd1f-b513-4dec-bd7d-9d80811a04c3",
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8310-5",
+              "display": "Body temperature"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:9ca20f70-a675-48d6-9df6-d0b19411a762"
+        },
+        "valueQuantity": {
+          "value": 38.2,
+          "unit": "Cel"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:8f6c55b9-9a97-4cc8-b3a3-7fa12d22ef6a",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "8f6c55b9-9a97-4cc8-b3a3-7fa12d22ef6a",
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "59408-5",
+              "display": "Oxygen saturation"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:9ca20f70-a675-48d6-9df6-d0b19411a762"
+        },
+        "valueQuantity": {
+          "value": 99.0,
+          "unit": "%"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:50daabb0-201d-4f1a-8c53-d26bc2514317",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "50daabb0-201d-4f1a-8c53-d26bc2514317",
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "425044008",
+              "display": "Physical exam finding"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:9ca20f70-a675-48d6-9df6-d0b19411a762"
+        },
+        "valueString": "Bilateral small joint swelling noted."
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:e82f8311-f16c-471d-b0b8-f7e5060f1bb3",
+      "resource": {
+        "resourceType": "Condition",
+        "id": "e82f8311-f16c-471d-b0b8-f7e5060f1bb3",
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active"
+            }
+          ]
+        },
+        "code": {
+          "text": "Rheumatoid arthritis",
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "69896004",
+              "display": "Rheumatoid arthritis"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:9ca20f70-a675-48d6-9df6-d0b19411a762"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:c166bb2c-b842-4aab-99cb-588f6907a35f",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "c166bb2c-b842-4aab-99cb-588f6907a35f",
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "1003642006",
+              "display": "Medical history note"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:9ca20f70-a675-48d6-9df6-d0b19411a762"
+        },
+        "valueString": "No significant past medical history"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:ef08d10b-29de-4e32-9620-4d7131afab72",
+      "resource": {
+        "resourceType": "FamilyMemberHistory",
+        "id": "ef08d10b-29de-4e32-9620-4d7131afab72",
+        "status": "completed",
+        "patient": {
+          "reference": "urn:uuid:9ca20f70-a675-48d6-9df6-d0b19411a762"
+        },
+        "note": [
+          {
+            "text": "Mother diagnosed with Type 2 Diabetes."
+          }
+        ],
+        "relationship": {
+          "text": "Family member"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:a29504eb-e4d7-465a-9398-373eeba4bcdd",
+      "resource": {
+        "resourceType": "Procedure",
+        "id": "a29504eb-e4d7-465a-9398-373eeba4bcdd",
+        "status": "completed",
+        "code": {
+          "text": "Wound dressing",
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "18946005",
+              "display": "Wound dressing"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:9ca20f70-a675-48d6-9df6-d0b19411a762"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:9451eca9-fc11-4704-9e14-553dece45bab",
+      "resource": {
+        "resourceType": "Appointment",
+        "id": "9451eca9-fc11-4704-9e14-553dece45bab",
+        "status": "booked",
+        "start": "2026-09-22T10:00:00+05:30",
+        "participant": [
+          {
+            "actor": {
+              "reference": "urn:uuid:9ca20f70-a675-48d6-9df6-d0b19411a762"
+            },
+            "status": "accepted"
+          }
+        ]
+      }
+    }
+  ]
+}

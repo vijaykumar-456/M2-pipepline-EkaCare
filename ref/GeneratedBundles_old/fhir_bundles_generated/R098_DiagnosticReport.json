@@ -1,0 +1,199 @@
+{
+  "resourceType": "Bundle",
+  "id": "DiagnosticReport-R098",
+  "meta": {
+    "profile": [
+      "https://nrces.in/ndhm/fhir/r4/StructureDefinition/DocumentBundle"
+    ]
+  },
+  "identifier": {
+    "system": "http://hip.in",
+    "value": "bundle-R098"
+  },
+  "type": "document",
+  "timestamp": "2026-09-10T04:52:40+05:30",
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:a22247df-bdb4-42bd-a5ed-bdc3873e0270",
+      "resource": {
+        "resourceType": "Composition",
+        "id": "a22247df-bdb4-42bd-a5ed-bdc3873e0270",
+        "meta": {
+          "profile": [
+            "https://nrces.in/ndhm/fhir/r4/StructureDefinition/DiagnosticReportRecord"
+          ]
+        },
+        "language": "en-IN",
+        "status": "final",
+        "type": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "721981007",
+              "display": "Diagnostic studies report"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:86402822-df7f-4cbd-962e-b7db324237ef"
+        },
+        "date": "2026-09-10T04:52:40+05:30",
+        "title": "DiagnosticReport Record",
+        "section": [
+          {
+            "title": "Investigation",
+            "entry": [
+              {
+                "reference": "urn:uuid:f8f73f0c-7f94-481e-9ac9-29f5dc7190f1"
+              },
+              {
+                "reference": "urn:uuid:5d21f817-131f-491b-bafc-62dfd3db98db"
+              }
+            ],
+            "code": {
+              "coding": [
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "721981007",
+                  "display": "Diagnostic studies report"
+                }
+              ]
+            }
+          }
+        ],
+        "author": [
+          {
+            "reference": "urn:uuid:61a8b170-ce5f-469a-b21f-d9263a66e570"
+          }
+        ],
+        "encounter": {
+          "reference": "urn:uuid:1a78b2ca-9ee5-47ba-924d-62890e35ba5d"
+        },
+        "custodian": {
+          "reference": "urn:uuid:19b40140-13ee-4b0c-ac1b-460af24143fe"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:86402822-df7f-4cbd-962e-b7db324237ef",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "86402822-df7f-4cbd-962e-b7db324237ef",
+        "identifier": [
+          {
+            "system": "https://healthid.ndhm.gov.in",
+            "value": "vikram.d@sbx"
+          },
+          {
+            "system": "https://abdm.gov.in/abha-number",
+            "value": "91-9945-6678-3324"
+          }
+        ],
+        "name": [
+          {
+            "text": "Vikram Desai"
+          }
+        ],
+        "gender": "male",
+        "birthDate": "1965-01-01",
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "9345678901"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:61a8b170-ce5f-469a-b21f-d9263a66e570",
+      "resource": {
+        "resourceType": "Practitioner",
+        "id": "61a8b170-ce5f-469a-b21f-d9263a66e570",
+        "name": [
+          {
+            "text": "Dr. Arun Kumar"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:19b40140-13ee-4b0c-ac1b-460af24143fe",
+      "resource": {
+        "resourceType": "Organization",
+        "id": "19b40140-13ee-4b0c-ac1b-460af24143fe",
+        "name": "RAINBOW_CHILD"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:1a78b2ca-9ee5-47ba-924d-62890e35ba5d",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "1a78b2ca-9ee5-47ba-924d-62890e35ba5d",
+        "status": "finished",
+        "class": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code": "AMB",
+          "display": "ambulatory"
+        },
+        "subject": {
+          "reference": "urn:uuid:86402822-df7f-4cbd-962e-b7db324237ef"
+        },
+        "period": {
+          "start": "2026-09-04T00:00:00+05:30"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:f8f73f0c-7f94-481e-9ac9-29f5dc7190f1",
+      "resource": {
+        "resourceType": "DiagnosticReport",
+        "id": "f8f73f0c-7f94-481e-9ac9-29f5dc7190f1",
+        "meta": {
+          "profile": [
+            "https://nrces.in/ndhm/fhir/r4/StructureDefinition/DiagnosticReportLab"
+          ]
+        },
+        "status": "final",
+        "code": {
+          "text": "Thyroid Function Test",
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "3024-7",
+              "display": "Thyroid Function Test"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:86402822-df7f-4cbd-962e-b7db324237ef"
+        },
+        "conclusion": "TSH 3.2 mIU/L, within normal range",
+        "issued": "2026-09-04T09:00:00+05:30"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:5d21f817-131f-491b-bafc-62dfd3db98db",
+      "resource": {
+        "resourceType": "DocumentReference",
+        "id": "5d21f817-131f-491b-bafc-62dfd3db98db",
+        "status": "current",
+        "subject": {
+          "reference": "urn:uuid:86402822-df7f-4cbd-962e-b7db324237ef"
+        },
+        "content": [
+          {
+            "attachment": {
+              "contentType": "application/pdf",
+              "url": "https://storage.abdm-sandbox.example/P008/lab_report_R098.pdf",
+              "title": "Laboratory test report (CBC/LFT/lipid panel)",
+              "size": 225280
+            }
+          }
+        ],
+        "type": {
+          "text": "Lab Report"
+        }
+      }
+    }
+  ]
+}

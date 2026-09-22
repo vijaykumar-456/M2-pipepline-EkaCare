@@ -1,0 +1,191 @@
+{
+  "resourceType": "Bundle",
+  "id": "DiagnosticReport-R019",
+  "meta": {
+    "profile": [
+      "https://nrces.in/ndhm/fhir/r4/StructureDefinition/DocumentBundle"
+    ]
+  },
+  "identifier": {
+    "system": "http://hip.in",
+    "value": "bundle-R019"
+  },
+  "type": "document",
+  "timestamp": "2026-09-10T04:52:40+05:30",
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:18d7ce2e-c0ff-4c00-842a-e356b38ee5c3",
+      "resource": {
+        "resourceType": "Composition",
+        "id": "18d7ce2e-c0ff-4c00-842a-e356b38ee5c3",
+        "meta": {
+          "profile": [
+            "https://nrces.in/ndhm/fhir/r4/StructureDefinition/DiagnosticReportRecord"
+          ]
+        },
+        "language": "en-IN",
+        "status": "final",
+        "type": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "721981007",
+              "display": "Diagnostic studies report"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:06ea5b74-2a6c-4880-9ffb-b7ab25149d55"
+        },
+        "date": "2026-09-10T04:52:40+05:30",
+        "title": "DiagnosticReport Record",
+        "section": [
+          {
+            "title": "Investigation",
+            "entry": [
+              {
+                "reference": "urn:uuid:fc8b0fdd-50e2-46db-a35f-3258acbe4f7d"
+              },
+              {
+                "reference": "urn:uuid:fe2fd25c-c59b-49ec-9fad-ee159c300181"
+              }
+            ],
+            "code": {
+              "coding": [
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "721981007",
+                  "display": "Diagnostic studies report"
+                }
+              ]
+            }
+          }
+        ],
+        "author": [
+          {
+            "reference": "urn:uuid:42445006-3884-4f9c-9c46-97f045cd635d"
+          }
+        ],
+        "encounter": {
+          "reference": "urn:uuid:302e8f46-74cf-4f23-b6bb-62e8d765737b"
+        },
+        "custodian": {
+          "reference": "urn:uuid:56211c8c-f269-4f54-ad9a-01859adce095"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:06ea5b74-2a6c-4880-9ffb-b7ab25149d55",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "06ea5b74-2a6c-4880-9ffb-b7ab25149d55",
+        "identifier": [
+          {
+            "system": "https://healthid.ndhm.gov.in",
+            "value": "priya.m@sbx"
+          },
+          {
+            "system": "https://abdm.gov.in/abha-number",
+            "value": "91-1056-7789-4435"
+          }
+        ],
+        "name": [
+          {
+            "text": "Priya Menon"
+          }
+        ],
+        "gender": "female",
+        "birthDate": "1998-01-01",
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "9456781230"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:42445006-3884-4f9c-9c46-97f045cd635d",
+      "resource": {
+        "resourceType": "Practitioner",
+        "id": "42445006-3884-4f9c-9c46-97f045cd635d",
+        "name": [
+          {
+            "text": "Dr. Kunal Mehta"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:56211c8c-f269-4f54-ad9a-01859adce095",
+      "resource": {
+        "resourceType": "Organization",
+        "id": "56211c8c-f269-4f54-ad9a-01859adce095",
+        "name": "APEX_DIAG"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:302e8f46-74cf-4f23-b6bb-62e8d765737b",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "302e8f46-74cf-4f23-b6bb-62e8d765737b",
+        "status": "finished",
+        "class": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code": "AMB",
+          "display": "ambulatory"
+        },
+        "subject": {
+          "reference": "urn:uuid:06ea5b74-2a6c-4880-9ffb-b7ab25149d55"
+        },
+        "period": {
+          "start": "2026-09-04T00:00:00+05:30"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:fc8b0fdd-50e2-46db-a35f-3258acbe4f7d",
+      "resource": {
+        "resourceType": "DiagnosticReport",
+        "id": "fc8b0fdd-50e2-46db-a35f-3258acbe4f7d",
+        "meta": {
+          "profile": [
+            "https://nrces.in/ndhm/fhir/r4/StructureDefinition/DiagnosticReportImaging"
+          ]
+        },
+        "status": "final",
+        "code": {
+          "text": "ECG"
+        },
+        "subject": {
+          "reference": "urn:uuid:06ea5b74-2a6c-4880-9ffb-b7ab25149d55"
+        },
+        "issued": "2026-09-04T09:00:00+05:30"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:fe2fd25c-c59b-49ec-9fad-ee159c300181",
+      "resource": {
+        "resourceType": "DocumentReference",
+        "id": "fe2fd25c-c59b-49ec-9fad-ee159c300181",
+        "status": "current",
+        "subject": {
+          "reference": "urn:uuid:06ea5b74-2a6c-4880-9ffb-b7ab25149d55"
+        },
+        "content": [
+          {
+            "attachment": {
+              "contentType": "application/pdf",
+              "url": "https://storage.abdm-sandbox.example/P009/ultrasound_report_R019.pdf",
+              "title": "Abdominal ultrasound report with images",
+              "size": 6348800
+            }
+          }
+        ],
+        "type": {
+          "text": "Ultrasound Report"
+        }
+      }
+    }
+  ]
+}

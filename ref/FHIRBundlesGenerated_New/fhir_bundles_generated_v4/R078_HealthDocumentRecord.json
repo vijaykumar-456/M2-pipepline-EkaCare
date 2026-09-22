@@ -1,0 +1,158 @@
+{
+  "resourceType": "Bundle",
+  "id": "HealthDocumentRecord-R078",
+  "meta": {
+    "profile": [
+      "https://nrces.in/ndhm/fhir/r4/StructureDefinition/DocumentBundle"
+    ]
+  },
+  "identifier": {
+    "system": "http://hip.in",
+    "value": "bundle-R078"
+  },
+  "type": "document",
+  "timestamp": "2026-09-10T05:12:37+05:30",
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:21ab4783-a250-4c32-88ab-9c66ec63c1fc",
+      "resource": {
+        "resourceType": "Composition",
+        "id": "21ab4783-a250-4c32-88ab-9c66ec63c1fc",
+        "meta": {
+          "profile": [
+            "https://nrces.in/ndhm/fhir/r4/StructureDefinition/HealthDocumentRecord"
+          ]
+        },
+        "language": "en-IN",
+        "status": "final",
+        "type": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "419891008",
+              "display": "Record artifact"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:b96ca5a5-acae-4087-93ca-6113bf92fffb"
+        },
+        "date": "2026-09-10T05:12:37+05:30",
+        "title": "HealthDocumentRecord Record",
+        "section": [
+          {
+            "entry": [
+              {
+                "reference": "urn:uuid:4fcde2b6-b3c2-4be2-a028-0b5d4a4c245b"
+              }
+            ]
+          }
+        ],
+        "author": [
+          {
+            "reference": "urn:uuid:ca2e6f5a-284c-4ebc-8009-6eb7425c9e6e"
+          }
+        ],
+        "encounter": {
+          "reference": "urn:uuid:dcbcf310-5284-430e-a6dc-ab452f8a382d"
+        },
+        "custodian": {
+          "reference": "urn:uuid:7bd6d9da-a82e-4bbc-808f-07bd8df159ea"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:b96ca5a5-acae-4087-93ca-6113bf92fffb",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "b96ca5a5-acae-4087-93ca-6113bf92fffb",
+        "identifier": [
+          {
+            "system": "https://healthid.ndhm.gov.in",
+            "value": "testinguser49@sbx"
+          },
+          {
+            "system": "https://abdm.gov.in/abha-number",
+            "value": "91-7365-4265-8832"
+          }
+        ],
+        "name": [
+          {
+            "text": "Vikram Verma"
+          }
+        ],
+        "gender": "female",
+        "birthDate": "1982-01-01",
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "9565923499"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:ca2e6f5a-284c-4ebc-8009-6eb7425c9e6e",
+      "resource": {
+        "resourceType": "Practitioner",
+        "id": "ca2e6f5a-284c-4ebc-8009-6eb7425c9e6e",
+        "name": [
+          {
+            "text": "Dr. Farha Khan"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:7bd6d9da-a82e-4bbc-808f-07bd8df159ea",
+      "resource": {
+        "resourceType": "Organization",
+        "id": "7bd6d9da-a82e-4bbc-808f-07bd8df159ea",
+        "name": "WELLNESS_FAM"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:dcbcf310-5284-430e-a6dc-ab452f8a382d",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "dcbcf310-5284-430e-a6dc-ab452f8a382d",
+        "status": "finished",
+        "class": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code": "AMB",
+          "display": "ambulatory"
+        },
+        "subject": {
+          "reference": "urn:uuid:b96ca5a5-acae-4087-93ca-6113bf92fffb"
+        },
+        "period": {
+          "start": "2026-08-28T00:00:00+05:30"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:4fcde2b6-b3c2-4be2-a028-0b5d4a4c245b",
+      "resource": {
+        "resourceType": "DocumentReference",
+        "id": "4fcde2b6-b3c2-4be2-a028-0b5d4a4c245b",
+        "status": "current",
+        "subject": {
+          "reference": "urn:uuid:b96ca5a5-acae-4087-93ca-6113bf92fffb"
+        },
+        "content": [
+          {
+            "attachment": {
+              "contentType": "image/jpeg",
+              "url": "https://storage.abdm-sandbox.example/178725722095673/prescription_slip_R078.jpg",
+              "title": "Photograph of handwritten prescription slip",
+              "size": 624640
+            }
+          }
+        ],
+        "type": {
+          "text": "Prescription Slip"
+        }
+      }
+    }
+  ]
+}

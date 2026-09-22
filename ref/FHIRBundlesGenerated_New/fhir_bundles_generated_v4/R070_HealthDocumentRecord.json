@@ -1,0 +1,158 @@
+{
+  "resourceType": "Bundle",
+  "id": "HealthDocumentRecord-R070",
+  "meta": {
+    "profile": [
+      "https://nrces.in/ndhm/fhir/r4/StructureDefinition/DocumentBundle"
+    ]
+  },
+  "identifier": {
+    "system": "http://hip.in",
+    "value": "bundle-R070"
+  },
+  "type": "document",
+  "timestamp": "2026-09-10T05:12:37+05:30",
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:615a8abb-a781-4c58-8980-2252e8e9f961",
+      "resource": {
+        "resourceType": "Composition",
+        "id": "615a8abb-a781-4c58-8980-2252e8e9f961",
+        "meta": {
+          "profile": [
+            "https://nrces.in/ndhm/fhir/r4/StructureDefinition/HealthDocumentRecord"
+          ]
+        },
+        "language": "en-IN",
+        "status": "final",
+        "type": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "419891008",
+              "display": "Record artifact"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:911c2d77-363e-4461-8a9d-cfa38306e1e5"
+        },
+        "date": "2026-09-10T05:12:37+05:30",
+        "title": "HealthDocumentRecord Record",
+        "section": [
+          {
+            "entry": [
+              {
+                "reference": "urn:uuid:3d301f89-3402-4062-9bd1-2699408c8d20"
+              }
+            ]
+          }
+        ],
+        "author": [
+          {
+            "reference": "urn:uuid:0d012bdb-b307-4713-9f09-61b339fdeab0"
+          }
+        ],
+        "encounter": {
+          "reference": "urn:uuid:25db0e74-c831-478d-bf18-479203c909f0"
+        },
+        "custodian": {
+          "reference": "urn:uuid:14576aa6-6b99-4876-b2e0-588edd376339"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:911c2d77-363e-4461-8a9d-cfa38306e1e5",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "911c2d77-363e-4461-8a9d-cfa38306e1e5",
+        "identifier": [
+          {
+            "system": "https://healthid.ndhm.gov.in",
+            "value": "testinguser41@sbx"
+          },
+          {
+            "system": "https://abdm.gov.in/abha-number",
+            "value": "91-3401-9899-1443"
+          }
+        ],
+        "name": [
+          {
+            "text": "Harish Reddy"
+          }
+        ],
+        "gender": "male",
+        "birthDate": "1998-01-01",
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "9790326952"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:0d012bdb-b307-4713-9f09-61b339fdeab0",
+      "resource": {
+        "resourceType": "Practitioner",
+        "id": "0d012bdb-b307-4713-9f09-61b339fdeab0",
+        "name": [
+          {
+            "text": "Dr. Arun Kumar"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:14576aa6-6b99-4876-b2e0-588edd376339",
+      "resource": {
+        "resourceType": "Organization",
+        "id": "14576aa6-6b99-4876-b2e0-588edd376339",
+        "name": "SRM_CHENNAI"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:25db0e74-c831-478d-bf18-479203c909f0",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "25db0e74-c831-478d-bf18-479203c909f0",
+        "status": "finished",
+        "class": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code": "AMB",
+          "display": "ambulatory"
+        },
+        "subject": {
+          "reference": "urn:uuid:911c2d77-363e-4461-8a9d-cfa38306e1e5"
+        },
+        "period": {
+          "start": "2026-08-27T00:00:00+05:30"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:3d301f89-3402-4062-9bd1-2699408c8d20",
+      "resource": {
+        "resourceType": "DocumentReference",
+        "id": "3d301f89-3402-4062-9bd1-2699408c8d20",
+        "status": "current",
+        "subject": {
+          "reference": "urn:uuid:911c2d77-363e-4461-8a9d-cfa38306e1e5"
+        },
+        "content": [
+          {
+            "attachment": {
+              "contentType": "video/mp4",
+              "url": "https://storage.abdm-sandbox.example/178759513488504/physiotherapy_demo_video_R070.mp4",
+              "title": "Home exercise demonstration video for patient",
+              "size": 15769600
+            }
+          }
+        ],
+        "type": {
+          "text": "Physiotherapy Demo Video"
+        }
+      }
+    }
+  ]
+}

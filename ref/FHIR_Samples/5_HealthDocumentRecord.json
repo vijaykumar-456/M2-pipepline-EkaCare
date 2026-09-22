@@ -1,0 +1,61 @@
+{
+  "resourceType": "Bundle",
+  "id": "HealthDocument-example-01",
+  "meta": {
+    "versionId": "1",
+    "lastUpdated": "2026-09-09T10:00:00.000+05:30",
+    "profile": ["https://nrces.in/ndhm/fhir/r4/StructureDefinition/DocumentBundle"]
+  },
+  "identifier": { "system": "http://hip.in", "value": "bundle-healthdoc-0001" },
+  "type": "document",
+  "timestamp": "2026-09-09T10:00:00.000+05:30",
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:comp-0005",
+      "resource": {
+        "resourceType": "Composition",
+        "id": "comp-0005",
+        "meta": { "profile": ["https://nrces.in/ndhm/fhir/r4/StructureDefinition/HealthDocumentRecord"] },
+        "language": "en-IN",
+        "status": "final",
+        "type": {
+          "coding": [{ "system": "http://snomed.info/sct", "code": "419891008", "display": "Record artifact" }],
+          "text": "Health Document Record"
+        },
+        "subject": { "reference": "urn:uuid:patient-0005" },
+        "date": "2026-09-09T10:00:00.000+05:30",
+        "author": [{ "reference": "urn:uuid:patient-0005" }],
+        "title": "Uploaded Health Document(s)",
+        "section": [
+          {
+            "code": { "coding": [{ "system": "http://snomed.info/sct", "code": "419891008", "display": "Record artifact" }] },
+            "entry": [
+              { "reference": "urn:uuid:docref-0003" },
+              { "reference": "urn:uuid:docref-0004" }
+            ]
+          }
+        ]
+      }
+    },
+    { "fullUrl": "urn:uuid:patient-0005", "resource": {
+        "resourceType": "Patient", "id": "patient-0005",
+        "name": [{ "text": "Anjali Verma" }], "gender": "female", "birthDate": "1995-09-30"
+    }},
+    { "fullUrl": "urn:uuid:docref-0003", "resource": {
+        "resourceType": "DocumentReference", "id": "docref-0003",
+        "status": "current",
+        "type": { "coding": [{ "system": "http://snomed.info/sct", "code": "719858009", "display": "Old medical record" }] },
+        "subject": { "reference": "urn:uuid:patient-0005" },
+        "date": "2026-09-09T10:00:00+05:30",
+        "content": [{ "attachment": { "contentType": "application/pdf", "title": "Old lab report (2019)" } }]
+    }},
+    { "fullUrl": "urn:uuid:docref-0004", "resource": {
+        "resourceType": "DocumentReference", "id": "docref-0004",
+        "status": "current",
+        "type": { "coding": [{ "system": "http://snomed.info/sct", "code": "419891008", "display": "Record artifact" }] },
+        "subject": { "reference": "urn:uuid:patient-0005" },
+        "date": "2026-09-09T10:00:00+05:30",
+        "content": [{ "attachment": { "contentType": "image/jpeg", "title": "Scanned handwritten prescription" } }]
+    }}
+  ]
+}

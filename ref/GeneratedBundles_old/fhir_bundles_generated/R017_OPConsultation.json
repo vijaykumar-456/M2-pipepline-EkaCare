@@ -1,0 +1,595 @@
+{
+  "resourceType": "Bundle",
+  "id": "OPConsultation-R017",
+  "meta": {
+    "profile": [
+      "https://nrces.in/ndhm/fhir/r4/StructureDefinition/DocumentBundle"
+    ]
+  },
+  "identifier": {
+    "system": "http://hip.in",
+    "value": "bundle-R017"
+  },
+  "type": "document",
+  "timestamp": "2026-09-10T04:52:40+05:30",
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:6596ad33-8ac0-40fc-a8c1-7fea81cedd24",
+      "resource": {
+        "resourceType": "Composition",
+        "id": "6596ad33-8ac0-40fc-a8c1-7fea81cedd24",
+        "meta": {
+          "profile": [
+            "https://nrces.in/ndhm/fhir/r4/StructureDefinition/OPConsultRecord"
+          ]
+        },
+        "language": "en-IN",
+        "status": "final",
+        "type": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "371530004",
+              "display": "Clinical consultation report"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:906a7f23-6ad6-47ec-982a-37c68d9ee090"
+        },
+        "date": "2026-09-10T04:52:40+05:30",
+        "title": "OPConsultation Record",
+        "section": [
+          {
+            "title": "Chief Complaints",
+            "entry": [
+              {
+                "reference": "urn:uuid:9303e8e5-525b-4950-947d-5f40b591b8b2"
+              }
+            ],
+            "code": {
+              "coding": [
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "422843007",
+                  "display": "Chief complaint section"
+                }
+              ]
+            }
+          },
+          {
+            "title": "Physical Examination",
+            "entry": [
+              {
+                "reference": "urn:uuid:ac88246f-4e40-40c7-becf-893eaf198924"
+              },
+              {
+                "reference": "urn:uuid:3642954a-ead6-4e27-ba0d-7c01fd8735e7"
+              },
+              {
+                "reference": "urn:uuid:5328e756-7489-46b4-a7e8-9fdd9a18ca8c"
+              },
+              {
+                "reference": "urn:uuid:f72adbd2-966f-42ca-b0cd-f97e38f82c3d"
+              },
+              {
+                "reference": "urn:uuid:e8c88196-5ff7-4bb7-be9c-3098795bad93"
+              },
+              {
+                "reference": "urn:uuid:86e69a7c-8d3f-4f16-8c7a-46bcd4ee6ae8"
+              }
+            ],
+            "code": {
+              "coding": [
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "425044008",
+                  "display": "Physical exam section"
+                }
+              ]
+            }
+          },
+          {
+            "title": "Allergies",
+            "entry": [
+              {
+                "reference": "urn:uuid:781f3fc5-8195-41e7-9a9a-92e060c04e0b"
+              }
+            ],
+            "code": {
+              "coding": [
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "722446000",
+                  "display": "Allergy record"
+                }
+              ]
+            }
+          },
+          {
+            "title": "Medical History",
+            "entry": [
+              {
+                "reference": "urn:uuid:9b8c5bf5-21c6-4f84-a81c-4c1b7e0845f2"
+              },
+              {
+                "reference": "urn:uuid:3d2688c4-edad-4da2-a3f3-9ecec1e38e46"
+              }
+            ],
+            "code": {
+              "coding": [
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "371529009",
+                  "display": "History and physical report"
+                }
+              ]
+            }
+          },
+          {
+            "title": "Family History",
+            "entry": [
+              {
+                "reference": "urn:uuid:09682fea-462e-44cd-b5bf-aae5a47bb977"
+              }
+            ],
+            "code": {
+              "coding": [
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "422432008",
+                  "display": "Family history section"
+                }
+              ]
+            }
+          },
+          {
+            "title": "Procedure",
+            "entry": [
+              {
+                "reference": "urn:uuid:276f75b4-9c50-416f-8171-3a256a2387f8"
+              }
+            ],
+            "code": {
+              "coding": [
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "371525003",
+                  "display": "Procedure section"
+                }
+              ]
+            }
+          },
+          {
+            "title": "Follow Up",
+            "entry": [
+              {
+                "reference": "urn:uuid:375a0545-e06b-4604-ab23-e731e7ed95a6"
+              }
+            ],
+            "code": {
+              "coding": [
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "390906007",
+                  "display": "Follow-up encounter"
+                }
+              ]
+            }
+          },
+          {
+            "title": "Referral",
+            "entry": [
+              {
+                "reference": "urn:uuid:6319a294-4413-4cc4-aff0-27c05037a5e3"
+              }
+            ],
+            "code": {
+              "coding": [
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "306206005",
+                  "display": "Referral to service"
+                }
+              ]
+            }
+          }
+        ],
+        "author": [
+          {
+            "reference": "urn:uuid:12cd57b3-bdd4-4d76-a1fd-b6efb2337076"
+          }
+        ],
+        "encounter": {
+          "reference": "urn:uuid:24a0b4d6-6cf5-49db-84bb-c605de32a5ba"
+        },
+        "custodian": {
+          "reference": "urn:uuid:809650a6-640c-41a6-b73c-ab9e46d9abf6"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:906a7f23-6ad6-47ec-982a-37c68d9ee090",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "906a7f23-6ad6-47ec-982a-37c68d9ee090",
+        "identifier": [
+          {
+            "system": "https://healthid.ndhm.gov.in",
+            "value": "anjali.v@sbx"
+          },
+          {
+            "system": "https://abdm.gov.in/abha-number",
+            "value": "91-8834-5567-2213"
+          }
+        ],
+        "name": [
+          {
+            "text": "Anjali Verma"
+          }
+        ],
+        "gender": "female",
+        "birthDate": "1995-01-01",
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "9765432180"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:12cd57b3-bdd4-4d76-a1fd-b6efb2337076",
+      "resource": {
+        "resourceType": "Practitioner",
+        "id": "12cd57b3-bdd4-4d76-a1fd-b6efb2337076",
+        "name": [
+          {
+            "text": "Dr. Farha Khan"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:809650a6-640c-41a6-b73c-ab9e46d9abf6",
+      "resource": {
+        "resourceType": "Organization",
+        "id": "809650a6-640c-41a6-b73c-ab9e46d9abf6",
+        "name": "APEX_DIAG"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:24a0b4d6-6cf5-49db-84bb-c605de32a5ba",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "24a0b4d6-6cf5-49db-84bb-c605de32a5ba",
+        "status": "finished",
+        "class": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code": "AMB",
+          "display": "ambulatory"
+        },
+        "subject": {
+          "reference": "urn:uuid:906a7f23-6ad6-47ec-982a-37c68d9ee090"
+        },
+        "period": {
+          "start": "2026-09-13T00:00:00+05:30"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:9303e8e5-525b-4950-947d-5f40b591b8b2",
+      "resource": {
+        "resourceType": "Condition",
+        "id": "9303e8e5-525b-4950-947d-5f40b591b8b2",
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active"
+            }
+          ]
+        },
+        "code": {
+          "text": "Skin rash with itching",
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "271807003",
+              "display": "Skin rash with itching"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:906a7f23-6ad6-47ec-982a-37c68d9ee090"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:ac88246f-4e40-40c7-becf-893eaf198924",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "ac88246f-4e40-40c7-becf-893eaf198924",
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8480-6",
+              "display": "Systolic blood pressure"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:906a7f23-6ad6-47ec-982a-37c68d9ee090"
+        },
+        "valueQuantity": {
+          "value": 115.0,
+          "unit": "mmHg"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:3642954a-ead6-4e27-ba0d-7c01fd8735e7",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "3642954a-ead6-4e27-ba0d-7c01fd8735e7",
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8462-4",
+              "display": "Diastolic blood pressure"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:906a7f23-6ad6-47ec-982a-37c68d9ee090"
+        },
+        "valueQuantity": {
+          "value": 87.0,
+          "unit": "mmHg"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:5328e756-7489-46b4-a7e8-9fdd9a18ca8c",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "5328e756-7489-46b4-a7e8-9fdd9a18ca8c",
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8867-4",
+              "display": "Heart rate"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:906a7f23-6ad6-47ec-982a-37c68d9ee090"
+        },
+        "valueQuantity": {
+          "value": 95.0,
+          "unit": "beats/min"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:f72adbd2-966f-42ca-b0cd-f97e38f82c3d",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "f72adbd2-966f-42ca-b0cd-f97e38f82c3d",
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8310-5",
+              "display": "Body temperature"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:906a7f23-6ad6-47ec-982a-37c68d9ee090"
+        },
+        "valueQuantity": {
+          "value": 38.1,
+          "unit": "Cel"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:e8c88196-5ff7-4bb7-be9c-3098795bad93",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "e8c88196-5ff7-4bb7-be9c-3098795bad93",
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "59408-5",
+              "display": "Oxygen saturation"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:906a7f23-6ad6-47ec-982a-37c68d9ee090"
+        },
+        "valueQuantity": {
+          "value": 96.0,
+          "unit": "%"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:86e69a7c-8d3f-4f16-8c7a-46bcd4ee6ae8",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "86e69a7c-8d3f-4f16-8c7a-46bcd4ee6ae8",
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "425044008",
+              "display": "Physical exam finding"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:906a7f23-6ad6-47ec-982a-37c68d9ee090"
+        },
+        "valueString": "Erythematous rash on forearms."
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:781f3fc5-8195-41e7-9a9a-92e060c04e0b",
+      "resource": {
+        "resourceType": "AllergyIntolerance",
+        "id": "781f3fc5-8195-41e7-9a9a-92e060c04e0b",
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical",
+              "code": "active"
+            }
+          ]
+        },
+        "code": {
+          "text": "Shellfish allergy"
+        },
+        "patient": {
+          "reference": "urn:uuid:906a7f23-6ad6-47ec-982a-37c68d9ee090"
+        },
+        "category": [
+          "food"
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:9b8c5bf5-21c6-4f84-a81c-4c1b7e0845f2",
+      "resource": {
+        "resourceType": "Condition",
+        "id": "9b8c5bf5-21c6-4f84-a81c-4c1b7e0845f2",
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active"
+            }
+          ]
+        },
+        "code": {
+          "text": "Contact dermatitis",
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "238539001",
+              "display": "Contact dermatitis"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:906a7f23-6ad6-47ec-982a-37c68d9ee090"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:3d2688c4-edad-4da2-a3f3-9ecec1e38e46",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "3d2688c4-edad-4da2-a3f3-9ecec1e38e46",
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "1003642006",
+              "display": "Medical history note"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:906a7f23-6ad6-47ec-982a-37c68d9ee090"
+        },
+        "valueString": "Previous appendectomy in 2015"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:09682fea-462e-44cd-b5bf-aae5a47bb977",
+      "resource": {
+        "resourceType": "FamilyMemberHistory",
+        "id": "09682fea-462e-44cd-b5bf-aae5a47bb977",
+        "status": "completed",
+        "patient": {
+          "reference": "urn:uuid:906a7f23-6ad6-47ec-982a-37c68d9ee090"
+        },
+        "note": [
+          {
+            "text": "Sibling with history of asthma."
+          }
+        ],
+        "relationship": {
+          "text": "Family member"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:276f75b4-9c50-416f-8171-3a256a2387f8",
+      "resource": {
+        "resourceType": "Procedure",
+        "id": "276f75b4-9c50-416f-8171-3a256a2387f8",
+        "status": "completed",
+        "code": {
+          "text": "Nebulization",
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "699253003",
+              "display": "Nebulization"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:906a7f23-6ad6-47ec-982a-37c68d9ee090"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:375a0545-e06b-4604-ab23-e731e7ed95a6",
+      "resource": {
+        "resourceType": "Appointment",
+        "id": "375a0545-e06b-4604-ab23-e731e7ed95a6",
+        "status": "booked",
+        "start": "2026-09-22T10:00:00+05:30",
+        "participant": [
+          {
+            "actor": {
+              "reference": "urn:uuid:906a7f23-6ad6-47ec-982a-37c68d9ee090"
+            },
+            "status": "accepted"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:6319a294-4413-4cc4-aff0-27c05037a5e3",
+      "resource": {
+        "resourceType": "ServiceRequest",
+        "id": "6319a294-4413-4cc4-aff0-27c05037a5e3",
+        "status": "active",
+        "intent": "order",
+        "code": {
+          "text": "Referred to endocrinologist for diabetes management."
+        },
+        "subject": {
+          "reference": "urn:uuid:906a7f23-6ad6-47ec-982a-37c68d9ee090"
+        }
+      }
+    }
+  ]
+}

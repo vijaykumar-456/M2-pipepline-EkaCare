@@ -1,0 +1,172 @@
+{
+  "resourceType": "Bundle",
+  "id": "Prescription-R052",
+  "meta": {
+    "profile": [
+      "https://nrces.in/ndhm/fhir/r4/StructureDefinition/DocumentBundle"
+    ]
+  },
+  "identifier": {
+    "system": "http://hip.in",
+    "value": "bundle-R052"
+  },
+  "type": "document",
+  "timestamp": "2026-09-10T04:52:40+05:30",
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:361a8dce-2f7a-4958-b65a-9d99fdd757e2",
+      "resource": {
+        "resourceType": "Composition",
+        "id": "361a8dce-2f7a-4958-b65a-9d99fdd757e2",
+        "meta": {
+          "profile": [
+            "https://nrces.in/ndhm/fhir/r4/StructureDefinition/PrescriptionRecord"
+          ]
+        },
+        "language": "en-IN",
+        "status": "final",
+        "type": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "440545006",
+              "display": "Prescription record"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:4f31b224-6a95-4a11-81f2-7a6f7cd82f90"
+        },
+        "date": "2026-09-10T04:52:40+05:30",
+        "title": "Prescription Record",
+        "section": [
+          {
+            "entry": [
+              {
+                "reference": "urn:uuid:dbb82e5b-a08c-42f2-b8cb-5cede49020ca"
+              },
+              {
+                "reference": "urn:uuid:fa70816f-ec1c-43b2-b491-ea6e6edf05c4"
+              }
+            ]
+          }
+        ],
+        "author": [
+          {
+            "reference": "urn:uuid:4fc76813-a0fb-4d12-a759-4c0a5573a152"
+          }
+        ],
+        "encounter": {
+          "reference": "urn:uuid:7184aa75-ac14-4d1e-ac6a-484b12a3f767"
+        },
+        "custodian": {
+          "reference": "urn:uuid:8fcd1734-08c4-4c8c-9703-c503a5f1f309"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:4f31b224-6a95-4a11-81f2-7a6f7cd82f90",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "4f31b224-6a95-4a11-81f2-7a6f7cd82f90",
+        "identifier": [
+          {
+            "system": "https://healthid.ndhm.gov.in",
+            "value": "testingmani@sbx"
+          },
+          {
+            "system": "https://abdm.gov.in/abha-number",
+            "value": "91-3385-4230-6456"
+          }
+        ],
+        "name": [
+          {
+            "text": "K Manikandan"
+          }
+        ],
+        "gender": "male",
+        "birthDate": "2001-01-01",
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "7846951356"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:4fc76813-a0fb-4d12-a759-4c0a5573a152",
+      "resource": {
+        "resourceType": "Practitioner",
+        "id": "4fc76813-a0fb-4d12-a759-4c0a5573a152",
+        "name": [
+          {
+            "text": "Dr. Neha Kapoor"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:8fcd1734-08c4-4c8c-9703-c503a5f1f309",
+      "resource": {
+        "resourceType": "Organization",
+        "id": "8fcd1734-08c4-4c8c-9703-c503a5f1f309",
+        "name": "APEX_DIAG"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:7184aa75-ac14-4d1e-ac6a-484b12a3f767",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "7184aa75-ac14-4d1e-ac6a-484b12a3f767",
+        "status": "finished",
+        "class": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code": "AMB",
+          "display": "ambulatory"
+        },
+        "subject": {
+          "reference": "urn:uuid:4f31b224-6a95-4a11-81f2-7a6f7cd82f90"
+        },
+        "period": {
+          "start": "2026-08-28T00:00:00+05:30"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:dbb82e5b-a08c-42f2-b8cb-5cede49020ca",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "id": "dbb82e5b-a08c-42f2-b8cb-5cede49020ca",
+        "status": "active",
+        "intent": "order",
+        "medicationCodeableConcept": {
+          "text": "Paracetamol"
+        },
+        "subject": {
+          "reference": "urn:uuid:4f31b224-6a95-4a11-81f2-7a6f7cd82f90"
+        },
+        "dosageInstruction": [
+          {
+            "text": "500 mg, Twice daily, for 3 days"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:fa70816f-ec1c-43b2-b491-ea6e6edf05c4",
+      "resource": {
+        "resourceType": "Binary",
+        "id": "fa70816f-ec1c-43b2-b491-ea6e6edf05c4",
+        "contentType": "image/jpeg",
+        "extension": [
+          {
+            "url": "http://example.org/fhir/StructureDefinition/source-url",
+            "valueUrl": "https://storage.abdm-sandbox.example/P002/prescription_slip_R052.jpg"
+          }
+        ],
+        "data": "PLACEHOLDER_BASE64=="
+      }
+    }
+  ]
+}

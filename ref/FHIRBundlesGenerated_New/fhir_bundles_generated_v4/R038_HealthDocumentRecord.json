@@ -1,0 +1,158 @@
+{
+  "resourceType": "Bundle",
+  "id": "HealthDocumentRecord-R038",
+  "meta": {
+    "profile": [
+      "https://nrces.in/ndhm/fhir/r4/StructureDefinition/DocumentBundle"
+    ]
+  },
+  "identifier": {
+    "system": "http://hip.in",
+    "value": "bundle-R038"
+  },
+  "type": "document",
+  "timestamp": "2026-09-10T05:12:37+05:30",
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:8409565b-072b-460d-a9da-6c2755272de8",
+      "resource": {
+        "resourceType": "Composition",
+        "id": "8409565b-072b-460d-a9da-6c2755272de8",
+        "meta": {
+          "profile": [
+            "https://nrces.in/ndhm/fhir/r4/StructureDefinition/HealthDocumentRecord"
+          ]
+        },
+        "language": "en-IN",
+        "status": "final",
+        "type": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "419891008",
+              "display": "Record artifact"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:dcf62a84-f281-4c21-a3dd-c5459a639c1a"
+        },
+        "date": "2026-09-10T05:12:37+05:30",
+        "title": "HealthDocumentRecord Record",
+        "section": [
+          {
+            "entry": [
+              {
+                "reference": "urn:uuid:9e9b10fb-4b4d-4707-9993-ccc2774138d0"
+              }
+            ]
+          }
+        ],
+        "author": [
+          {
+            "reference": "urn:uuid:fe135605-f157-4f48-ae14-4e088ee66cd0"
+          }
+        ],
+        "encounter": {
+          "reference": "urn:uuid:0533d1cc-ce2a-46c2-9361-1f7eb84a36df"
+        },
+        "custodian": {
+          "reference": "urn:uuid:f6995614-480f-475c-97ae-77431ef6b386"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:dcf62a84-f281-4c21-a3dd-c5459a639c1a",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "dcf62a84-f281-4c21-a3dd-c5459a639c1a",
+        "identifier": [
+          {
+            "system": "https://healthid.ndhm.gov.in",
+            "value": "testinguser49@sbx"
+          },
+          {
+            "system": "https://abdm.gov.in/abha-number",
+            "value": "91-7365-4265-8832"
+          }
+        ],
+        "name": [
+          {
+            "text": "Vikram Verma"
+          }
+        ],
+        "gender": "female",
+        "birthDate": "1982-01-01",
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "9565923499"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:fe135605-f157-4f48-ae14-4e088ee66cd0",
+      "resource": {
+        "resourceType": "Practitioner",
+        "id": "fe135605-f157-4f48-ae14-4e088ee66cd0",
+        "name": [
+          {
+            "text": "Dr. Arun Kumar"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:f6995614-480f-475c-97ae-77431ef6b386",
+      "resource": {
+        "resourceType": "Organization",
+        "id": "f6995614-480f-475c-97ae-77431ef6b386",
+        "name": "APEX_DIAG"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:0533d1cc-ce2a-46c2-9361-1f7eb84a36df",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "0533d1cc-ce2a-46c2-9361-1f7eb84a36df",
+        "status": "finished",
+        "class": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code": "AMB",
+          "display": "ambulatory"
+        },
+        "subject": {
+          "reference": "urn:uuid:dcf62a84-f281-4c21-a3dd-c5459a639c1a"
+        },
+        "period": {
+          "start": "2026-08-31T00:00:00+05:30"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:9e9b10fb-4b4d-4707-9993-ccc2774138d0",
+      "resource": {
+        "resourceType": "DocumentReference",
+        "id": "9e9b10fb-4b4d-4707-9993-ccc2774138d0",
+        "status": "current",
+        "subject": {
+          "reference": "urn:uuid:dcf62a84-f281-4c21-a3dd-c5459a639c1a"
+        },
+        "content": [
+          {
+            "attachment": {
+              "contentType": "application/pdf",
+              "url": "https://storage.abdm-sandbox.example/178725722095673/clinical_report_R038.pdf",
+              "title": "Scanned clinical consultation note",
+              "size": 184320
+            }
+          }
+        ],
+        "type": {
+          "text": "Clinical Report"
+        }
+      }
+    }
+  ]
+}

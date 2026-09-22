@@ -1,0 +1,576 @@
+{
+  "resourceType": "Bundle",
+  "type": "document",
+  "identifier": {
+    "system": "https://ndhm.in/phr",
+    "value": "cc-e75e964f95634b4a"
+  },
+  "timestamp": "2026-08-31T07:24:50.773877+00:00",
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:b84df82c-29e8-48cb-b1f8-35d518240a3b",
+      "resource": {
+        "resourceType": "Composition",
+        "meta": {
+          "profile": [
+            "https://nrces.in/ndhm/fhir/r4/StructureDefinition/WellnessRecord"
+          ]
+        },
+        "language": "en-IN",
+        "status": "final",
+        "type": {
+          "text": "Wellness Record"
+        },
+        "subject": {
+          "reference": "urn:uuid:987fa063-e458-4263-8643-5b8fb606494a"
+        },
+        "encounter": {
+          "reference": "urn:uuid:4a52cd7f-db32-4ed3-be5a-75f32adb0a54"
+        },
+        "date": "2026-08-31T07:24:50.773877+00:00",
+        "author": [
+          {
+            "reference": "urn:uuid:7d34b56a-6b0e-43bd-a62f-787222107c9d"
+          }
+        ],
+        "title": "Wellness Record",
+        "section": [
+          {
+            "title": "Vital Signs",
+            "entry": [
+              {
+                "reference": "urn:uuid:224a2bcc-8f9f-40bb-a8aa-894368d9a609"
+              },
+              {
+                "reference": "urn:uuid:f139ac24-f653-4b06-9214-17ffb896720c"
+              },
+              {
+                "reference": "urn:uuid:adcd270c-66d6-4c09-bc42-b1c040edb198"
+              },
+              {
+                "reference": "urn:uuid:4be8c706-333d-4c5e-b30c-e638775600e9"
+              },
+              {
+                "reference": "urn:uuid:66b6436d-4fde-42f0-9f55-4acf0ad879eb"
+              }
+            ],
+            "code": {
+              "text": "Vital Signs"
+            }
+          },
+          {
+            "title": "General Assessment",
+            "entry": [
+              {
+                "reference": "urn:uuid:33fbd254-af04-4f7a-9b56-439372e7e1ff"
+              }
+            ],
+            "code": {
+              "text": "General Assessment"
+            }
+          },
+          {
+            "title": "Other Observations",
+            "entry": [
+              {
+                "reference": "urn:uuid:7ed98ba6-b315-4a84-a52e-87a0550f0a76"
+              }
+            ],
+            "code": {
+              "text": "Other Observations"
+            }
+          },
+          {
+            "title": "Document Reference",
+            "entry": [
+              {
+                "reference": "urn:uuid:e39ba6e0-d280-4fde-a608-8affd87cb4d7"
+              }
+            ],
+            "code": {
+              "text": "Document Reference"
+            }
+          }
+        ],
+        "custodian": {
+          "reference": "urn:uuid:ce30e857-5c98-49a4-ac70-ab481962599c"
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Composition</b></p><p>Wellness Record - 31 Aug 2026</p></div>"
+        },
+        "id": "b84df82c-29e8-48cb-b1f8-35d518240a3b"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:987fa063-e458-4263-8643-5b8fb606494a",
+      "resource": {
+        "resourceType": "Patient",
+        "meta": {
+          "profile": [
+            "https://nrces.in/ndhm/fhir/r4/StructureDefinition/Patient"
+          ]
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Patient</b></p><p>Vijay Kumar</p></div>"
+        },
+        "identifier": [
+          {
+            "type": {
+              "coding": [
+                {
+                  "system": "https://nrces.in/ndhm/fhir/r4/CodeSystem/ndhm-identifier-type-code",
+                  "code": "ABHA",
+                  "display": "Ayushman Bharat Health Account (ABHA) ID"
+                }
+              ]
+            },
+            "value": "testinguser12@sbx"
+          },
+          {
+            "value": "91-5510-3107-6211"
+          }
+        ],
+        "name": [
+          {
+            "text": "Vijay Kumar"
+          }
+        ],
+        "gender": "male",
+        "birthDate": "1998-01-01",
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "7483976167",
+            "use": "mobile"
+          }
+        ],
+        "id": "987fa063-e458-4263-8643-5b8fb606494a"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:7d34b56a-6b0e-43bd-a62f-787222107c9d",
+      "resource": {
+        "resourceType": "Practitioner",
+        "meta": {
+          "profile": [
+            "https://nrces.in/ndhm/fhir/r4/StructureDefinition/Practitioner"
+          ]
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Practitioner</b></p><p>Dr. Arun Kumar</p></div>"
+        },
+        "name": [
+          {
+            "text": "Dr. Arun Kumar"
+          }
+        ],
+        "id": "7d34b56a-6b0e-43bd-a62f-787222107c9d"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:ce30e857-5c98-49a4-ac70-ab481962599c",
+      "resource": {
+        "resourceType": "Organization",
+        "meta": {
+          "profile": [
+            "https://nrces.in/ndhm/fhir/r4/StructureDefinition/Organization"
+          ]
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Organization</b></p><p>SRM_CHENNAI</p></div>"
+        },
+        "identifier": [
+          {
+            "value": "SRM_CHENNAI"
+          }
+        ],
+        "name": "SRM_CHENNAI",
+        "id": "ce30e857-5c98-49a4-ac70-ab481962599c"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:4a52cd7f-db32-4ed3-be5a-75f32adb0a54",
+      "resource": {
+        "resourceType": "Encounter",
+        "meta": {
+          "profile": [
+            "https://nrces.in/ndhm/fhir/r4/StructureDefinition/Encounter"
+          ]
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Encounter</b></p><p>ENC-P001-009</p></div>"
+        },
+        "identifier": [
+          {
+            "value": "ENC-P001-009"
+          }
+        ],
+        "status": "finished",
+        "class": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code": "AMB",
+          "display": "ambulatory"
+        },
+        "subject": {
+          "reference": "urn:uuid:987fa063-e458-4263-8643-5b8fb606494a"
+        },
+        "period": {
+          "start": "2026-08-31"
+        },
+        "participant": [
+          {
+            "individual": {
+              "reference": "urn:uuid:7d34b56a-6b0e-43bd-a62f-787222107c9d"
+            }
+          }
+        ],
+        "serviceProvider": {
+          "reference": "urn:uuid:ce30e857-5c98-49a4-ac70-ab481962599c"
+        },
+        "id": "4a52cd7f-db32-4ed3-be5a-75f32adb0a54"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:224a2bcc-8f9f-40bb-a8aa-894368d9a609",
+      "resource": {
+        "resourceType": "Observation",
+        "meta": {
+          "profile": [
+            "https://nrces.in/ndhm/fhir/r4/StructureDefinition/Observation"
+          ]
+        },
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8480-6",
+              "display": "Systolic blood pressure"
+            }
+          ],
+          "text": "Systolic blood pressure"
+        },
+        "subject": {
+          "reference": "urn:uuid:987fa063-e458-4263-8643-5b8fb606494a"
+        },
+        "encounter": {
+          "reference": "urn:uuid:4a52cd7f-db32-4ed3-be5a-75f32adb0a54"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "valueQuantity": {
+          "value": 120.0,
+          "unit": "mmHg"
+        },
+        "effectiveDateTime": "2026-08-31T00:00:00+05:30",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Observation</b></p><p>120</p></div>"
+        },
+        "id": "224a2bcc-8f9f-40bb-a8aa-894368d9a609"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:f139ac24-f653-4b06-9214-17ffb896720c",
+      "resource": {
+        "resourceType": "Observation",
+        "meta": {
+          "profile": [
+            "https://nrces.in/ndhm/fhir/r4/StructureDefinition/Observation"
+          ]
+        },
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8462-4",
+              "display": "Diastolic blood pressure"
+            }
+          ],
+          "text": "Diastolic blood pressure"
+        },
+        "subject": {
+          "reference": "urn:uuid:987fa063-e458-4263-8643-5b8fb606494a"
+        },
+        "encounter": {
+          "reference": "urn:uuid:4a52cd7f-db32-4ed3-be5a-75f32adb0a54"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "valueQuantity": {
+          "value": 80.0,
+          "unit": "mmHg"
+        },
+        "effectiveDateTime": "2026-08-31T00:00:00+05:30",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Observation</b></p><p>80</p></div>"
+        },
+        "id": "f139ac24-f653-4b06-9214-17ffb896720c"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:adcd270c-66d6-4c09-bc42-b1c040edb198",
+      "resource": {
+        "resourceType": "Observation",
+        "meta": {
+          "profile": [
+            "https://nrces.in/ndhm/fhir/r4/StructureDefinition/Observation"
+          ]
+        },
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8867-4",
+              "display": "Heart rate"
+            }
+          ],
+          "text": "Heart rate"
+        },
+        "subject": {
+          "reference": "urn:uuid:987fa063-e458-4263-8643-5b8fb606494a"
+        },
+        "encounter": {
+          "reference": "urn:uuid:4a52cd7f-db32-4ed3-be5a-75f32adb0a54"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "valueQuantity": {
+          "value": 82.0,
+          "unit": "beats/min"
+        },
+        "effectiveDateTime": "2026-08-31T00:00:00+05:30",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Observation</b></p><p>82</p></div>"
+        },
+        "id": "adcd270c-66d6-4c09-bc42-b1c040edb198"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:4be8c706-333d-4c5e-b30c-e638775600e9",
+      "resource": {
+        "resourceType": "Observation",
+        "meta": {
+          "profile": [
+            "https://nrces.in/ndhm/fhir/r4/StructureDefinition/Observation"
+          ]
+        },
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8310-5",
+              "display": "Body temperature"
+            }
+          ],
+          "text": "Body temperature"
+        },
+        "subject": {
+          "reference": "urn:uuid:987fa063-e458-4263-8643-5b8fb606494a"
+        },
+        "encounter": {
+          "reference": "urn:uuid:4a52cd7f-db32-4ed3-be5a-75f32adb0a54"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "valueQuantity": {
+          "value": 38.2,
+          "unit": "Cel"
+        },
+        "effectiveDateTime": "2026-08-31T00:00:00+05:30",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Observation</b></p><p>38.2</p></div>"
+        },
+        "id": "4be8c706-333d-4c5e-b30c-e638775600e9"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:66b6436d-4fde-42f0-9f55-4acf0ad879eb",
+      "resource": {
+        "resourceType": "Observation",
+        "meta": {
+          "profile": [
+            "https://nrces.in/ndhm/fhir/r4/StructureDefinition/Observation"
+          ]
+        },
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "59408-5",
+              "display": "Oxygen saturation"
+            }
+          ],
+          "text": "Oxygen saturation"
+        },
+        "subject": {
+          "reference": "urn:uuid:987fa063-e458-4263-8643-5b8fb606494a"
+        },
+        "encounter": {
+          "reference": "urn:uuid:4a52cd7f-db32-4ed3-be5a-75f32adb0a54"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "valueQuantity": {
+          "value": 98.0,
+          "unit": "%"
+        },
+        "effectiveDateTime": "2026-08-31T00:00:00+05:30",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Observation</b></p><p>98</p></div>"
+        },
+        "id": "66b6436d-4fde-42f0-9f55-4acf0ad879eb"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:33fbd254-af04-4f7a-9b56-439372e7e1ff",
+      "resource": {
+        "resourceType": "Observation",
+        "meta": {
+          "profile": [
+            "https://nrces.in/ndhm/fhir/r4/StructureDefinition/Observation"
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "exam",
+                "display": "Exam"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "text": "Physical examination findings"
+        },
+        "subject": {
+          "reference": "urn:uuid:987fa063-e458-4263-8643-5b8fb606494a"
+        },
+        "encounter": {
+          "reference": "urn:uuid:4a52cd7f-db32-4ed3-be5a-75f32adb0a54"
+        },
+        "effectiveDateTime": "2026-08-31T00:00:00+05:30",
+        "valueString": "Mild throat congestion. No respiratory distress.",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Observation</b></p><p>Mild throat congestion. No respiratory distress.</p></div>"
+        },
+        "id": "33fbd254-af04-4f7a-9b56-439372e7e1ff"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:7ed98ba6-b315-4a84-a52e-87a0550f0a76",
+      "resource": {
+        "resourceType": "CarePlan",
+        "status": "active",
+        "intent": "proposal",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>CarePlan</b></p><p>Patient evaluated during outpatient consultation.</p></div>"
+        },
+        "description": "Patient evaluated during outpatient consultation.",
+        "subject": {
+          "reference": "urn:uuid:987fa063-e458-4263-8643-5b8fb606494a"
+        },
+        "encounter": {
+          "reference": "urn:uuid:4a52cd7f-db32-4ed3-be5a-75f32adb0a54"
+        },
+        "id": "7ed98ba6-b315-4a84-a52e-87a0550f0a76"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:e39ba6e0-d280-4fde-a608-8affd87cb4d7",
+      "resource": {
+        "resourceType": "DocumentReference",
+        "meta": {
+          "profile": [
+            "https://nrces.in/ndhm/fhir/r4/StructureDefinition/DocumentReference"
+          ]
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>DocumentReference</b></p><p>Wellness Record</p></div>"
+        },
+        "status": "current",
+        "type": {
+          "text": "Wellness Record"
+        },
+        "subject": {
+          "reference": "urn:uuid:987fa063-e458-4263-8643-5b8fb606494a"
+        },
+        "date": "2026-08-31T00:00:00+05:30",
+        "content": [
+          {
+            "attachment": {
+              "contentType": "application/octet-stream"
+            }
+          }
+        ],
+        "context": {
+          "encounter": [
+            {
+              "reference": "urn:uuid:4a52cd7f-db32-4ed3-be5a-75f32adb0a54"
+            }
+          ]
+        },
+        "id": "e39ba6e0-d280-4fde-a608-8affd87cb4d7"
+      }
+    }
+  ]
+}

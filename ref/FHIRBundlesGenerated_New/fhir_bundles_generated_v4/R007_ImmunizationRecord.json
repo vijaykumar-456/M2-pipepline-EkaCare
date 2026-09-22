@@ -1,0 +1,216 @@
+{
+  "resourceType": "Bundle",
+  "id": "ImmunizationRecord-R007",
+  "meta": {
+    "profile": [
+      "https://nrces.in/ndhm/fhir/r4/StructureDefinition/DocumentBundle"
+    ]
+  },
+  "identifier": {
+    "system": "http://hip.in",
+    "value": "bundle-R007"
+  },
+  "type": "document",
+  "timestamp": "2026-09-10T05:12:37+05:30",
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:fc4866e1-c972-4a9a-a848-5aecc7b8c209",
+      "resource": {
+        "resourceType": "Composition",
+        "id": "fc4866e1-c972-4a9a-a848-5aecc7b8c209",
+        "meta": {
+          "profile": [
+            "https://nrces.in/ndhm/fhir/r4/StructureDefinition/ImmunizationRecord"
+          ]
+        },
+        "language": "en-IN",
+        "status": "final",
+        "type": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "41000179103",
+              "display": "Immunization record"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:096dbc37-556b-48c5-90ae-25914ac61114"
+        },
+        "date": "2026-09-10T05:12:37+05:30",
+        "title": "ImmunizationRecord Record",
+        "section": [
+          {
+            "entry": [
+              {
+                "reference": "urn:uuid:8c79aef7-70a9-4970-84b5-83117f50c1ec"
+              },
+              {
+                "reference": "urn:uuid:c0ca882b-880b-43df-be44-0757bf5f0769"
+              },
+              {
+                "reference": "urn:uuid:a3f93dc0-b5b3-41c4-bfc9-aa6326afd984"
+              }
+            ]
+          }
+        ],
+        "author": [
+          {
+            "reference": "urn:uuid:656bd901-a68f-4133-b8aa-d069d67e5c69"
+          }
+        ],
+        "encounter": {
+          "reference": "urn:uuid:9a9fb6df-629a-452d-8edb-4268c6951784"
+        },
+        "custodian": {
+          "reference": "urn:uuid:559275b9-1c64-44fc-963a-f2570f1fe369"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:096dbc37-556b-48c5-90ae-25914ac61114",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "096dbc37-556b-48c5-90ae-25914ac61114",
+        "identifier": [
+          {
+            "system": "https://healthid.ndhm.gov.in",
+            "value": "testinguser18@sbx"
+          },
+          {
+            "system": "https://abdm.gov.in/abha-number",
+            "value": "91-2028-1976-4374"
+          }
+        ],
+        "name": [
+          {
+            "text": "Anjali Desai"
+          }
+        ],
+        "gender": "male",
+        "birthDate": "2023-01-01",
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "9830573909"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:656bd901-a68f-4133-b8aa-d069d67e5c69",
+      "resource": {
+        "resourceType": "Practitioner",
+        "id": "656bd901-a68f-4133-b8aa-d069d67e5c69",
+        "name": [
+          {
+            "text": "Dr. Kunal Mehta"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:559275b9-1c64-44fc-963a-f2570f1fe369",
+      "resource": {
+        "resourceType": "Organization",
+        "id": "559275b9-1c64-44fc-963a-f2570f1fe369",
+        "name": "APEX_DIAG"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:9a9fb6df-629a-452d-8edb-4268c6951784",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "9a9fb6df-629a-452d-8edb-4268c6951784",
+        "status": "finished",
+        "class": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code": "AMB",
+          "display": "ambulatory"
+        },
+        "subject": {
+          "reference": "urn:uuid:096dbc37-556b-48c5-90ae-25914ac61114"
+        },
+        "period": {
+          "start": "2026-09-08T00:00:00+05:30"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:8c79aef7-70a9-4970-84b5-83117f50c1ec",
+      "resource": {
+        "resourceType": "Immunization",
+        "id": "8c79aef7-70a9-4970-84b5-83117f50c1ec",
+        "status": "completed",
+        "vaccineCode": {
+          "text": "COVID-19 vaccine (Covishield)"
+        },
+        "patient": {
+          "reference": "urn:uuid:096dbc37-556b-48c5-90ae-25914ac61114"
+        },
+        "occurrenceDateTime": "2026-09-08T09:00:00+05:30",
+        "protocolApplied": [
+          {
+            "doseNumberPositiveInt": 1
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:c0ca882b-880b-43df-be44-0757bf5f0769",
+      "resource": {
+        "resourceType": "ImmunizationRecommendation",
+        "id": "c0ca882b-880b-43df-be44-0757bf5f0769",
+        "patient": {
+          "reference": "urn:uuid:096dbc37-556b-48c5-90ae-25914ac61114"
+        },
+        "date": "2026-09-10T05:12:37+05:30",
+        "recommendation": [
+          {
+            "forecastStatus": {
+              "text": "due"
+            },
+            "dateCriterion": [
+              {
+                "code": {
+                  "coding": [
+                    {
+                      "system": "http://loinc.org",
+                      "code": "30980-7",
+                      "display": "Date vaccine due"
+                    }
+                  ]
+                },
+                "value": "2026-11-03T00:00:00+05:30"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:a3f93dc0-b5b3-41c4-bfc9-aa6326afd984",
+      "resource": {
+        "resourceType": "DocumentReference",
+        "id": "a3f93dc0-b5b3-41c4-bfc9-aa6326afd984",
+        "status": "current",
+        "subject": {
+          "reference": "urn:uuid:096dbc37-556b-48c5-90ae-25914ac61114"
+        },
+        "content": [
+          {
+            "attachment": {
+              "contentType": "application/pdf",
+              "url": "https://storage.abdm-sandbox.example/178783432905170/vaccination_certificate_R007.pdf",
+              "title": "Digital vaccination certificate",
+              "size": 153600
+            }
+          }
+        ],
+        "type": {
+          "text": "Vaccination Certificate"
+        }
+      }
+    }
+  ]
+}

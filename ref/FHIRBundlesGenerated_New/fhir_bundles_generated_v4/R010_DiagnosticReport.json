@@ -1,0 +1,199 @@
+{
+  "resourceType": "Bundle",
+  "id": "DiagnosticReport-R010",
+  "meta": {
+    "profile": [
+      "https://nrces.in/ndhm/fhir/r4/StructureDefinition/DocumentBundle"
+    ]
+  },
+  "identifier": {
+    "system": "http://hip.in",
+    "value": "bundle-R010"
+  },
+  "type": "document",
+  "timestamp": "2026-09-10T05:12:37+05:30",
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:6ca05ab4-41d3-4c86-83eb-d734b37af921",
+      "resource": {
+        "resourceType": "Composition",
+        "id": "6ca05ab4-41d3-4c86-83eb-d734b37af921",
+        "meta": {
+          "profile": [
+            "https://nrces.in/ndhm/fhir/r4/StructureDefinition/DiagnosticReportRecord"
+          ]
+        },
+        "language": "en-IN",
+        "status": "final",
+        "type": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "721981007",
+              "display": "Diagnostic studies report"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:edcf6da7-2bb8-4d44-b910-890422b75730"
+        },
+        "date": "2026-09-10T05:12:37+05:30",
+        "title": "DiagnosticReport Record",
+        "section": [
+          {
+            "title": "Investigation",
+            "entry": [
+              {
+                "reference": "urn:uuid:6303300a-718b-44f5-a1aa-9b93186c3dd1"
+              },
+              {
+                "reference": "urn:uuid:abd65b04-67df-48ce-84a2-2ed973f99f24"
+              }
+            ],
+            "code": {
+              "coding": [
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "721981007",
+                  "display": "Diagnostic studies report"
+                }
+              ]
+            }
+          }
+        ],
+        "author": [
+          {
+            "reference": "urn:uuid:4702ee40-8a8f-408f-8def-ed6084beaada"
+          }
+        ],
+        "encounter": {
+          "reference": "urn:uuid:b701f049-4cd1-404c-802b-50f81c399550"
+        },
+        "custodian": {
+          "reference": "urn:uuid:e94b4acc-6be8-4d83-bdc2-8f6582497374"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:edcf6da7-2bb8-4d44-b910-890422b75730",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "edcf6da7-2bb8-4d44-b910-890422b75730",
+        "identifier": [
+          {
+            "system": "https://healthid.ndhm.gov.in",
+            "value": "testinguser21@sbx"
+          },
+          {
+            "system": "https://abdm.gov.in/abha-number",
+            "value": "91-5717-2199-2934"
+          }
+        ],
+        "name": [
+          {
+            "text": "Rohan Reddy"
+          }
+        ],
+        "gender": "male",
+        "birthDate": "2025-01-01",
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "9548955962"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:4702ee40-8a8f-408f-8def-ed6084beaada",
+      "resource": {
+        "resourceType": "Practitioner",
+        "id": "4702ee40-8a8f-408f-8def-ed6084beaada",
+        "name": [
+          {
+            "text": "Dr. Neha Kapoor"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:e94b4acc-6be8-4d83-bdc2-8f6582497374",
+      "resource": {
+        "resourceType": "Organization",
+        "id": "e94b4acc-6be8-4d83-bdc2-8f6582497374",
+        "name": "RAINBOW_CHILD"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:b701f049-4cd1-404c-802b-50f81c399550",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "b701f049-4cd1-404c-802b-50f81c399550",
+        "status": "finished",
+        "class": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code": "AMB",
+          "display": "ambulatory"
+        },
+        "subject": {
+          "reference": "urn:uuid:edcf6da7-2bb8-4d44-b910-890422b75730"
+        },
+        "period": {
+          "start": "2026-09-03T00:00:00+05:30"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:6303300a-718b-44f5-a1aa-9b93186c3dd1",
+      "resource": {
+        "resourceType": "DiagnosticReport",
+        "id": "6303300a-718b-44f5-a1aa-9b93186c3dd1",
+        "meta": {
+          "profile": [
+            "https://nrces.in/ndhm/fhir/r4/StructureDefinition/DiagnosticReportLab"
+          ]
+        },
+        "status": "final",
+        "code": {
+          "text": "Fasting Blood Sugar",
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "1558-6",
+              "display": "Fasting Blood Sugar"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:edcf6da7-2bb8-4d44-b910-890422b75730"
+        },
+        "conclusion": "Fasting glucose 118 mg/dL",
+        "issued": "2026-09-03T09:00:00+05:30"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:abd65b04-67df-48ce-84a2-2ed973f99f24",
+      "resource": {
+        "resourceType": "DocumentReference",
+        "id": "abd65b04-67df-48ce-84a2-2ed973f99f24",
+        "status": "current",
+        "subject": {
+          "reference": "urn:uuid:edcf6da7-2bb8-4d44-b910-890422b75730"
+        },
+        "content": [
+          {
+            "attachment": {
+              "contentType": "application/pdf",
+              "url": "https://storage.abdm-sandbox.example/178773262485792/lab_report_R010.pdf",
+              "title": "Laboratory test report (CBC/LFT/lipid panel)",
+              "size": 225280
+            }
+          }
+        ],
+        "type": {
+          "text": "Lab Report"
+        }
+      }
+    }
+  ]
+}

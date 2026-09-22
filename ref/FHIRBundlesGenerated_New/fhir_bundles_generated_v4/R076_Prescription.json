@@ -1,0 +1,172 @@
+{
+  "resourceType": "Bundle",
+  "id": "Prescription-R076",
+  "meta": {
+    "profile": [
+      "https://nrces.in/ndhm/fhir/r4/StructureDefinition/DocumentBundle"
+    ]
+  },
+  "identifier": {
+    "system": "http://hip.in",
+    "value": "bundle-R076"
+  },
+  "type": "document",
+  "timestamp": "2026-09-10T05:12:37+05:30",
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:8927fc84-7aaf-431d-b227-16bc99b98de0",
+      "resource": {
+        "resourceType": "Composition",
+        "id": "8927fc84-7aaf-431d-b227-16bc99b98de0",
+        "meta": {
+          "profile": [
+            "https://nrces.in/ndhm/fhir/r4/StructureDefinition/PrescriptionRecord"
+          ]
+        },
+        "language": "en-IN",
+        "status": "final",
+        "type": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "440545006",
+              "display": "Prescription record"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:7cc686fb-5b40-42cd-88f9-67626896331a"
+        },
+        "date": "2026-09-10T05:12:37+05:30",
+        "title": "Prescription Record",
+        "section": [
+          {
+            "entry": [
+              {
+                "reference": "urn:uuid:11787fa8-b212-4437-9aaf-8e0e61033611"
+              },
+              {
+                "reference": "urn:uuid:93c68046-ca32-46f4-a9f2-33f589238ce7"
+              }
+            ]
+          }
+        ],
+        "author": [
+          {
+            "reference": "urn:uuid:75a7a6a5-35a9-4c6c-b02a-6bbcfdff67c9"
+          }
+        ],
+        "encounter": {
+          "reference": "urn:uuid:2ab94d6c-ffb8-4ae8-b405-ec7b8de35b3b"
+        },
+        "custodian": {
+          "reference": "urn:uuid:b8cf5525-5030-480f-b8fe-c11f03c3cc21"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:7cc686fb-5b40-42cd-88f9-67626896331a",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "7cc686fb-5b40-42cd-88f9-67626896331a",
+        "identifier": [
+          {
+            "system": "https://healthid.ndhm.gov.in",
+            "value": "testinguser47@sbx"
+          },
+          {
+            "system": "https://abdm.gov.in/abha-number",
+            "value": "91-4716-8701-4222"
+          }
+        ],
+        "name": [
+          {
+            "text": "Suresh Rao"
+          }
+        ],
+        "gender": "male",
+        "birthDate": "2003-01-01",
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "9319444228"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:75a7a6a5-35a9-4c6c-b02a-6bbcfdff67c9",
+      "resource": {
+        "resourceType": "Practitioner",
+        "id": "75a7a6a5-35a9-4c6c-b02a-6bbcfdff67c9",
+        "name": [
+          {
+            "text": "Dr. Priyanka Iyer"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:b8cf5525-5030-480f-b8fe-c11f03c3cc21",
+      "resource": {
+        "resourceType": "Organization",
+        "id": "b8cf5525-5030-480f-b8fe-c11f03c3cc21",
+        "name": "SUNRISE_HOSP"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:2ab94d6c-ffb8-4ae8-b405-ec7b8de35b3b",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "2ab94d6c-ffb8-4ae8-b405-ec7b8de35b3b",
+        "status": "finished",
+        "class": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code": "AMB",
+          "display": "ambulatory"
+        },
+        "subject": {
+          "reference": "urn:uuid:7cc686fb-5b40-42cd-88f9-67626896331a"
+        },
+        "period": {
+          "start": "2026-09-01T00:00:00+05:30"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:11787fa8-b212-4437-9aaf-8e0e61033611",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "id": "11787fa8-b212-4437-9aaf-8e0e61033611",
+        "status": "active",
+        "intent": "order",
+        "medicationCodeableConcept": {
+          "text": "Amlodipine"
+        },
+        "subject": {
+          "reference": "urn:uuid:7cc686fb-5b40-42cd-88f9-67626896331a"
+        },
+        "dosageInstruction": [
+          {
+            "text": "5 mg, Once daily, for 30 days"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:93c68046-ca32-46f4-a9f2-33f589238ce7",
+      "resource": {
+        "resourceType": "Binary",
+        "id": "93c68046-ca32-46f4-a9f2-33f589238ce7",
+        "contentType": "image/jpeg",
+        "extension": [
+          {
+            "url": "http://example.org/fhir/StructureDefinition/source-url",
+            "valueUrl": "https://storage.abdm-sandbox.example/178723831780352/prescription_slip_R076.jpg"
+          }
+        ],
+        "data": "PLACEHOLDER_BASE64=="
+      }
+    }
+  ]
+}

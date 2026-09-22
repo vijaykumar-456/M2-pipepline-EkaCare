@@ -1,0 +1,826 @@
+{
+  "resourceType": "Bundle",
+  "type": "document",
+  "identifier": {
+    "system": "https://ndhm.in/phr",
+    "value": "cc-0bb8459c65e64c66"
+  },
+  "timestamp": "2026-09-08T11:04:55.332602+00:00",
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:b4f21e1d-4df8-440b-bf44-f3f4d2dfb855",
+      "resource": {
+        "resourceType": "Composition",
+        "meta": {
+          "profile": [
+            "https://nrces.in/ndhm/fhir/r4/StructureDefinition/OPConsultRecord"
+          ]
+        },
+        "language": "en-IN",
+        "status": "final",
+        "type": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "371530004",
+              "display": "Clinical consultation report"
+            }
+          ],
+          "text": "Clinical consultation report"
+        },
+        "subject": {
+          "reference": "urn:uuid:109f2fed-3766-483b-8899-eb11280c4ea7"
+        },
+        "encounter": {
+          "reference": "urn:uuid:7192616d-e646-48e7-8feb-f403c75bd0ed"
+        },
+        "date": "2026-09-08T11:04:55.332602+00:00",
+        "author": [
+          {
+            "reference": "urn:uuid:c1f40486-14a2-4f72-a09f-8710c6214fcf"
+          }
+        ],
+        "title": "OP Consultation Record",
+        "section": [
+          {
+            "title": "Chief Complaints",
+            "entry": [
+              {
+                "reference": "urn:uuid:7355e117-f8b9-41b0-a68a-1573df85f7b4"
+              }
+            ],
+            "code": {
+              "coding": [
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "422587007",
+                  "display": "Symptoms"
+                }
+              ],
+              "text": "Chief Complaints"
+            }
+          },
+          {
+            "title": "Vital Signs",
+            "entry": [
+              {
+                "reference": "urn:uuid:6bc739b1-0ec4-4598-ae15-9d599167a2a7"
+              },
+              {
+                "reference": "urn:uuid:76ea59f7-c40f-4bf5-9793-9eef0ac67e72"
+              },
+              {
+                "reference": "urn:uuid:fb9f7687-0e50-4510-a6e4-9ddf74e08f09"
+              },
+              {
+                "reference": "urn:uuid:44637502-af37-4d6f-859b-235a4ca6f105"
+              },
+              {
+                "reference": "urn:uuid:98e61d54-bca9-4f01-b8a4-81c9a9b0ee39"
+              }
+            ],
+            "code": {
+              "text": "Vital Signs"
+            }
+          },
+          {
+            "title": "Examination",
+            "entry": [
+              {
+                "reference": "urn:uuid:5735dccf-5f84-49ad-bdc0-b664659a6778"
+              }
+            ],
+            "code": {
+              "text": "Examination"
+            }
+          },
+          {
+            "title": "Diagnosis",
+            "entry": [
+              {
+                "reference": "urn:uuid:c5cba88b-e82f-488c-a1ad-609cd1440395"
+              }
+            ],
+            "code": {
+              "text": "Diagnosis"
+            }
+          },
+          {
+            "title": "Medical History",
+            "entry": [
+              {
+                "reference": "urn:uuid:e980b580-269f-4fa8-99e3-b79039c638d0"
+              }
+            ],
+            "code": {
+              "text": "Medical History"
+            }
+          },
+          {
+            "title": "Advice",
+            "entry": [
+              {
+                "reference": "urn:uuid:eb33b092-556c-404d-af3c-46dbb1bd509b"
+              }
+            ],
+            "code": {
+              "text": "Advice"
+            }
+          },
+          {
+            "title": "Clinical Notes",
+            "entry": [
+              {
+                "reference": "urn:uuid:d86e846e-5ccc-49db-ab5a-8a0c6300fdd0"
+              }
+            ],
+            "code": {
+              "text": "Clinical Notes"
+            }
+          },
+          {
+            "title": "Procedures",
+            "entry": [
+              {
+                "reference": "urn:uuid:6c1f0941-6ccc-4549-b48d-b8464d98aed6"
+              }
+            ],
+            "code": {
+              "coding": [
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "371525003",
+                  "display": "Clinical procedure report"
+                }
+              ],
+              "text": "Procedures"
+            }
+          },
+          {
+            "title": "Follow-up",
+            "entry": [
+              {
+                "reference": "urn:uuid:73990a15-4bf4-4d21-bea0-c7ab3a5b715d"
+              }
+            ],
+            "code": {
+              "text": "Follow-up"
+            }
+          }
+        ],
+        "custodian": {
+          "reference": "urn:uuid:b51b3221-4240-4f00-a65f-2aed0f2aab87"
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Composition</b></p><p>OP Consultation - 08 Sep 2026</p></div>"
+        },
+        "id": "b4f21e1d-4df8-440b-bf44-f3f4d2dfb855"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:109f2fed-3766-483b-8899-eb11280c4ea7",
+      "resource": {
+        "resourceType": "Patient",
+        "meta": {
+          "profile": [
+            "https://nrces.in/ndhm/fhir/r4/StructureDefinition/Patient"
+          ]
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Patient</b></p><p>Vijay Kumar</p></div>"
+        },
+        "identifier": [
+          {
+            "type": {
+              "coding": [
+                {
+                  "system": "https://nrces.in/ndhm/fhir/r4/CodeSystem/ndhm-identifier-type-code",
+                  "code": "ABHA",
+                  "display": "Ayushman Bharat Health Account (ABHA) ID"
+                }
+              ]
+            },
+            "value": "testinguser12@sbx"
+          },
+          {
+            "value": "91-5510-3107-6211"
+          }
+        ],
+        "name": [
+          {
+            "text": "Vijay Kumar"
+          }
+        ],
+        "gender": "male",
+        "birthDate": "1998-01-01",
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "7483976167",
+            "use": "mobile"
+          }
+        ],
+        "id": "109f2fed-3766-483b-8899-eb11280c4ea7"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:c1f40486-14a2-4f72-a09f-8710c6214fcf",
+      "resource": {
+        "resourceType": "Practitioner",
+        "meta": {
+          "profile": [
+            "https://nrces.in/ndhm/fhir/r4/StructureDefinition/Practitioner"
+          ]
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Practitioner</b></p><p>Dr. Arun Kumar</p></div>"
+        },
+        "name": [
+          {
+            "text": "Dr. Arun Kumar"
+          }
+        ],
+        "id": "c1f40486-14a2-4f72-a09f-8710c6214fcf"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:b51b3221-4240-4f00-a65f-2aed0f2aab87",
+      "resource": {
+        "resourceType": "Organization",
+        "meta": {
+          "profile": [
+            "https://nrces.in/ndhm/fhir/r4/StructureDefinition/Organization"
+          ]
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Organization</b></p><p>SRM_CHENNAI</p></div>"
+        },
+        "identifier": [
+          {
+            "value": "SRM_CHENNAI"
+          }
+        ],
+        "name": "SRM_CHENNAI",
+        "id": "b51b3221-4240-4f00-a65f-2aed0f2aab87"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:7192616d-e646-48e7-8feb-f403c75bd0ed",
+      "resource": {
+        "resourceType": "Encounter",
+        "meta": {
+          "profile": [
+            "https://nrces.in/ndhm/fhir/r4/StructureDefinition/Encounter"
+          ]
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Encounter</b></p><p>ENC-P001-013</p></div>"
+        },
+        "identifier": [
+          {
+            "value": "ENC-P001-013"
+          }
+        ],
+        "status": "finished",
+        "class": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code": "AMB",
+          "display": "ambulatory"
+        },
+        "subject": {
+          "reference": "urn:uuid:109f2fed-3766-483b-8899-eb11280c4ea7"
+        },
+        "period": {
+          "start": "2026-09-08"
+        },
+        "participant": [
+          {
+            "individual": {
+              "reference": "urn:uuid:c1f40486-14a2-4f72-a09f-8710c6214fcf"
+            }
+          }
+        ],
+        "serviceProvider": {
+          "reference": "urn:uuid:b51b3221-4240-4f00-a65f-2aed0f2aab87"
+        },
+        "id": "7192616d-e646-48e7-8feb-f403c75bd0ed"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:7355e117-f8b9-41b0-a68a-1573df85f7b4",
+      "resource": {
+        "resourceType": "Observation",
+        "meta": {
+          "profile": [
+            "https://nrces.in/ndhm/fhir/r4/StructureDefinition/Observation"
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "exam",
+                "display": "Exam"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "267102003"
+            }
+          ],
+          "text": "Fever, cough and sore throat"
+        },
+        "subject": {
+          "reference": "urn:uuid:109f2fed-3766-483b-8899-eb11280c4ea7"
+        },
+        "encounter": {
+          "reference": "urn:uuid:7192616d-e646-48e7-8feb-f403c75bd0ed"
+        },
+        "effectiveDateTime": "2026-09-08T00:00:00+05:30",
+        "valueString": "Fever, cough and sore throat",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Observation</b></p><p>Fever, cough and sore throat</p></div>"
+        },
+        "id": "7355e117-f8b9-41b0-a68a-1573df85f7b4"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:6bc739b1-0ec4-4598-ae15-9d599167a2a7",
+      "resource": {
+        "resourceType": "Observation",
+        "meta": {
+          "profile": [
+            "https://nrces.in/ndhm/fhir/r4/StructureDefinition/Observation"
+          ]
+        },
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8480-6",
+              "display": "Systolic blood pressure"
+            }
+          ],
+          "text": "Systolic blood pressure"
+        },
+        "subject": {
+          "reference": "urn:uuid:109f2fed-3766-483b-8899-eb11280c4ea7"
+        },
+        "encounter": {
+          "reference": "urn:uuid:7192616d-e646-48e7-8feb-f403c75bd0ed"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "valueQuantity": {
+          "value": 120.0,
+          "unit": "mmHg"
+        },
+        "effectiveDateTime": "2026-09-08T00:00:00+05:30",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Observation</b></p><p>120</p></div>"
+        },
+        "id": "6bc739b1-0ec4-4598-ae15-9d599167a2a7"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:76ea59f7-c40f-4bf5-9793-9eef0ac67e72",
+      "resource": {
+        "resourceType": "Observation",
+        "meta": {
+          "profile": [
+            "https://nrces.in/ndhm/fhir/r4/StructureDefinition/Observation"
+          ]
+        },
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8462-4",
+              "display": "Diastolic blood pressure"
+            }
+          ],
+          "text": "Diastolic blood pressure"
+        },
+        "subject": {
+          "reference": "urn:uuid:109f2fed-3766-483b-8899-eb11280c4ea7"
+        },
+        "encounter": {
+          "reference": "urn:uuid:7192616d-e646-48e7-8feb-f403c75bd0ed"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "valueQuantity": {
+          "value": 80.0,
+          "unit": "mmHg"
+        },
+        "effectiveDateTime": "2026-09-08T00:00:00+05:30",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Observation</b></p><p>80</p></div>"
+        },
+        "id": "76ea59f7-c40f-4bf5-9793-9eef0ac67e72"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:fb9f7687-0e50-4510-a6e4-9ddf74e08f09",
+      "resource": {
+        "resourceType": "Observation",
+        "meta": {
+          "profile": [
+            "https://nrces.in/ndhm/fhir/r4/StructureDefinition/Observation"
+          ]
+        },
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8867-4",
+              "display": "Heart rate"
+            }
+          ],
+          "text": "Heart rate"
+        },
+        "subject": {
+          "reference": "urn:uuid:109f2fed-3766-483b-8899-eb11280c4ea7"
+        },
+        "encounter": {
+          "reference": "urn:uuid:7192616d-e646-48e7-8feb-f403c75bd0ed"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "valueQuantity": {
+          "value": 82.0,
+          "unit": "beats/min"
+        },
+        "effectiveDateTime": "2026-09-08T00:00:00+05:30",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Observation</b></p><p>82</p></div>"
+        },
+        "id": "fb9f7687-0e50-4510-a6e4-9ddf74e08f09"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:44637502-af37-4d6f-859b-235a4ca6f105",
+      "resource": {
+        "resourceType": "Observation",
+        "meta": {
+          "profile": [
+            "https://nrces.in/ndhm/fhir/r4/StructureDefinition/Observation"
+          ]
+        },
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8310-5",
+              "display": "Body temperature"
+            }
+          ],
+          "text": "Body temperature"
+        },
+        "subject": {
+          "reference": "urn:uuid:109f2fed-3766-483b-8899-eb11280c4ea7"
+        },
+        "encounter": {
+          "reference": "urn:uuid:7192616d-e646-48e7-8feb-f403c75bd0ed"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "valueQuantity": {
+          "value": 38.2,
+          "unit": "Cel"
+        },
+        "effectiveDateTime": "2026-09-08T00:00:00+05:30",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Observation</b></p><p>38.2</p></div>"
+        },
+        "id": "44637502-af37-4d6f-859b-235a4ca6f105"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:98e61d54-bca9-4f01-b8a4-81c9a9b0ee39",
+      "resource": {
+        "resourceType": "Observation",
+        "meta": {
+          "profile": [
+            "https://nrces.in/ndhm/fhir/r4/StructureDefinition/Observation"
+          ]
+        },
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "59408-5",
+              "display": "Oxygen saturation"
+            }
+          ],
+          "text": "Oxygen saturation"
+        },
+        "subject": {
+          "reference": "urn:uuid:109f2fed-3766-483b-8899-eb11280c4ea7"
+        },
+        "encounter": {
+          "reference": "urn:uuid:7192616d-e646-48e7-8feb-f403c75bd0ed"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "valueQuantity": {
+          "value": 98.0,
+          "unit": "%"
+        },
+        "effectiveDateTime": "2026-09-08T00:00:00+05:30",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Observation</b></p><p>98</p></div>"
+        },
+        "id": "98e61d54-bca9-4f01-b8a4-81c9a9b0ee39"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:5735dccf-5f84-49ad-bdc0-b664659a6778",
+      "resource": {
+        "resourceType": "Observation",
+        "meta": {
+          "profile": [
+            "https://nrces.in/ndhm/fhir/r4/StructureDefinition/Observation"
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "exam",
+                "display": "Exam"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "text": "Physical examination findings"
+        },
+        "subject": {
+          "reference": "urn:uuid:109f2fed-3766-483b-8899-eb11280c4ea7"
+        },
+        "encounter": {
+          "reference": "urn:uuid:7192616d-e646-48e7-8feb-f403c75bd0ed"
+        },
+        "effectiveDateTime": "2026-09-08T00:00:00+05:30",
+        "valueString": "Mild throat congestion. No respiratory distress.",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Observation</b></p><p>Mild throat congestion. No respiratory distress.</p></div>"
+        },
+        "id": "5735dccf-5f84-49ad-bdc0-b664659a6778"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:c5cba88b-e82f-488c-a1ad-609cd1440395",
+      "resource": {
+        "resourceType": "Condition",
+        "meta": {
+          "profile": [
+            "https://nrces.in/ndhm/fhir/r4/StructureDefinition/Condition"
+          ]
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Condition</b></p><p>Acute upper respiratory infection</p></div>"
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active"
+            }
+          ]
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+                "code": "encounter-diagnosis"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "54150009"
+            }
+          ],
+          "text": "Acute upper respiratory infection"
+        },
+        "subject": {
+          "reference": "urn:uuid:109f2fed-3766-483b-8899-eb11280c4ea7"
+        },
+        "encounter": {
+          "reference": "urn:uuid:7192616d-e646-48e7-8feb-f403c75bd0ed"
+        },
+        "id": "c5cba88b-e82f-488c-a1ad-609cd1440395"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:e980b580-269f-4fa8-99e3-b79039c638d0",
+      "resource": {
+        "resourceType": "Condition",
+        "meta": {
+          "profile": [
+            "https://nrces.in/ndhm/fhir/r4/StructureDefinition/Condition"
+          ]
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Condition</b></p><p>No significant past medical history</p></div>"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+                "code": "problem-list-item"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "text": "No significant past medical history"
+        },
+        "subject": {
+          "reference": "urn:uuid:109f2fed-3766-483b-8899-eb11280c4ea7"
+        },
+        "encounter": {
+          "reference": "urn:uuid:7192616d-e646-48e7-8feb-f403c75bd0ed"
+        },
+        "id": "e980b580-269f-4fa8-99e3-b79039c638d0"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:eb33b092-556c-404d-af3c-46dbb1bd509b",
+      "resource": {
+        "resourceType": "CarePlan",
+        "status": "active",
+        "intent": "plan",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>CarePlan</b></p><p>Rest, adequate fluids and follow-up if symptoms worsen.</p></div>"
+        },
+        "description": "Rest, adequate fluids and follow-up if symptoms worsen.",
+        "subject": {
+          "reference": "urn:uuid:109f2fed-3766-483b-8899-eb11280c4ea7"
+        },
+        "encounter": {
+          "reference": "urn:uuid:7192616d-e646-48e7-8feb-f403c75bd0ed"
+        },
+        "id": "eb33b092-556c-404d-af3c-46dbb1bd509b"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:d86e846e-5ccc-49db-ab5a-8a0c6300fdd0",
+      "resource": {
+        "resourceType": "CarePlan",
+        "status": "active",
+        "intent": "proposal",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>CarePlan</b></p><p>Patient evaluated during outpatient consultation.</p></div>"
+        },
+        "description": "Patient evaluated during outpatient consultation.",
+        "subject": {
+          "reference": "urn:uuid:109f2fed-3766-483b-8899-eb11280c4ea7"
+        },
+        "encounter": {
+          "reference": "urn:uuid:7192616d-e646-48e7-8feb-f403c75bd0ed"
+        },
+        "id": "d86e846e-5ccc-49db-ab5a-8a0c6300fdd0"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:6c1f0941-6ccc-4549-b48d-b8464d98aed6",
+      "resource": {
+        "resourceType": "Procedure",
+        "meta": {
+          "profile": [
+            "https://nrces.in/ndhm/fhir/r4/StructureDefinition/Procedure"
+          ]
+        },
+        "status": "completed",
+        "code": {
+          "text": "Clinical examination"
+        },
+        "subject": {
+          "reference": "urn:uuid:109f2fed-3766-483b-8899-eb11280c4ea7"
+        },
+        "encounter": {
+          "reference": "urn:uuid:7192616d-e646-48e7-8feb-f403c75bd0ed"
+        },
+        "performedDateTime": "2026-09-08T00:00:00+05:30",
+        "note": [
+          {
+            "text": "Mild throat congestion. No respiratory distress."
+          }
+        ],
+        "id": "6c1f0941-6ccc-4549-b48d-b8464d98aed6"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:73990a15-4bf4-4d21-bea0-c7ab3a5b715d",
+      "resource": {
+        "resourceType": "Appointment",
+        "meta": {
+          "profile": [
+            "https://nrces.in/ndhm/fhir/r4/StructureDefinition/Appointment"
+          ]
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Appointment</b></p><p>01-09-2026</p></div>"
+        },
+        "status": "proposed",
+        "appointmentType": {
+          "text": "Follow-up"
+        },
+        "start": "01-09-2026T00:00:00+05:30",
+        "participant": [
+          {
+            "actor": {
+              "reference": "urn:uuid:109f2fed-3766-483b-8899-eb11280c4ea7"
+            },
+            "status": "accepted"
+          },
+          {
+            "actor": {
+              "reference": "urn:uuid:c1f40486-14a2-4f72-a09f-8710c6214fcf"
+            },
+            "status": "accepted"
+          }
+        ],
+        "id": "73990a15-4bf4-4d21-bea0-c7ab3a5b715d"
+      }
+    }
+  ]
+}

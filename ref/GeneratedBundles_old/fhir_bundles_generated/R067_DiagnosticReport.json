@@ -1,0 +1,191 @@
+{
+  "resourceType": "Bundle",
+  "id": "DiagnosticReport-R067",
+  "meta": {
+    "profile": [
+      "https://nrces.in/ndhm/fhir/r4/StructureDefinition/DocumentBundle"
+    ]
+  },
+  "identifier": {
+    "system": "http://hip.in",
+    "value": "bundle-R067"
+  },
+  "type": "document",
+  "timestamp": "2026-09-10T04:52:40+05:30",
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:53fef119-5ed8-4bd2-9a9c-450a8d4d9367",
+      "resource": {
+        "resourceType": "Composition",
+        "id": "53fef119-5ed8-4bd2-9a9c-450a8d4d9367",
+        "meta": {
+          "profile": [
+            "https://nrces.in/ndhm/fhir/r4/StructureDefinition/DiagnosticReportRecord"
+          ]
+        },
+        "language": "en-IN",
+        "status": "final",
+        "type": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "721981007",
+              "display": "Diagnostic studies report"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:ce267a3b-b317-42f1-8704-e016d5a504dc"
+        },
+        "date": "2026-09-10T04:52:40+05:30",
+        "title": "DiagnosticReport Record",
+        "section": [
+          {
+            "title": "Investigation",
+            "entry": [
+              {
+                "reference": "urn:uuid:c463da49-c6f1-4678-a2cf-784668dfd7dd"
+              },
+              {
+                "reference": "urn:uuid:46303c94-8192-4cac-87ad-e750dfd743fc"
+              }
+            ],
+            "code": {
+              "coding": [
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "721981007",
+                  "display": "Diagnostic studies report"
+                }
+              ]
+            }
+          }
+        ],
+        "author": [
+          {
+            "reference": "urn:uuid:cffd4656-89ab-437b-89e7-8507a5cd106c"
+          }
+        ],
+        "encounter": {
+          "reference": "urn:uuid:24919563-36e5-4a8a-a434-5ad3054992aa"
+        },
+        "custodian": {
+          "reference": "urn:uuid:e9bbcdb9-0929-43d7-972e-eda771a813c7"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:ce267a3b-b317-42f1-8704-e016d5a504dc",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "ce267a3b-b317-42f1-8704-e016d5a504dc",
+        "identifier": [
+          {
+            "system": "https://healthid.ndhm.gov.in",
+            "value": "anjali.v@sbx"
+          },
+          {
+            "system": "https://abdm.gov.in/abha-number",
+            "value": "91-8834-5567-2213"
+          }
+        ],
+        "name": [
+          {
+            "text": "Anjali Verma"
+          }
+        ],
+        "gender": "female",
+        "birthDate": "1995-01-01",
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "9765432180"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:cffd4656-89ab-437b-89e7-8507a5cd106c",
+      "resource": {
+        "resourceType": "Practitioner",
+        "id": "cffd4656-89ab-437b-89e7-8507a5cd106c",
+        "name": [
+          {
+            "text": "Dr. Neha Kapoor"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:e9bbcdb9-0929-43d7-972e-eda771a813c7",
+      "resource": {
+        "resourceType": "Organization",
+        "id": "e9bbcdb9-0929-43d7-972e-eda771a813c7",
+        "name": "APEX_DIAG"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:24919563-36e5-4a8a-a434-5ad3054992aa",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "24919563-36e5-4a8a-a434-5ad3054992aa",
+        "status": "finished",
+        "class": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code": "AMB",
+          "display": "ambulatory"
+        },
+        "subject": {
+          "reference": "urn:uuid:ce267a3b-b317-42f1-8704-e016d5a504dc"
+        },
+        "period": {
+          "start": "2026-08-28T00:00:00+05:30"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:c463da49-c6f1-4678-a2cf-784668dfd7dd",
+      "resource": {
+        "resourceType": "DiagnosticReport",
+        "id": "c463da49-c6f1-4678-a2cf-784668dfd7dd",
+        "meta": {
+          "profile": [
+            "https://nrces.in/ndhm/fhir/r4/StructureDefinition/DiagnosticReportImaging"
+          ]
+        },
+        "status": "final",
+        "code": {
+          "text": "ECG"
+        },
+        "subject": {
+          "reference": "urn:uuid:ce267a3b-b317-42f1-8704-e016d5a504dc"
+        },
+        "issued": "2026-08-28T09:00:00+05:30"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:46303c94-8192-4cac-87ad-e750dfd743fc",
+      "resource": {
+        "resourceType": "DocumentReference",
+        "id": "46303c94-8192-4cac-87ad-e750dfd743fc",
+        "status": "current",
+        "subject": {
+          "reference": "urn:uuid:ce267a3b-b317-42f1-8704-e016d5a504dc"
+        },
+        "content": [
+          {
+            "attachment": {
+              "contentType": "application/pdf",
+              "url": "https://storage.abdm-sandbox.example/P007/ultrasound_report_R067.pdf",
+              "title": "Abdominal ultrasound report with images",
+              "size": 6348800
+            }
+          }
+        ],
+        "type": {
+          "text": "Ultrasound Report"
+        }
+      }
+    }
+  ]
+}

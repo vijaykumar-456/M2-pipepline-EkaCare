@@ -1,0 +1,154 @@
+{
+  "resourceType": "Bundle",
+  "id": "Prescription-R044",
+  "meta": {
+    "profile": [
+      "https://nrces.in/ndhm/fhir/r4/StructureDefinition/DocumentBundle"
+    ]
+  },
+  "identifier": {
+    "system": "http://hip.in",
+    "value": "bundle-R044"
+  },
+  "type": "document",
+  "timestamp": "2026-09-10T04:52:40+05:30",
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:ca6ffe8e-9c8d-4679-aaa8-dd8c0ca9ce8f",
+      "resource": {
+        "resourceType": "Composition",
+        "id": "ca6ffe8e-9c8d-4679-aaa8-dd8c0ca9ce8f",
+        "meta": {
+          "profile": [
+            "https://nrces.in/ndhm/fhir/r4/StructureDefinition/PrescriptionRecord"
+          ]
+        },
+        "language": "en-IN",
+        "status": "final",
+        "type": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "440545006",
+              "display": "Prescription record"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:fe7beb25-583f-489c-a66a-0241d8a0ac26"
+        },
+        "date": "2026-09-10T04:52:40+05:30",
+        "title": "Prescription Record",
+        "section": [
+          {
+            "entry": [
+              {
+                "reference": "urn:uuid:5e7a7087-639a-4beb-bb7c-a8b6e16f25f2"
+              }
+            ]
+          }
+        ],
+        "author": [
+          {
+            "reference": "urn:uuid:b1b74657-de50-45b3-b98a-8b81a84d120f"
+          }
+        ],
+        "encounter": {
+          "reference": "urn:uuid:7d40865d-998d-4932-b0a8-1d186c7bd3da"
+        },
+        "custodian": {
+          "reference": "urn:uuid:6d6c5e33-cb87-4b48-bb55-a9f4d32e3878"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:fe7beb25-583f-489c-a66a-0241d8a0ac26",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "fe7beb25-583f-489c-a66a-0241d8a0ac26",
+        "identifier": [
+          {
+            "system": "https://healthid.ndhm.gov.in",
+            "value": "aarav.j@sbx"
+          },
+          {
+            "system": "https://abdm.gov.in/abha-number",
+            "value": "91-2210-9987-4432"
+          }
+        ],
+        "name": [
+          {
+            "text": "Baby Aarav Joshi"
+          }
+        ],
+        "gender": "male",
+        "birthDate": "2025-01-01",
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "9988776655"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:b1b74657-de50-45b3-b98a-8b81a84d120f",
+      "resource": {
+        "resourceType": "Practitioner",
+        "id": "b1b74657-de50-45b3-b98a-8b81a84d120f",
+        "name": [
+          {
+            "text": "Dr. Neha Kapoor"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:6d6c5e33-cb87-4b48-bb55-a9f4d32e3878",
+      "resource": {
+        "resourceType": "Organization",
+        "id": "6d6c5e33-cb87-4b48-bb55-a9f4d32e3878",
+        "name": "APEX_DIAG"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:7d40865d-998d-4932-b0a8-1d186c7bd3da",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "7d40865d-998d-4932-b0a8-1d186c7bd3da",
+        "status": "finished",
+        "class": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code": "AMB",
+          "display": "ambulatory"
+        },
+        "subject": {
+          "reference": "urn:uuid:fe7beb25-583f-489c-a66a-0241d8a0ac26"
+        },
+        "period": {
+          "start": "2026-09-03T00:00:00+05:30"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:5e7a7087-639a-4beb-bb7c-a8b6e16f25f2",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "id": "5e7a7087-639a-4beb-bb7c-a8b6e16f25f2",
+        "status": "active",
+        "intent": "order",
+        "medicationCodeableConcept": {
+          "text": "Omeprazole"
+        },
+        "subject": {
+          "reference": "urn:uuid:fe7beb25-583f-489c-a66a-0241d8a0ac26"
+        },
+        "dosageInstruction": [
+          {
+            "text": "20 mg, Once daily, for 14 days"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,199 @@
+{
+  "resourceType": "Bundle",
+  "id": "DiagnosticReport-R090",
+  "meta": {
+    "profile": [
+      "https://nrces.in/ndhm/fhir/r4/StructureDefinition/DocumentBundle"
+    ]
+  },
+  "identifier": {
+    "system": "http://hip.in",
+    "value": "bundle-R090"
+  },
+  "type": "document",
+  "timestamp": "2026-09-10T04:52:40+05:30",
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:4829dcce-92a3-4062-b2a9-bb9675fdafa5",
+      "resource": {
+        "resourceType": "Composition",
+        "id": "4829dcce-92a3-4062-b2a9-bb9675fdafa5",
+        "meta": {
+          "profile": [
+            "https://nrces.in/ndhm/fhir/r4/StructureDefinition/DiagnosticReportRecord"
+          ]
+        },
+        "language": "en-IN",
+        "status": "final",
+        "type": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "721981007",
+              "display": "Diagnostic studies report"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:136318fb-befd-4124-98c4-e8eb9bda48f6"
+        },
+        "date": "2026-09-10T04:52:40+05:30",
+        "title": "DiagnosticReport Record",
+        "section": [
+          {
+            "title": "Investigation",
+            "entry": [
+              {
+                "reference": "urn:uuid:fe05483d-aec0-4013-8e00-fca448e04d2c"
+              },
+              {
+                "reference": "urn:uuid:70497e26-fa0d-4f24-8168-7eb140435355"
+              }
+            ],
+            "code": {
+              "coding": [
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "721981007",
+                  "display": "Diagnostic studies report"
+                }
+              ]
+            }
+          }
+        ],
+        "author": [
+          {
+            "reference": "urn:uuid:03bd423d-3cf2-4353-9a8e-a884c69f6d3c"
+          }
+        ],
+        "encounter": {
+          "reference": "urn:uuid:ba8a129e-a6ae-42f3-b273-a962b0aa08bb"
+        },
+        "custodian": {
+          "reference": "urn:uuid:d02ca23f-1d7c-42fc-9605-bf9c2bc13da5"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:136318fb-befd-4124-98c4-e8eb9bda48f6",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "136318fb-befd-4124-98c4-e8eb9bda48f6",
+        "identifier": [
+          {
+            "system": "https://healthid.ndhm.gov.in",
+            "value": "rohan.s@sbx"
+          },
+          {
+            "system": "https://abdm.gov.in/abha-number",
+            "value": "91-2167-8890-5546"
+          }
+        ],
+        "name": [
+          {
+            "text": "Rohan Sharma"
+          }
+        ],
+        "gender": "male",
+        "birthDate": "1988-01-01",
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "9567891234"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:03bd423d-3cf2-4353-9a8e-a884c69f6d3c",
+      "resource": {
+        "resourceType": "Practitioner",
+        "id": "03bd423d-3cf2-4353-9a8e-a884c69f6d3c",
+        "name": [
+          {
+            "text": "Dr. Farha Khan"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:d02ca23f-1d7c-42fc-9605-bf9c2bc13da5",
+      "resource": {
+        "resourceType": "Organization",
+        "id": "d02ca23f-1d7c-42fc-9605-bf9c2bc13da5",
+        "name": "WELLNESS_FAM"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:ba8a129e-a6ae-42f3-b273-a962b0aa08bb",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "ba8a129e-a6ae-42f3-b273-a962b0aa08bb",
+        "status": "finished",
+        "class": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code": "AMB",
+          "display": "ambulatory"
+        },
+        "subject": {
+          "reference": "urn:uuid:136318fb-befd-4124-98c4-e8eb9bda48f6"
+        },
+        "period": {
+          "start": "2026-09-06T00:00:00+05:30"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:fe05483d-aec0-4013-8e00-fca448e04d2c",
+      "resource": {
+        "resourceType": "DiagnosticReport",
+        "id": "fe05483d-aec0-4013-8e00-fca448e04d2c",
+        "meta": {
+          "profile": [
+            "https://nrces.in/ndhm/fhir/r4/StructureDefinition/DiagnosticReportLab"
+          ]
+        },
+        "status": "final",
+        "code": {
+          "text": "Urine Routine",
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "5804-0",
+              "display": "Urine Routine"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:136318fb-befd-4124-98c4-e8eb9bda48f6"
+        },
+        "conclusion": "No pus cells; no albumin; specific gravity 1.020",
+        "issued": "2026-09-06T09:00:00+05:30"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:70497e26-fa0d-4f24-8168-7eb140435355",
+      "resource": {
+        "resourceType": "DocumentReference",
+        "id": "70497e26-fa0d-4f24-8168-7eb140435355",
+        "status": "current",
+        "subject": {
+          "reference": "urn:uuid:136318fb-befd-4124-98c4-e8eb9bda48f6"
+        },
+        "content": [
+          {
+            "attachment": {
+              "contentType": "application/pdf",
+              "url": "https://storage.abdm-sandbox.example/P010/lab_report_R090.pdf",
+              "title": "Laboratory test report (CBC/LFT/lipid panel)",
+              "size": 225280
+            }
+          }
+        ],
+        "type": {
+          "text": "Lab Report"
+        }
+      }
+    }
+  ]
+}

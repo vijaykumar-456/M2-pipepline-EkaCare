@@ -1,0 +1,158 @@
+{
+  "resourceType": "Bundle",
+  "id": "HealthDocumentRecord-R014",
+  "meta": {
+    "profile": [
+      "https://nrces.in/ndhm/fhir/r4/StructureDefinition/DocumentBundle"
+    ]
+  },
+  "identifier": {
+    "system": "http://hip.in",
+    "value": "bundle-R014"
+  },
+  "type": "document",
+  "timestamp": "2026-09-10T05:12:37+05:30",
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:127eb656-775c-40d6-9830-c6b371413fa4",
+      "resource": {
+        "resourceType": "Composition",
+        "id": "127eb656-775c-40d6-9830-c6b371413fa4",
+        "meta": {
+          "profile": [
+            "https://nrces.in/ndhm/fhir/r4/StructureDefinition/HealthDocumentRecord"
+          ]
+        },
+        "language": "en-IN",
+        "status": "final",
+        "type": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "419891008",
+              "display": "Record artifact"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:4ecde445-266d-444b-8b4c-7008f5c05622"
+        },
+        "date": "2026-09-10T05:12:37+05:30",
+        "title": "HealthDocumentRecord Record",
+        "section": [
+          {
+            "entry": [
+              {
+                "reference": "urn:uuid:bd1cc910-e0e3-4a91-b26a-57eea5667250"
+              }
+            ]
+          }
+        ],
+        "author": [
+          {
+            "reference": "urn:uuid:cba8ff87-146a-41c3-ab1e-2c0a735a0950"
+          }
+        ],
+        "encounter": {
+          "reference": "urn:uuid:ab759c35-f34c-46ff-a95e-d3f60f957445"
+        },
+        "custodian": {
+          "reference": "urn:uuid:8dd2059b-c148-4608-9700-111f6db46347"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:4ecde445-266d-444b-8b4c-7008f5c05622",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "4ecde445-266d-444b-8b4c-7008f5c05622",
+        "identifier": [
+          {
+            "system": "https://healthid.ndhm.gov.in",
+            "value": "testinguser25@sbx"
+          },
+          {
+            "system": "https://abdm.gov.in/abha-number",
+            "value": "91-1994-6072-8301"
+          }
+        ],
+        "name": [
+          {
+            "text": "Karthik Sharma"
+          }
+        ],
+        "gender": "female",
+        "birthDate": "1996-01-01",
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "9869473236"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:cba8ff87-146a-41c3-ab1e-2c0a735a0950",
+      "resource": {
+        "resourceType": "Practitioner",
+        "id": "cba8ff87-146a-41c3-ab1e-2c0a735a0950",
+        "name": [
+          {
+            "text": "Dr. Rajesh Nair"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:8dd2059b-c148-4608-9700-111f6db46347",
+      "resource": {
+        "resourceType": "Organization",
+        "id": "8dd2059b-c148-4608-9700-111f6db46347",
+        "name": "APEX_DIAG"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:ab759c35-f34c-46ff-a95e-d3f60f957445",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "ab759c35-f34c-46ff-a95e-d3f60f957445",
+        "status": "finished",
+        "class": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code": "AMB",
+          "display": "ambulatory"
+        },
+        "subject": {
+          "reference": "urn:uuid:4ecde445-266d-444b-8b4c-7008f5c05622"
+        },
+        "period": {
+          "start": "2026-08-23T00:00:00+05:30"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:bd1cc910-e0e3-4a91-b26a-57eea5667250",
+      "resource": {
+        "resourceType": "DocumentReference",
+        "id": "bd1cc910-e0e3-4a91-b26a-57eea5667250",
+        "status": "current",
+        "subject": {
+          "reference": "urn:uuid:4ecde445-266d-444b-8b4c-7008f5c05622"
+        },
+        "content": [
+          {
+            "attachment": {
+              "contentType": "application/pdf",
+              "url": "https://storage.abdm-sandbox.example/178721442446618/ultrasound_report_R014.pdf",
+              "title": "Abdominal ultrasound report with images",
+              "size": 6348800
+            }
+          }
+        ],
+        "type": {
+          "text": "Ultrasound Report"
+        }
+      }
+    }
+  ]
+}

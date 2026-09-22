@@ -1,0 +1,172 @@
+{
+  "resourceType": "Bundle",
+  "id": "Prescription-R028",
+  "meta": {
+    "profile": [
+      "https://nrces.in/ndhm/fhir/r4/StructureDefinition/DocumentBundle"
+    ]
+  },
+  "identifier": {
+    "system": "http://hip.in",
+    "value": "bundle-R028"
+  },
+  "type": "document",
+  "timestamp": "2026-09-10T04:52:40+05:30",
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:7842118c-657a-450f-a82d-5bdc20ce6c7b",
+      "resource": {
+        "resourceType": "Composition",
+        "id": "7842118c-657a-450f-a82d-5bdc20ce6c7b",
+        "meta": {
+          "profile": [
+            "https://nrces.in/ndhm/fhir/r4/StructureDefinition/PrescriptionRecord"
+          ]
+        },
+        "language": "en-IN",
+        "status": "final",
+        "type": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "440545006",
+              "display": "Prescription record"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:d81640d8-59ea-464b-9725-433193fab2ff"
+        },
+        "date": "2026-09-10T04:52:40+05:30",
+        "title": "Prescription Record",
+        "section": [
+          {
+            "entry": [
+              {
+                "reference": "urn:uuid:b53f8036-d5cb-4f76-907d-9d6482cc9ff3"
+              },
+              {
+                "reference": "urn:uuid:d767778d-b6ec-4278-9815-9134c12f13d0"
+              }
+            ]
+          }
+        ],
+        "author": [
+          {
+            "reference": "urn:uuid:614f869f-0322-4456-bc04-e8a14c489fd1"
+          }
+        ],
+        "encounter": {
+          "reference": "urn:uuid:f287f07b-6835-48c9-b7a0-587e7651dcbc"
+        },
+        "custodian": {
+          "reference": "urn:uuid:8fe50ea4-fd9f-4d03-a93d-4d540fc9f5f2"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:d81640d8-59ea-464b-9725-433193fab2ff",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "d81640d8-59ea-464b-9725-433193fab2ff",
+        "identifier": [
+          {
+            "system": "https://healthid.ndhm.gov.in",
+            "value": "vikram.d@sbx"
+          },
+          {
+            "system": "https://abdm.gov.in/abha-number",
+            "value": "91-9945-6678-3324"
+          }
+        ],
+        "name": [
+          {
+            "text": "Vikram Desai"
+          }
+        ],
+        "gender": "male",
+        "birthDate": "1965-01-01",
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "9345678901"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:614f869f-0322-4456-bc04-e8a14c489fd1",
+      "resource": {
+        "resourceType": "Practitioner",
+        "id": "614f869f-0322-4456-bc04-e8a14c489fd1",
+        "name": [
+          {
+            "text": "Dr. Kunal Mehta"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:8fe50ea4-fd9f-4d03-a93d-4d540fc9f5f2",
+      "resource": {
+        "resourceType": "Organization",
+        "id": "8fe50ea4-fd9f-4d03-a93d-4d540fc9f5f2",
+        "name": "SUNRISE_HOSP"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:f287f07b-6835-48c9-b7a0-587e7651dcbc",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "f287f07b-6835-48c9-b7a0-587e7651dcbc",
+        "status": "finished",
+        "class": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code": "AMB",
+          "display": "ambulatory"
+        },
+        "subject": {
+          "reference": "urn:uuid:d81640d8-59ea-464b-9725-433193fab2ff"
+        },
+        "period": {
+          "start": "2026-08-27T00:00:00+05:30"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:b53f8036-d5cb-4f76-907d-9d6482cc9ff3",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "id": "b53f8036-d5cb-4f76-907d-9d6482cc9ff3",
+        "status": "active",
+        "intent": "order",
+        "medicationCodeableConcept": {
+          "text": "Amoxicillin"
+        },
+        "subject": {
+          "reference": "urn:uuid:d81640d8-59ea-464b-9725-433193fab2ff"
+        },
+        "dosageInstruction": [
+          {
+            "text": "500 mg, Thrice daily, for 7 days"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:d767778d-b6ec-4278-9815-9134c12f13d0",
+      "resource": {
+        "resourceType": "Binary",
+        "id": "d767778d-b6ec-4278-9815-9134c12f13d0",
+        "contentType": "image/jpeg",
+        "extension": [
+          {
+            "url": "http://example.org/fhir/StructureDefinition/source-url",
+            "valueUrl": "https://storage.abdm-sandbox.example/P008/prescription_slip_R028.jpg"
+          }
+        ],
+        "data": "PLACEHOLDER_BASE64=="
+      }
+    }
+  ]
+}

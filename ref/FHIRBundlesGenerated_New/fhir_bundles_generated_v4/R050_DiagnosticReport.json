@@ -1,0 +1,199 @@
+{
+  "resourceType": "Bundle",
+  "id": "DiagnosticReport-R050",
+  "meta": {
+    "profile": [
+      "https://nrces.in/ndhm/fhir/r4/StructureDefinition/DocumentBundle"
+    ]
+  },
+  "identifier": {
+    "system": "http://hip.in",
+    "value": "bundle-R050"
+  },
+  "type": "document",
+  "timestamp": "2026-09-10T05:12:37+05:30",
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:be2ea90a-7c2e-4069-8058-069af79df281",
+      "resource": {
+        "resourceType": "Composition",
+        "id": "be2ea90a-7c2e-4069-8058-069af79df281",
+        "meta": {
+          "profile": [
+            "https://nrces.in/ndhm/fhir/r4/StructureDefinition/DiagnosticReportRecord"
+          ]
+        },
+        "language": "en-IN",
+        "status": "final",
+        "type": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "721981007",
+              "display": "Diagnostic studies report"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:465201da-1111-4567-8bf9-4da0ecdaea65"
+        },
+        "date": "2026-09-10T05:12:37+05:30",
+        "title": "DiagnosticReport Record",
+        "section": [
+          {
+            "title": "Investigation",
+            "entry": [
+              {
+                "reference": "urn:uuid:808c1611-463c-4c48-862f-07218f3cd1e1"
+              },
+              {
+                "reference": "urn:uuid:ace20b7d-2dad-46b7-848e-01becdda3a30"
+              }
+            ],
+            "code": {
+              "coding": [
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "721981007",
+                  "display": "Diagnostic studies report"
+                }
+              ]
+            }
+          }
+        ],
+        "author": [
+          {
+            "reference": "urn:uuid:89ef18a8-0c6d-41e4-b183-7f357069eb90"
+          }
+        ],
+        "encounter": {
+          "reference": "urn:uuid:0029b9c4-e5cc-4a27-b335-202d3c11c976"
+        },
+        "custodian": {
+          "reference": "urn:uuid:3249ee13-a3f8-44ec-bba0-f8303b253617"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:465201da-1111-4567-8bf9-4da0ecdaea65",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "465201da-1111-4567-8bf9-4da0ecdaea65",
+        "identifier": [
+          {
+            "system": "https://healthid.ndhm.gov.in",
+            "value": "testinguser21@sbx"
+          },
+          {
+            "system": "https://abdm.gov.in/abha-number",
+            "value": "91-5717-2199-2934"
+          }
+        ],
+        "name": [
+          {
+            "text": "Rohan Reddy"
+          }
+        ],
+        "gender": "male",
+        "birthDate": "2025-01-01",
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "9548955962"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:89ef18a8-0c6d-41e4-b183-7f357069eb90",
+      "resource": {
+        "resourceType": "Practitioner",
+        "id": "89ef18a8-0c6d-41e4-b183-7f357069eb90",
+        "name": [
+          {
+            "text": "Dr. Priyanka Iyer"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:3249ee13-a3f8-44ec-bba0-f8303b253617",
+      "resource": {
+        "resourceType": "Organization",
+        "id": "3249ee13-a3f8-44ec-bba0-f8303b253617",
+        "name": "SUNRISE_HOSP"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:0029b9c4-e5cc-4a27-b335-202d3c11c976",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "0029b9c4-e5cc-4a27-b335-202d3c11c976",
+        "status": "finished",
+        "class": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code": "AMB",
+          "display": "ambulatory"
+        },
+        "subject": {
+          "reference": "urn:uuid:465201da-1111-4567-8bf9-4da0ecdaea65"
+        },
+        "period": {
+          "start": "2026-08-30T00:00:00+05:30"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:808c1611-463c-4c48-862f-07218f3cd1e1",
+      "resource": {
+        "resourceType": "DiagnosticReport",
+        "id": "808c1611-463c-4c48-862f-07218f3cd1e1",
+        "meta": {
+          "profile": [
+            "https://nrces.in/ndhm/fhir/r4/StructureDefinition/DiagnosticReportLab"
+          ]
+        },
+        "status": "final",
+        "code": {
+          "text": "Complete Blood Count",
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "57021-8",
+              "display": "Complete Blood Count"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:465201da-1111-4567-8bf9-4da0ecdaea65"
+        },
+        "conclusion": "Hemoglobin 13.8 g/dL; WBC 7200/uL; Platelets 245000/uL",
+        "issued": "2026-08-30T09:00:00+05:30"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:ace20b7d-2dad-46b7-848e-01becdda3a30",
+      "resource": {
+        "resourceType": "DocumentReference",
+        "id": "ace20b7d-2dad-46b7-848e-01becdda3a30",
+        "status": "current",
+        "subject": {
+          "reference": "urn:uuid:465201da-1111-4567-8bf9-4da0ecdaea65"
+        },
+        "content": [
+          {
+            "attachment": {
+              "contentType": "application/pdf",
+              "url": "https://storage.abdm-sandbox.example/178773262485792/lab_report_R050.pdf",
+              "title": "Laboratory test report (CBC/LFT/lipid panel)",
+              "size": 225280
+            }
+          }
+        ],
+        "type": {
+          "text": "Lab Report"
+        }
+      }
+    }
+  ]
+}

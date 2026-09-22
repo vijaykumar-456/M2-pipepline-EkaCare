@@ -1,0 +1,525 @@
+{
+  "resourceType": "Bundle",
+  "id": "OPConsultation-R009",
+  "meta": {
+    "profile": [
+      "https://nrces.in/ndhm/fhir/r4/StructureDefinition/DocumentBundle"
+    ]
+  },
+  "identifier": {
+    "system": "http://hip.in",
+    "value": "bundle-R009"
+  },
+  "type": "document",
+  "timestamp": "2026-09-10T05:12:37+05:30",
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:8d72c7e9-e1cd-4424-83fc-57ffe230065d",
+      "resource": {
+        "resourceType": "Composition",
+        "id": "8d72c7e9-e1cd-4424-83fc-57ffe230065d",
+        "meta": {
+          "profile": [
+            "https://nrces.in/ndhm/fhir/r4/StructureDefinition/OPConsultRecord"
+          ]
+        },
+        "language": "en-IN",
+        "status": "final",
+        "type": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "371530004",
+              "display": "Clinical consultation report"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:0ce2bf79-b71f-44e7-ab2e-466040e5c5b3"
+        },
+        "date": "2026-09-10T05:12:37+05:30",
+        "title": "OPConsultation Record",
+        "section": [
+          {
+            "title": "Chief Complaints",
+            "entry": [
+              {
+                "reference": "urn:uuid:73b7cf81-5cf0-46ec-9d6c-0365253a4c18"
+              }
+            ],
+            "code": {
+              "coding": [
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "422843007",
+                  "display": "Chief complaint section"
+                }
+              ]
+            }
+          },
+          {
+            "title": "Physical Examination",
+            "entry": [
+              {
+                "reference": "urn:uuid:63b9c3ba-e222-431b-b1d6-3dbd8cb2ff93"
+              },
+              {
+                "reference": "urn:uuid:1016572c-a977-46e0-befd-3dc7f3969a1a"
+              },
+              {
+                "reference": "urn:uuid:00548bec-aa98-46c4-8977-04b4248d718f"
+              },
+              {
+                "reference": "urn:uuid:4ef5dce0-67ef-461a-af89-5676590722a8"
+              },
+              {
+                "reference": "urn:uuid:eb9b0594-84e7-4795-bfd8-438b754bf9a1"
+              },
+              {
+                "reference": "urn:uuid:570a98da-0a6e-4882-9584-e40ea5b3f5d9"
+              }
+            ],
+            "code": {
+              "coding": [
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "425044008",
+                  "display": "Physical exam section"
+                }
+              ]
+            }
+          },
+          {
+            "title": "Allergies",
+            "entry": [
+              {
+                "reference": "urn:uuid:5b314970-5c95-4261-a317-0eb8de6187a2"
+              }
+            ],
+            "code": {
+              "coding": [
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "722446000",
+                  "display": "Allergy record"
+                }
+              ]
+            }
+          },
+          {
+            "title": "Medical History",
+            "entry": [
+              {
+                "reference": "urn:uuid:f7007367-22ab-4abf-aaf1-1df4cc93b585"
+              },
+              {
+                "reference": "urn:uuid:ea9f3fbc-3b77-415f-80a6-999a2b6b9e41"
+              }
+            ],
+            "code": {
+              "coding": [
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "371529009",
+                  "display": "History and physical report"
+                }
+              ]
+            }
+          },
+          {
+            "title": "Family History",
+            "entry": [
+              {
+                "reference": "urn:uuid:50daff4a-3281-433c-8308-6dd56846655e"
+              }
+            ],
+            "code": {
+              "coding": [
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "422432008",
+                  "display": "Family history section"
+                }
+              ]
+            }
+          },
+          {
+            "title": "Follow Up",
+            "entry": [
+              {
+                "reference": "urn:uuid:5d90734a-cca6-45bc-bd3d-710a52fd3495"
+              }
+            ],
+            "code": {
+              "coding": [
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "390906007",
+                  "display": "Follow-up encounter"
+                }
+              ]
+            }
+          }
+        ],
+        "author": [
+          {
+            "reference": "urn:uuid:d121462e-03fb-41fb-b983-db949b4f99f5"
+          }
+        ],
+        "encounter": {
+          "reference": "urn:uuid:f1a112f9-c9b1-4733-8ae6-7baabc8b6437"
+        },
+        "custodian": {
+          "reference": "urn:uuid:3dd8ecc6-9fba-4929-876b-70059ba69d09"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:0ce2bf79-b71f-44e7-ab2e-466040e5c5b3",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "0ce2bf79-b71f-44e7-ab2e-466040e5c5b3",
+        "identifier": [
+          {
+            "system": "https://healthid.ndhm.gov.in",
+            "value": "testinguser20@sbx"
+          },
+          {
+            "system": "https://abdm.gov.in/abha-number",
+            "value": "91-2341-5919-9604"
+          }
+        ],
+        "name": [
+          {
+            "text": "Priya Pillai"
+          }
+        ],
+        "gender": "male",
+        "birthDate": "2023-01-01",
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "9468804211"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:d121462e-03fb-41fb-b983-db949b4f99f5",
+      "resource": {
+        "resourceType": "Practitioner",
+        "id": "d121462e-03fb-41fb-b983-db949b4f99f5",
+        "name": [
+          {
+            "text": "Dr. Anita Rao"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:3dd8ecc6-9fba-4929-876b-70059ba69d09",
+      "resource": {
+        "resourceType": "Organization",
+        "id": "3dd8ecc6-9fba-4929-876b-70059ba69d09",
+        "name": "WELLNESS_FAM"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:f1a112f9-c9b1-4733-8ae6-7baabc8b6437",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "f1a112f9-c9b1-4733-8ae6-7baabc8b6437",
+        "status": "finished",
+        "class": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code": "AMB",
+          "display": "ambulatory"
+        },
+        "subject": {
+          "reference": "urn:uuid:0ce2bf79-b71f-44e7-ab2e-466040e5c5b3"
+        },
+        "period": {
+          "start": "2026-09-08T00:00:00+05:30"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:73b7cf81-5cf0-46ec-9d6c-0365253a4c18",
+      "resource": {
+        "resourceType": "Condition",
+        "id": "73b7cf81-5cf0-46ec-9d6c-0365253a4c18",
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active"
+            }
+          ]
+        },
+        "code": {
+          "text": "Skin rash with itching",
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "271807003",
+              "display": "Skin rash with itching"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:0ce2bf79-b71f-44e7-ab2e-466040e5c5b3"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:63b9c3ba-e222-431b-b1d6-3dbd8cb2ff93",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "63b9c3ba-e222-431b-b1d6-3dbd8cb2ff93",
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8480-6",
+              "display": "Systolic blood pressure"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:0ce2bf79-b71f-44e7-ab2e-466040e5c5b3"
+        },
+        "valueQuantity": {
+          "value": 126.0,
+          "unit": "mmHg"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:1016572c-a977-46e0-befd-3dc7f3969a1a",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "1016572c-a977-46e0-befd-3dc7f3969a1a",
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8462-4",
+              "display": "Diastolic blood pressure"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:0ce2bf79-b71f-44e7-ab2e-466040e5c5b3"
+        },
+        "valueQuantity": {
+          "value": 89.0,
+          "unit": "mmHg"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:00548bec-aa98-46c4-8977-04b4248d718f",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "00548bec-aa98-46c4-8977-04b4248d718f",
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8867-4",
+              "display": "Heart rate"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:0ce2bf79-b71f-44e7-ab2e-466040e5c5b3"
+        },
+        "valueQuantity": {
+          "value": 81.0,
+          "unit": "beats/min"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:4ef5dce0-67ef-461a-af89-5676590722a8",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "4ef5dce0-67ef-461a-af89-5676590722a8",
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8310-5",
+              "display": "Body temperature"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:0ce2bf79-b71f-44e7-ab2e-466040e5c5b3"
+        },
+        "valueQuantity": {
+          "value": 36.9,
+          "unit": "Cel"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:eb9b0594-84e7-4795-bfd8-438b754bf9a1",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "eb9b0594-84e7-4795-bfd8-438b754bf9a1",
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "59408-5",
+              "display": "Oxygen saturation"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:0ce2bf79-b71f-44e7-ab2e-466040e5c5b3"
+        },
+        "valueQuantity": {
+          "value": 98.0,
+          "unit": "%"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:570a98da-0a6e-4882-9584-e40ea5b3f5d9",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "570a98da-0a6e-4882-9584-e40ea5b3f5d9",
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "425044008",
+              "display": "Physical exam finding"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:0ce2bf79-b71f-44e7-ab2e-466040e5c5b3"
+        },
+        "valueString": "Erythematous rash on forearms."
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:5b314970-5c95-4261-a317-0eb8de6187a2",
+      "resource": {
+        "resourceType": "AllergyIntolerance",
+        "id": "5b314970-5c95-4261-a317-0eb8de6187a2",
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical",
+              "code": "active"
+            }
+          ]
+        },
+        "code": {
+          "text": "Shellfish allergy"
+        },
+        "patient": {
+          "reference": "urn:uuid:0ce2bf79-b71f-44e7-ab2e-466040e5c5b3"
+        },
+        "category": [
+          "food"
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:f7007367-22ab-4abf-aaf1-1df4cc93b585",
+      "resource": {
+        "resourceType": "Condition",
+        "id": "f7007367-22ab-4abf-aaf1-1df4cc93b585",
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active"
+            }
+          ]
+        },
+        "code": {
+          "text": "Contact dermatitis",
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "238539001",
+              "display": "Contact dermatitis"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:0ce2bf79-b71f-44e7-ab2e-466040e5c5b3"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:ea9f3fbc-3b77-415f-80a6-999a2b6b9e41",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "ea9f3fbc-3b77-415f-80a6-999a2b6b9e41",
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "1003642006",
+              "display": "Medical history note"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:0ce2bf79-b71f-44e7-ab2e-466040e5c5b3"
+        },
+        "valueString": "Known hypertensive on treatment"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:50daff4a-3281-433c-8308-6dd56846655e",
+      "resource": {
+        "resourceType": "FamilyMemberHistory",
+        "id": "50daff4a-3281-433c-8308-6dd56846655e",
+        "status": "completed",
+        "patient": {
+          "reference": "urn:uuid:0ce2bf79-b71f-44e7-ab2e-466040e5c5b3"
+        },
+        "note": [
+          {
+            "text": "No significant family history reported."
+          }
+        ],
+        "relationship": {
+          "text": "Family member"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:5d90734a-cca6-45bc-bd3d-710a52fd3495",
+      "resource": {
+        "resourceType": "Appointment",
+        "id": "5d90734a-cca6-45bc-bd3d-710a52fd3495",
+        "status": "booked",
+        "start": "2026-09-23T10:00:00+05:30",
+        "participant": [
+          {
+            "actor": {
+              "reference": "urn:uuid:0ce2bf79-b71f-44e7-ab2e-466040e5c5b3"
+            },
+            "status": "accepted"
+          }
+        ]
+      }
+    }
+  ]
+}

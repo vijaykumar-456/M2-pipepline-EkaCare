@@ -1,0 +1,154 @@
+{
+  "resourceType": "Bundle",
+  "id": "Prescription-R068",
+  "meta": {
+    "profile": [
+      "https://nrces.in/ndhm/fhir/r4/StructureDefinition/DocumentBundle"
+    ]
+  },
+  "identifier": {
+    "system": "http://hip.in",
+    "value": "bundle-R068"
+  },
+  "type": "document",
+  "timestamp": "2026-09-10T04:52:40+05:30",
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:3806546f-8cbd-4eca-b0fc-ed1b675f5d8e",
+      "resource": {
+        "resourceType": "Composition",
+        "id": "3806546f-8cbd-4eca-b0fc-ed1b675f5d8e",
+        "meta": {
+          "profile": [
+            "https://nrces.in/ndhm/fhir/r4/StructureDefinition/PrescriptionRecord"
+          ]
+        },
+        "language": "en-IN",
+        "status": "final",
+        "type": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "440545006",
+              "display": "Prescription record"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:a719419c-a6ab-4b3b-ae0b-083fa25deda4"
+        },
+        "date": "2026-09-10T04:52:40+05:30",
+        "title": "Prescription Record",
+        "section": [
+          {
+            "entry": [
+              {
+                "reference": "urn:uuid:853c8d9f-e4b7-4bb7-a3b9-520e7fc9a2f5"
+              }
+            ]
+          }
+        ],
+        "author": [
+          {
+            "reference": "urn:uuid:6c9a3ba6-4a54-4a99-b3a5-ee3e19e3672e"
+          }
+        ],
+        "encounter": {
+          "reference": "urn:uuid:a552caf7-1c73-4b59-95b1-4c9bc7db8270"
+        },
+        "custodian": {
+          "reference": "urn:uuid:d5bde0e7-75a7-40b1-a17c-c34ac7c53743"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:a719419c-a6ab-4b3b-ae0b-083fa25deda4",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "a719419c-a6ab-4b3b-ae0b-083fa25deda4",
+        "identifier": [
+          {
+            "system": "https://healthid.ndhm.gov.in",
+            "value": "vikram.d@sbx"
+          },
+          {
+            "system": "https://abdm.gov.in/abha-number",
+            "value": "91-9945-6678-3324"
+          }
+        ],
+        "name": [
+          {
+            "text": "Vikram Desai"
+          }
+        ],
+        "gender": "male",
+        "birthDate": "1965-01-01",
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "9345678901"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:6c9a3ba6-4a54-4a99-b3a5-ee3e19e3672e",
+      "resource": {
+        "resourceType": "Practitioner",
+        "id": "6c9a3ba6-4a54-4a99-b3a5-ee3e19e3672e",
+        "name": [
+          {
+            "text": "Dr. Rajesh Nair"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:d5bde0e7-75a7-40b1-a17c-c34ac7c53743",
+      "resource": {
+        "resourceType": "Organization",
+        "id": "d5bde0e7-75a7-40b1-a17c-c34ac7c53743",
+        "name": "APEX_DIAG"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:a552caf7-1c73-4b59-95b1-4c9bc7db8270",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "a552caf7-1c73-4b59-95b1-4c9bc7db8270",
+        "status": "finished",
+        "class": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code": "AMB",
+          "display": "ambulatory"
+        },
+        "subject": {
+          "reference": "urn:uuid:a719419c-a6ab-4b3b-ae0b-083fa25deda4"
+        },
+        "period": {
+          "start": "2026-09-03T00:00:00+05:30"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:853c8d9f-e4b7-4bb7-a3b9-520e7fc9a2f5",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "id": "853c8d9f-e4b7-4bb7-a3b9-520e7fc9a2f5",
+        "status": "active",
+        "intent": "order",
+        "medicationCodeableConcept": {
+          "text": "Amoxicillin"
+        },
+        "subject": {
+          "reference": "urn:uuid:a719419c-a6ab-4b3b-ae0b-083fa25deda4"
+        },
+        "dosageInstruction": [
+          {
+            "text": "500 mg, Thrice daily, for 7 days"
+          }
+        ]
+      }
+    }
+  ]
+}

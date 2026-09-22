@@ -1,0 +1,172 @@
+{
+  "resourceType": "Bundle",
+  "id": "Prescription-R100",
+  "meta": {
+    "profile": [
+      "https://nrces.in/ndhm/fhir/r4/StructureDefinition/DocumentBundle"
+    ]
+  },
+  "identifier": {
+    "system": "http://hip.in",
+    "value": "bundle-R100"
+  },
+  "type": "document",
+  "timestamp": "2026-09-10T04:52:40+05:30",
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:8bdd7a35-2195-4528-af80-389d8b515d46",
+      "resource": {
+        "resourceType": "Composition",
+        "id": "8bdd7a35-2195-4528-af80-389d8b515d46",
+        "meta": {
+          "profile": [
+            "https://nrces.in/ndhm/fhir/r4/StructureDefinition/PrescriptionRecord"
+          ]
+        },
+        "language": "en-IN",
+        "status": "final",
+        "type": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "440545006",
+              "display": "Prescription record"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:31d3cf59-6de2-492b-9436-a3aff1dc8e19"
+        },
+        "date": "2026-09-10T04:52:40+05:30",
+        "title": "Prescription Record",
+        "section": [
+          {
+            "entry": [
+              {
+                "reference": "urn:uuid:1a484bd1-c0f1-4b48-992d-9afedc1cc0de"
+              },
+              {
+                "reference": "urn:uuid:fbd04f04-c7d9-4b76-a380-1c91557cd434"
+              }
+            ]
+          }
+        ],
+        "author": [
+          {
+            "reference": "urn:uuid:0eb64ace-6e27-444e-95df-6c4878c83456"
+          }
+        ],
+        "encounter": {
+          "reference": "urn:uuid:9d51a218-21ed-4639-b2ec-34af61c7a2fc"
+        },
+        "custodian": {
+          "reference": "urn:uuid:c3a50d60-c044-41e0-a236-5c3b2e454077"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:31d3cf59-6de2-492b-9436-a3aff1dc8e19",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "31d3cf59-6de2-492b-9436-a3aff1dc8e19",
+        "identifier": [
+          {
+            "system": "https://healthid.ndhm.gov.in",
+            "value": "rohan.s@sbx"
+          },
+          {
+            "system": "https://abdm.gov.in/abha-number",
+            "value": "91-2167-8890-5546"
+          }
+        ],
+        "name": [
+          {
+            "text": "Rohan Sharma"
+          }
+        ],
+        "gender": "male",
+        "birthDate": "1988-01-01",
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "9567891234"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:0eb64ace-6e27-444e-95df-6c4878c83456",
+      "resource": {
+        "resourceType": "Practitioner",
+        "id": "0eb64ace-6e27-444e-95df-6c4878c83456",
+        "name": [
+          {
+            "text": "Dr. Rajesh Nair"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:c3a50d60-c044-41e0-a236-5c3b2e454077",
+      "resource": {
+        "resourceType": "Organization",
+        "id": "c3a50d60-c044-41e0-a236-5c3b2e454077",
+        "name": "SRM_CHENNAI"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:9d51a218-21ed-4639-b2ec-34af61c7a2fc",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "9d51a218-21ed-4639-b2ec-34af61c7a2fc",
+        "status": "finished",
+        "class": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code": "AMB",
+          "display": "ambulatory"
+        },
+        "subject": {
+          "reference": "urn:uuid:31d3cf59-6de2-492b-9436-a3aff1dc8e19"
+        },
+        "period": {
+          "start": "2026-09-01T00:00:00+05:30"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:1a484bd1-c0f1-4b48-992d-9afedc1cc0de",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "id": "1a484bd1-c0f1-4b48-992d-9afedc1cc0de",
+        "status": "active",
+        "intent": "order",
+        "medicationCodeableConcept": {
+          "text": "Salbutamol Inhaler"
+        },
+        "subject": {
+          "reference": "urn:uuid:31d3cf59-6de2-492b-9436-a3aff1dc8e19"
+        },
+        "dosageInstruction": [
+          {
+            "text": "100 mcg, As needed, for 30 days"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:fbd04f04-c7d9-4b76-a380-1c91557cd434",
+      "resource": {
+        "resourceType": "Binary",
+        "id": "fbd04f04-c7d9-4b76-a380-1c91557cd434",
+        "contentType": "image/jpeg",
+        "extension": [
+          {
+            "url": "http://example.org/fhir/StructureDefinition/source-url",
+            "valueUrl": "https://storage.abdm-sandbox.example/P010/prescription_slip_R100.jpg"
+          }
+        ],
+        "data": "PLACEHOLDER_BASE64=="
+      }
+    }
+  ]
+}

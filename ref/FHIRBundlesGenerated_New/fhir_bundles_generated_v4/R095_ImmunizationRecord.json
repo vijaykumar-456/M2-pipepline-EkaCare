@@ -1,0 +1,189 @@
+{
+  "resourceType": "Bundle",
+  "id": "ImmunizationRecord-R095",
+  "meta": {
+    "profile": [
+      "https://nrces.in/ndhm/fhir/r4/StructureDefinition/DocumentBundle"
+    ]
+  },
+  "identifier": {
+    "system": "http://hip.in",
+    "value": "bundle-R095"
+  },
+  "type": "document",
+  "timestamp": "2026-09-10T05:12:37+05:30",
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:e5a78388-3dda-4118-99f0-1dda660db972",
+      "resource": {
+        "resourceType": "Composition",
+        "id": "e5a78388-3dda-4118-99f0-1dda660db972",
+        "meta": {
+          "profile": [
+            "https://nrces.in/ndhm/fhir/r4/StructureDefinition/ImmunizationRecord"
+          ]
+        },
+        "language": "en-IN",
+        "status": "final",
+        "type": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "41000179103",
+              "display": "Immunization record"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:47aabf8c-3672-4ee9-a9d9-4398701325d2"
+        },
+        "date": "2026-09-10T05:12:37+05:30",
+        "title": "ImmunizationRecord Record",
+        "section": [
+          {
+            "entry": [
+              {
+                "reference": "urn:uuid:657d576c-b49d-482e-bf14-53f2a1ad6904"
+              },
+              {
+                "reference": "urn:uuid:4a2c18a8-efe4-4bac-859d-ba77ac81d1ee"
+              }
+            ]
+          }
+        ],
+        "author": [
+          {
+            "reference": "urn:uuid:08c679da-fc4a-416e-83a8-65358181524e"
+          }
+        ],
+        "encounter": {
+          "reference": "urn:uuid:ec73ec9d-dca9-4a50-a0eb-ea9506fdc95f"
+        },
+        "custodian": {
+          "reference": "urn:uuid:e9725e45-99c2-43a5-b6c3-a73a4d887bf7"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:47aabf8c-3672-4ee9-a9d9-4398701325d2",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "47aabf8c-3672-4ee9-a9d9-4398701325d2",
+        "identifier": [
+          {
+            "system": "https://healthid.ndhm.gov.in",
+            "value": "testinguser26@sbx"
+          },
+          {
+            "system": "https://abdm.gov.in/abha-number",
+            "value": "91-1369-8564-6823"
+          }
+        ],
+        "name": [
+          {
+            "text": "Sneha Menon"
+          }
+        ],
+        "gender": "male",
+        "birthDate": "1981-01-01",
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "9755969870"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:08c679da-fc4a-416e-83a8-65358181524e",
+      "resource": {
+        "resourceType": "Practitioner",
+        "id": "08c679da-fc4a-416e-83a8-65358181524e",
+        "name": [
+          {
+            "text": "Dr. Rajesh Nair"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:e9725e45-99c2-43a5-b6c3-a73a4d887bf7",
+      "resource": {
+        "resourceType": "Organization",
+        "id": "e9725e45-99c2-43a5-b6c3-a73a4d887bf7",
+        "name": "APEX_DIAG"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:ec73ec9d-dca9-4a50-a0eb-ea9506fdc95f",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "ec73ec9d-dca9-4a50-a0eb-ea9506fdc95f",
+        "status": "finished",
+        "class": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code": "AMB",
+          "display": "ambulatory"
+        },
+        "subject": {
+          "reference": "urn:uuid:47aabf8c-3672-4ee9-a9d9-4398701325d2"
+        },
+        "period": {
+          "start": "2026-08-24T00:00:00+05:30"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:657d576c-b49d-482e-bf14-53f2a1ad6904",
+      "resource": {
+        "resourceType": "Immunization",
+        "id": "657d576c-b49d-482e-bf14-53f2a1ad6904",
+        "status": "completed",
+        "vaccineCode": {
+          "text": "MMR vaccine"
+        },
+        "patient": {
+          "reference": "urn:uuid:47aabf8c-3672-4ee9-a9d9-4398701325d2"
+        },
+        "occurrenceDateTime": "2026-08-24T09:00:00+05:30",
+        "protocolApplied": [
+          {
+            "doseNumberPositiveInt": 2
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:4a2c18a8-efe4-4bac-859d-ba77ac81d1ee",
+      "resource": {
+        "resourceType": "ImmunizationRecommendation",
+        "id": "4a2c18a8-efe4-4bac-859d-ba77ac81d1ee",
+        "patient": {
+          "reference": "urn:uuid:47aabf8c-3672-4ee9-a9d9-4398701325d2"
+        },
+        "date": "2026-09-10T05:12:37+05:30",
+        "recommendation": [
+          {
+            "forecastStatus": {
+              "text": "due"
+            },
+            "dateCriterion": [
+              {
+                "code": {
+                  "coding": [
+                    {
+                      "system": "http://loinc.org",
+                      "code": "30980-7",
+                      "display": "Date vaccine due"
+                    }
+                  ]
+                },
+                "value": "2026-11-07T00:00:00+05:30"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

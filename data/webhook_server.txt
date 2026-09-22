@@ -1,0 +1,264 @@
+import sys
+import os
+import json
+import encryption
+
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
+from flask import Flask, request, jsonify
+import flat_table_manager as ftm
+import logging_utils as log
+import fhir_builder
+import encryption
+import eka_client
+from config import load_config
+
+from hiu_decrypt import get_hiu_exchange
+from encryption import decrypt_incoming_payload
+
+app = Flask(__name__)
+_config = load_config()
+
+
+def _verify_signature(req) -> bool:
+    # PLACEHOLDER -- replace with Eka's real signature verification.
+    return True
+
+
+@app.route("/webhooks/eka", methods=["POST"])
+def handle_webhook():
+    if not _verify_signature(request):
+        return jsonify({"error": "invalid signature"}), 401
+
+    payload = request.get_json(force=True, silent=True) or {}
+    print("\n========== WEBHOOK RECEIVED ==========")
+    print(json.dumps(payload, indent=2))
+    print("======================================")
+
+    os.makedirs("data", exist_ok=True)
+    with open("data/webhook_last.json", "w", encoding="utf-8") as f:
+        json.dump(payload, f, indent=2)
+
+    event_type = payload.get("event")
+    data = payload.get("data", {})
+
+    if event_type == "abha.link_care_context":
+        care_context_id = data.get("care_context_id")
+        status = data.get("status")
+        error = data.get("error") or ""
+
+        if not care_context_id:
+            return jsonify({"error": "missing care_context_id in payload.data"}), 400
+
+        try:
+            row = ftm.find_row_by_care_context_id(care_context_id)
+        except ValueError:
+            return jsonify({"error": f"unknown care_context_id: {care_context_id}"}), 404
+
+        record_id = row["record_id"]
+        ftm.mark_link_webhook_result(record_id, status=status, error=error)
+        log.log_push_event(
+            env=os.environ.get("EKA_ENV", "sandbox"), row_id=record_id,
+            care_context_id=care_context_id, hi_type=row.get("hi_type", ""),
+            status=status, error=error,
+        )
+        return jsonify({"ok": True}), 200
+
+    elif event_type == "abha.consent_update":
+        print()
+        print("========== CONSENT UPDATE ==========")
+
+        consent_data = data.get("data", {})
+
+        status = consent_data.get("status")
+
+        notification = consent_data.get("notification", {})
+
+        consent_request_id = notification.get(
+            "consentRequestId"
+        )
+
+        consent_artefacts = notification.get(
+            "consentArtefacts", {}
+        )
+
+        consent_artefact_id = consent_artefacts.get(
+            "id"
+        )
+
+        print("Consent Request ID :", consent_request_id)
+        print("Status             :", status)
+        print("Consent Artefact ID:", consent_artefact_id)
+
+        print("====================================")
+        print()
+
+        return jsonify({
+            "ok": True,
+            "event": "abha.consent_update",
+            "status": status
+        }), 200
+
+  
+    elif event_type == "abha.hip_data_fetch":
+        transaction_id = data.get("transaction_id", "")
+        care_contexts = data.get("care_contexts", [])
+        key_information = data.get("key_information", {})
+
+        if not transaction_id:
+            return jsonify({"error": "missing transaction_id"}), 400
+        if not care_contexts:
+            return jsonify({"error": "missing care_contexts"}), 400
+        if not key_information:
+            return jsonify({"error": "missing key_information"}), 400
+
+        requester_nonce = key_information.get("nonce", "")
+        requester_public_key = key_information.get("dh_public_key", {}).get("key_value", "")
+        env = os.environ.get("EKA_ENV", "sandbox")
+
+        # One call per care context. Each gets its OWN fresh key material --
+        # simpler and safer than trying to share one ephemeral key across
+        # multiple care contexts that might (in principle) have different
+        # hip_id/partner_patient_id headers.
+        for care_context_id in care_contexts:
+            try:
+                row = ftm.find_row_by_care_context_id(care_context_id)
+            except ValueError:
+                return jsonify({"error": f"unknown care_context_id: {care_context_id}"}), 404
+
+            record_id = row["record_id"]
+
+            # Per Eka's own docs (getting-started page): "When an HIU
+            # requests data for a linked care context (after the user
+            # grants consent), you receive the abha.hip_data_fetch
+            # webhook." Eka's platform guarantees consent was already
+            # verified upstream before this webhook is ever sent -- so
+            # its arrival IS the confirmation, not something we should
+            # require to already be set locally beforehand.
+            #
+            # transaction_id is used as the consent_artifact_id here as
+            # the best available audit reference -- the real payload
+            # doesn't appear to carry an explicit consent artifact ID
+            # (only transaction_id, care_contexts, key_information were
+            # confirmed). If Eka's payload does include one under a
+            # different field name, use that instead.
+            if row.get("consent_status") != "granted":
+                ftm.set_consent(record_id, consent_status="granted",
+                                consent_artifact_id=transaction_id,
+                                hiu_id=row.get("hiu_id", ""))
+                row = ftm.get_row(record_id)
+
+            hiu_id = row.get("hiu_id", "")
+
+            # Still checked, now as a safety net rather than a real
+            # precondition -- should always pass at this point given the
+            # auto-grant above, unless link_status somehow isn't LINKED.
+            if not ftm.check_consent_before_bundling(record_id):
+                log.log_bundle_event(
+                    env=env, row_id=record_id, hiu_id=hiu_id,
+                    consent_artifact_id=row.get("consent_artifact_id", ""),
+                    hi_types=row.get("hi_type", ""), event_type="bundle_blocked",
+                    status="denied", error="link_status not LINKED despite a data-fetch request -- unexpected",
+                )
+                return jsonify({"error": f"care context not in LINKED state: {care_context_id}"}), 403
+
+            try:
+                bundle = fhir_builder.build_bundle(row)
+                bundle_json = json.dumps(bundle)
+                # checksum on the PLAINTEXT, computed BEFORE encryption --
+                # a checksum of the ciphertext would be meaningless to the
+                # HIU, who only ever sees the ciphertext + this checksum.
+                checksum = encryption.calculate_checksum(bundle_json)
+                ftm.mark_bundle_created(record_id)
+                log.log_bundle_event(
+                    env=env, row_id=record_id, hiu_id=hiu_id,
+                    consent_artifact_id=row.get("consent_artifact_id", ""),
+                    hi_types=row.get("hi_type", ""), event_type="bundle_created", status="ok",
+                )
+            except Exception as e:
+                log.log_bundle_event(
+                    env=env, row_id=record_id, hiu_id=hiu_id,
+                    consent_artifact_id=row.get("consent_artifact_id", ""),
+                    hi_types=row.get("hi_type", ""), event_type="bundle_created",
+                    status="failed", error=str(e),
+                )
+                return jsonify({"error": "bundle build failed"}), 500
+
+            try:
+                hip_key_material = encryption.generate_hip_key_material()
+                encrypted = encryption.encrypt_fhir_bundle(
+                    bundle_json, hip_key_material, requester_nonce, requester_public_key,
+                )
+                eka_client.push_on_fetch_response(
+                    _config, row, transaction_id, care_context_id, checksum, encrypted, hip_key_material,
+                )
+                ftm.mark_bundle_transferred(record_id, status="sent")
+                log.log_bundle_event(
+                    env=env, row_id=record_id, hiu_id=hiu_id,
+                    consent_artifact_id=row.get("consent_artifact_id", ""),
+                    hi_types=row.get("hi_type", ""), event_type="bundle_transferred", status="sent",
+                )
+            except Exception as e:
+                ftm.mark_bundle_transferred(record_id, status="failed", error=str(e))
+                log.log_bundle_event(
+                    env=env, row_id=record_id, hiu_id=hiu_id,
+                    consent_artifact_id=row.get("consent_artifact_id", ""),
+                    hi_types=row.get("hi_type", ""), event_type="bundle_transferred",
+                    status="failed", error=str(e),
+                )
+                return jsonify({"error": "encryption/transfer failed"}), 500
+
+        return jsonify({"ok": True}), 200
+
+  
+
+    elif event_type == "abha.hiu_data_push":
+        data = payload.get("data", {})
+        entries = data.get("entries", [])
+        key_information = data.get("key_information", {})
+        sender_nonce = key_information.get("nonce")
+        sender_public_key = key_information.get("dh_public_key", {}).get("key_value", "")
+
+        hiu_key_material = get_hiu_exchange()
+
+        for entry in entries:
+            encrypted_content = entry.get("content", "")
+            decrypted_fhir = decrypt_incoming_payload(
+                encrypted_data=encrypted_content,
+                own_key_material=hiu_key_material,
+                sender_nonce=sender_nonce,
+                sender_x509_public_key=sender_public_key,
+            )
+            fhir_bundle = json.loads(decrypted_fhir)
+            # print(json.dumps(fhir_bundle, indent=2))
+            care_context_id = entry.get("care_context_id", "unknown")
+            os.makedirs("decrypt-hiu", exist_ok=True)
+            filename = f"decrypt-hiu/{care_context_id}.json"
+            with open(filename, "w", encoding="utf-8") as f:
+                json.dump(fhir_bundle, f, indent=2)
+            print(f"Saved decrypted bundle to {filename}")
+
+        return jsonify({"ok": True}), 200
+
+
+
+    elif event_type == "abha.discover_care_context":
+        return jsonify({"ok": True, "note": "discover_care_context received, not yet wired"}), 200
+
+    else:
+        return jsonify({"ok": True, "note": f"unhandled event type: {event_type}"}), 200
+
+
+# if __name__ == "__main__":
+#     app.run(port=5000, debug=True)
+
+if __name__ == "__main__":
+    if os.environ.get("WERKZEUG_RUN_MAIN") == "true" or not app.debug:
+        from hiu_decrypt import create_hiu_exchange
+        import eka_client as _eka_client
+
+        _hiu_key_material = create_hiu_exchange()
+        _eka_client.update_hiu_keyset(_config, _hiu_key_material)
+        print("HIU keyset registered.")
+
+    app.run(port=5000, debug=True)

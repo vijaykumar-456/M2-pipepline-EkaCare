@@ -1,0 +1,525 @@
+{
+  "resourceType": "Bundle",
+  "id": "OPConsultation-R089",
+  "meta": {
+    "profile": [
+      "https://nrces.in/ndhm/fhir/r4/StructureDefinition/DocumentBundle"
+    ]
+  },
+  "identifier": {
+    "system": "http://hip.in",
+    "value": "bundle-R089"
+  },
+  "type": "document",
+  "timestamp": "2026-09-10T04:52:40+05:30",
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:c1bfa7c1-c516-4e68-b7c2-6c1ee4655b0f",
+      "resource": {
+        "resourceType": "Composition",
+        "id": "c1bfa7c1-c516-4e68-b7c2-6c1ee4655b0f",
+        "meta": {
+          "profile": [
+            "https://nrces.in/ndhm/fhir/r4/StructureDefinition/OPConsultRecord"
+          ]
+        },
+        "language": "en-IN",
+        "status": "final",
+        "type": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "371530004",
+              "display": "Clinical consultation report"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:e40170bf-51c5-43aa-a0e1-d683149037e8"
+        },
+        "date": "2026-09-10T04:52:40+05:30",
+        "title": "OPConsultation Record",
+        "section": [
+          {
+            "title": "Chief Complaints",
+            "entry": [
+              {
+                "reference": "urn:uuid:9ac4eecf-63e2-4248-89d7-06157dc42ef7"
+              }
+            ],
+            "code": {
+              "coding": [
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "422843007",
+                  "display": "Chief complaint section"
+                }
+              ]
+            }
+          },
+          {
+            "title": "Physical Examination",
+            "entry": [
+              {
+                "reference": "urn:uuid:834f2d3a-eb03-4254-86cf-6bf772aaba81"
+              },
+              {
+                "reference": "urn:uuid:63fd567b-0668-4b0f-96d6-3069737bb475"
+              },
+              {
+                "reference": "urn:uuid:560ba9ea-c717-47fd-8ddd-830dfa724232"
+              },
+              {
+                "reference": "urn:uuid:8ee7dd10-1c45-4651-9a0a-c077a552d602"
+              },
+              {
+                "reference": "urn:uuid:d706f7ea-d975-411f-b68f-02f0b7c46c39"
+              },
+              {
+                "reference": "urn:uuid:271a7051-5209-44c7-b2f2-c4f85a5102e1"
+              }
+            ],
+            "code": {
+              "coding": [
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "425044008",
+                  "display": "Physical exam section"
+                }
+              ]
+            }
+          },
+          {
+            "title": "Medical History",
+            "entry": [
+              {
+                "reference": "urn:uuid:0fcceaac-134b-449d-a2ae-35e67993b300"
+              },
+              {
+                "reference": "urn:uuid:db20ba16-7200-4e32-b49c-611fdc0a1c60"
+              }
+            ],
+            "code": {
+              "coding": [
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "371529009",
+                  "display": "History and physical report"
+                }
+              ]
+            }
+          },
+          {
+            "title": "Family History",
+            "entry": [
+              {
+                "reference": "urn:uuid:ad6c6233-30a5-421c-ada1-3c77bed98619"
+              }
+            ],
+            "code": {
+              "coding": [
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "422432008",
+                  "display": "Family history section"
+                }
+              ]
+            }
+          },
+          {
+            "title": "Follow Up",
+            "entry": [
+              {
+                "reference": "urn:uuid:d1414081-7165-487c-96ae-b9379c5a84a0"
+              }
+            ],
+            "code": {
+              "coding": [
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "390906007",
+                  "display": "Follow-up encounter"
+                }
+              ]
+            }
+          },
+          {
+            "title": "Document Reference",
+            "entry": [
+              {
+                "reference": "urn:uuid:552322ea-0b7a-46d7-9bba-885b2354d0d9"
+              }
+            ],
+            "code": {
+              "coding": [
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "371530004",
+                  "display": "Clinical consultation report"
+                }
+              ]
+            }
+          }
+        ],
+        "author": [
+          {
+            "reference": "urn:uuid:42e98de3-4c67-4f3b-9345-3b28d69b29d1"
+          }
+        ],
+        "encounter": {
+          "reference": "urn:uuid:9fc39177-1490-447a-a3a1-522c362943e9"
+        },
+        "custodian": {
+          "reference": "urn:uuid:03f9afd2-a850-4550-9f13-694cffea0a26"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:e40170bf-51c5-43aa-a0e1-d683149037e8",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "e40170bf-51c5-43aa-a0e1-d683149037e8",
+        "identifier": [
+          {
+            "system": "https://healthid.ndhm.gov.in",
+            "value": "priya.m@sbx"
+          },
+          {
+            "system": "https://abdm.gov.in/abha-number",
+            "value": "91-1056-7789-4435"
+          }
+        ],
+        "name": [
+          {
+            "text": "Priya Menon"
+          }
+        ],
+        "gender": "female",
+        "birthDate": "1998-01-01",
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "9456781230"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:42e98de3-4c67-4f3b-9345-3b28d69b29d1",
+      "resource": {
+        "resourceType": "Practitioner",
+        "id": "42e98de3-4c67-4f3b-9345-3b28d69b29d1",
+        "name": [
+          {
+            "text": "Dr. Priyanka Iyer"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:03f9afd2-a850-4550-9f13-694cffea0a26",
+      "resource": {
+        "resourceType": "Organization",
+        "id": "03f9afd2-a850-4550-9f13-694cffea0a26",
+        "name": "SUNRISE_HOSP"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:9fc39177-1490-447a-a3a1-522c362943e9",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "9fc39177-1490-447a-a3a1-522c362943e9",
+        "status": "finished",
+        "class": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code": "AMB",
+          "display": "ambulatory"
+        },
+        "subject": {
+          "reference": "urn:uuid:e40170bf-51c5-43aa-a0e1-d683149037e8"
+        },
+        "period": {
+          "start": "2026-09-04T00:00:00+05:30"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:9ac4eecf-63e2-4248-89d7-06157dc42ef7",
+      "resource": {
+        "resourceType": "Condition",
+        "id": "9ac4eecf-63e2-4248-89d7-06157dc42ef7",
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active"
+            }
+          ]
+        },
+        "code": {
+          "text": "Fever, cough and sore throat",
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "267102003",
+              "display": "Fever, cough and sore throat"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:e40170bf-51c5-43aa-a0e1-d683149037e8"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:834f2d3a-eb03-4254-86cf-6bf772aaba81",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "834f2d3a-eb03-4254-86cf-6bf772aaba81",
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8480-6",
+              "display": "Systolic blood pressure"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:e40170bf-51c5-43aa-a0e1-d683149037e8"
+        },
+        "valueQuantity": {
+          "value": 137.0,
+          "unit": "mmHg"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:63fd567b-0668-4b0f-96d6-3069737bb475",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "63fd567b-0668-4b0f-96d6-3069737bb475",
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8462-4",
+              "display": "Diastolic blood pressure"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:e40170bf-51c5-43aa-a0e1-d683149037e8"
+        },
+        "valueQuantity": {
+          "value": 80.0,
+          "unit": "mmHg"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:560ba9ea-c717-47fd-8ddd-830dfa724232",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "560ba9ea-c717-47fd-8ddd-830dfa724232",
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8867-4",
+              "display": "Heart rate"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:e40170bf-51c5-43aa-a0e1-d683149037e8"
+        },
+        "valueQuantity": {
+          "value": 70.0,
+          "unit": "beats/min"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:8ee7dd10-1c45-4651-9a0a-c077a552d602",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "8ee7dd10-1c45-4651-9a0a-c077a552d602",
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8310-5",
+              "display": "Body temperature"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:e40170bf-51c5-43aa-a0e1-d683149037e8"
+        },
+        "valueQuantity": {
+          "value": 37.5,
+          "unit": "Cel"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:d706f7ea-d975-411f-b68f-02f0b7c46c39",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "d706f7ea-d975-411f-b68f-02f0b7c46c39",
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "59408-5",
+              "display": "Oxygen saturation"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:e40170bf-51c5-43aa-a0e1-d683149037e8"
+        },
+        "valueQuantity": {
+          "value": 98.0,
+          "unit": "%"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:271a7051-5209-44c7-b2f2-c4f85a5102e1",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "271a7051-5209-44c7-b2f2-c4f85a5102e1",
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "425044008",
+              "display": "Physical exam finding"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:e40170bf-51c5-43aa-a0e1-d683149037e8"
+        },
+        "valueString": "Mild throat congestion. No respiratory distress."
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:0fcceaac-134b-449d-a2ae-35e67993b300",
+      "resource": {
+        "resourceType": "Condition",
+        "id": "0fcceaac-134b-449d-a2ae-35e67993b300",
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active"
+            }
+          ]
+        },
+        "code": {
+          "text": "Acute upper respiratory infection",
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "54150009",
+              "display": "Acute upper respiratory infection"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:e40170bf-51c5-43aa-a0e1-d683149037e8"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:db20ba16-7200-4e32-b49c-611fdc0a1c60",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "db20ba16-7200-4e32-b49c-611fdc0a1c60",
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "1003642006",
+              "display": "Medical history note"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:e40170bf-51c5-43aa-a0e1-d683149037e8"
+        },
+        "valueString": "Known hypertensive on treatment"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:ad6c6233-30a5-421c-ada1-3c77bed98619",
+      "resource": {
+        "resourceType": "FamilyMemberHistory",
+        "id": "ad6c6233-30a5-421c-ada1-3c77bed98619",
+        "status": "completed",
+        "patient": {
+          "reference": "urn:uuid:e40170bf-51c5-43aa-a0e1-d683149037e8"
+        },
+        "note": [
+          {
+            "text": "Sibling with history of asthma."
+          }
+        ],
+        "relationship": {
+          "text": "Family member"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:d1414081-7165-487c-96ae-b9379c5a84a0",
+      "resource": {
+        "resourceType": "Appointment",
+        "id": "d1414081-7165-487c-96ae-b9379c5a84a0",
+        "status": "booked",
+        "start": "2026-09-19T10:00:00+05:30",
+        "participant": [
+          {
+            "actor": {
+              "reference": "urn:uuid:e40170bf-51c5-43aa-a0e1-d683149037e8"
+            },
+            "status": "accepted"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:552322ea-0b7a-46d7-9bba-885b2354d0d9",
+      "resource": {
+        "resourceType": "DocumentReference",
+        "id": "552322ea-0b7a-46d7-9bba-885b2354d0d9",
+        "status": "current",
+        "subject": {
+          "reference": "urn:uuid:e40170bf-51c5-43aa-a0e1-d683149037e8"
+        },
+        "content": [
+          {
+            "attachment": {
+              "contentType": "audio/mpeg",
+              "url": "https://storage.abdm-sandbox.example/P009/consultation_audio_note_R089.mp3",
+              "title": "Recorded audio summary of teleconsultation",
+              "size": 2150400
+            }
+          }
+        ],
+        "type": {
+          "text": "Consultation Audio Note"
+        }
+      }
+    }
+  ]
+}

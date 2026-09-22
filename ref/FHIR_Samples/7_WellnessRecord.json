@@ -1,0 +1,126 @@
+{
+  "resourceType": "Bundle",
+  "id": "Wellness-example-01",
+  "meta": {
+    "versionId": "1",
+    "lastUpdated": "2026-09-09T10:00:00.000+05:30",
+    "profile": ["https://nrces.in/ndhm/fhir/r4/StructureDefinition/DocumentBundle"]
+  },
+  "identifier": { "system": "http://hip.in", "value": "bundle-wellness-0001" },
+  "type": "document",
+  "timestamp": "2026-09-09T10:00:00.000+05:30",
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:comp-0007",
+      "resource": {
+        "resourceType": "Composition",
+        "id": "comp-0007",
+        "meta": { "profile": ["https://nrces.in/ndhm/fhir/r4/StructureDefinition/WellnessRecord"] },
+        "language": "en-IN",
+        "status": "final",
+        "type": {
+          "coding": [{ "system": "http://snomed.info/sct", "code": "410097008", "display": "Wellness assessment" }],
+          "text": "Wellness Record"
+        },
+        "subject": { "reference": "urn:uuid:patient-0007" },
+        "date": "2026-09-09T10:00:00.000+05:30",
+        "author": [{ "reference": "urn:uuid:patient-0007" }],
+        "title": "Daily Wellness Record",
+        "section": [
+          {
+            "title": "Vital Signs",
+            "entry": [{ "reference": "urn:uuid:obs-vitals-0001" }]
+          },
+          {
+            "title": "Body Measurement",
+            "entry": [{ "reference": "urn:uuid:obs-bodymeasure-0001" }]
+          },
+          {
+            "title": "Physical Activity",
+            "entry": [{ "reference": "urn:uuid:obs-activity-0001" }]
+          },
+          {
+            "title": "General Assessment",
+            "entry": [{ "reference": "urn:uuid:obs-general-0001" }]
+          },
+          {
+            "title": "Women Health",
+            "entry": [{ "reference": "urn:uuid:obs-women-0001" }]
+          },
+          {
+            "title": "Lifestyle",
+            "entry": [{ "reference": "urn:uuid:obs-lifestyle-0001" }]
+          },
+          {
+            "title": "Other Wellness Records",
+            "entry": [{ "reference": "urn:uuid:docref-0006" }]
+          }
+        ]
+      }
+    },
+    { "fullUrl": "urn:uuid:patient-0007", "resource": {
+        "resourceType": "Patient", "id": "patient-0007",
+        "name": [{ "text": "Priya Menon" }], "gender": "female", "birthDate": "1998-03-08"
+    }},
+    { "fullUrl": "urn:uuid:obs-vitals-0001", "resource": {
+        "resourceType": "Observation", "id": "obs-vitals-0001",
+        "meta": { "profile": ["https://nrces.in/ndhm/fhir/r4/StructureDefinition/ObservationVitalSigns"] },
+        "status": "final",
+        "code": { "coding": [{ "system": "http://loinc.org", "code": "8867-4", "display": "Heart rate" }] },
+        "subject": { "reference": "urn:uuid:patient-0007" },
+        "effectiveDateTime": "2026-09-09T08:00:00+05:30",
+        "valueQuantity": { "value": 72, "unit": "beats/min" }
+    }},
+    { "fullUrl": "urn:uuid:obs-bodymeasure-0001", "resource": {
+        "resourceType": "Observation", "id": "obs-bodymeasure-0001",
+        "meta": { "profile": ["https://nrces.in/ndhm/fhir/r4/StructureDefinition/ObservationBodyMeasurement"] },
+        "status": "final",
+        "code": { "coding": [{ "system": "http://loinc.org", "code": "29463-7", "display": "Body weight" }] },
+        "subject": { "reference": "urn:uuid:patient-0007" },
+        "effectiveDateTime": "2026-09-09T08:00:00+05:30",
+        "valueQuantity": { "value": 58, "unit": "kg" }
+    }},
+    { "fullUrl": "urn:uuid:obs-activity-0001", "resource": {
+        "resourceType": "Observation", "id": "obs-activity-0001",
+        "meta": { "profile": ["https://nrces.in/ndhm/fhir/r4/StructureDefinition/ObservationPhysicalActivity"] },
+        "status": "final",
+        "code": { "coding": [{ "system": "http://loinc.org", "code": "55423-8", "display": "Number of steps" }] },
+        "subject": { "reference": "urn:uuid:patient-0007" },
+        "effectiveDateTime": "2026-09-09T08:00:00+05:30",
+        "valueQuantity": { "value": 6500, "unit": "steps" }
+    }},
+    { "fullUrl": "urn:uuid:obs-general-0001", "resource": {
+        "resourceType": "Observation", "id": "obs-general-0001",
+        "meta": { "profile": ["https://nrces.in/ndhm/fhir/r4/StructureDefinition/ObservationGeneralAssessment"] },
+        "status": "final",
+        "code": { "coding": [{ "system": "http://loinc.org", "code": "72514-3", "display": "Pain severity, 0-10" }] },
+        "subject": { "reference": "urn:uuid:patient-0007" },
+        "effectiveDateTime": "2026-09-09T08:00:00+05:30",
+        "valueQuantity": { "value": 1 }
+    }},
+    { "fullUrl": "urn:uuid:obs-women-0001", "resource": {
+        "resourceType": "Observation", "id": "obs-women-0001",
+        "meta": { "profile": ["https://nrces.in/ndhm/fhir/r4/StructureDefinition/ObservationWomenHealth"] },
+        "status": "final",
+        "code": { "coding": [{ "system": "http://loinc.org", "code": "8665-2", "display": "LMP" }] },
+        "subject": { "reference": "urn:uuid:patient-0007" },
+        "effectiveDateTime": "2026-09-09T08:00:00+05:30",
+        "valueDateTime": "2026-08-25"
+    }},
+    { "fullUrl": "urn:uuid:obs-lifestyle-0001", "resource": {
+        "resourceType": "Observation", "id": "obs-lifestyle-0001",
+        "meta": { "profile": ["https://nrces.in/ndhm/fhir/r4/StructureDefinition/ObservationLifestyle"] },
+        "status": "final",
+        "code": { "coding": [{ "system": "http://loinc.org", "code": "72166-2", "display": "Tobacco smoking status" }] },
+        "subject": { "reference": "urn:uuid:patient-0007" },
+        "effectiveDateTime": "2026-09-09T08:00:00+05:30",
+        "valueCodeableConcept": { "coding": [{ "system": "http://snomed.info/sct", "code": "266919005", "display": "Never smoked" }] }
+    }},
+    { "fullUrl": "urn:uuid:docref-0006", "resource": {
+        "resourceType": "DocumentReference", "id": "docref-0006",
+        "status": "current",
+        "subject": { "reference": "urn:uuid:patient-0007" },
+        "content": [{ "attachment": { "contentType": "application/pdf", "title": "Fitness tracker export" } }]
+    }}
+  ]
+}

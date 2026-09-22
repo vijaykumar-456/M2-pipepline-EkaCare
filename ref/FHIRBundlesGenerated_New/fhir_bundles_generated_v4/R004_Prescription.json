@@ -1,0 +1,154 @@
+{
+  "resourceType": "Bundle",
+  "id": "Prescription-R004",
+  "meta": {
+    "profile": [
+      "https://nrces.in/ndhm/fhir/r4/StructureDefinition/DocumentBundle"
+    ]
+  },
+  "identifier": {
+    "system": "http://hip.in",
+    "value": "bundle-R004"
+  },
+  "type": "document",
+  "timestamp": "2026-09-10T05:12:37+05:30",
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:6279b03b-31dc-4d68-8d23-3b68edfc23fd",
+      "resource": {
+        "resourceType": "Composition",
+        "id": "6279b03b-31dc-4d68-8d23-3b68edfc23fd",
+        "meta": {
+          "profile": [
+            "https://nrces.in/ndhm/fhir/r4/StructureDefinition/PrescriptionRecord"
+          ]
+        },
+        "language": "en-IN",
+        "status": "final",
+        "type": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "440545006",
+              "display": "Prescription record"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:4be55506-7999-4de0-affa-2c1d05f815e8"
+        },
+        "date": "2026-09-10T05:12:37+05:30",
+        "title": "Prescription Record",
+        "section": [
+          {
+            "entry": [
+              {
+                "reference": "urn:uuid:fafaf3fb-96c1-4823-9ce1-afecd64d5c32"
+              }
+            ]
+          }
+        ],
+        "author": [
+          {
+            "reference": "urn:uuid:4654bf1e-e829-4aa4-a65d-49f7af6d9936"
+          }
+        ],
+        "encounter": {
+          "reference": "urn:uuid:9ab1fd95-a510-4da9-858d-1927cb8b7f1f"
+        },
+        "custodian": {
+          "reference": "urn:uuid:0881cabf-f86b-4a51-8f86-2abdbc9e6676"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:4be55506-7999-4de0-affa-2c1d05f815e8",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "4be55506-7999-4de0-affa-2c1d05f815e8",
+        "identifier": [
+          {
+            "system": "https://healthid.ndhm.gov.in",
+            "value": "testinguser15@sbx"
+          },
+          {
+            "system": "https://abdm.gov.in/abha-number",
+            "value": "91-4657-2013-7499"
+          }
+        ],
+        "name": [
+          {
+            "text": "Aarav Sharma"
+          }
+        ],
+        "gender": "male",
+        "birthDate": "1966-01-01",
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "9337384804"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:4654bf1e-e829-4aa4-a65d-49f7af6d9936",
+      "resource": {
+        "resourceType": "Practitioner",
+        "id": "4654bf1e-e829-4aa4-a65d-49f7af6d9936",
+        "name": [
+          {
+            "text": "Dr. Priyanka Iyer"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:0881cabf-f86b-4a51-8f86-2abdbc9e6676",
+      "resource": {
+        "resourceType": "Organization",
+        "id": "0881cabf-f86b-4a51-8f86-2abdbc9e6676",
+        "name": "APEX_DIAG"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:9ab1fd95-a510-4da9-858d-1927cb8b7f1f",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "9ab1fd95-a510-4da9-858d-1927cb8b7f1f",
+        "status": "finished",
+        "class": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code": "AMB",
+          "display": "ambulatory"
+        },
+        "subject": {
+          "reference": "urn:uuid:4be55506-7999-4de0-affa-2c1d05f815e8"
+        },
+        "period": {
+          "start": "2026-09-12T00:00:00+05:30"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:fafaf3fb-96c1-4823-9ce1-afecd64d5c32",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "id": "fafaf3fb-96c1-4823-9ce1-afecd64d5c32",
+        "status": "active",
+        "intent": "order",
+        "medicationCodeableConcept": {
+          "text": "Cetirizine"
+        },
+        "subject": {
+          "reference": "urn:uuid:4be55506-7999-4de0-affa-2c1d05f815e8"
+        },
+        "dosageInstruction": [
+          {
+            "text": "10 mg, Once daily, for 5 days"
+          }
+        ]
+      }
+    }
+  ]
+}

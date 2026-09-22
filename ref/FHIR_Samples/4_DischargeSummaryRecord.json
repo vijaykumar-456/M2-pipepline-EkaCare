@@ -1,0 +1,161 @@
+{
+  "resourceType": "Bundle",
+  "id": "DischargeSummary-example-01",
+  "meta": {
+    "versionId": "1",
+    "lastUpdated": "2026-09-09T10:00:00.000+05:30",
+    "profile": ["https://nrces.in/ndhm/fhir/r4/StructureDefinition/DocumentBundle"]
+  },
+  "identifier": { "system": "http://hip.in", "value": "bundle-discharge-0001" },
+  "type": "document",
+  "timestamp": "2026-09-09T10:00:00.000+05:30",
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:comp-0004",
+      "resource": {
+        "resourceType": "Composition",
+        "id": "comp-0004",
+        "meta": { "profile": ["https://nrces.in/ndhm/fhir/r4/StructureDefinition/DischargeSummaryRecord"] },
+        "language": "en-IN",
+        "status": "final",
+        "type": {
+          "coding": [{ "system": "http://snomed.info/sct", "code": "373942005", "display": "Discharge summary" }],
+          "text": "Discharge Summary"
+        },
+        "subject": { "reference": "urn:uuid:patient-0004" },
+        "encounter": { "reference": "urn:uuid:encounter-0004" },
+        "date": "2026-09-09T10:00:00.000+05:30",
+        "author": [{ "reference": "urn:uuid:practitioner-0004" }],
+        "title": "Discharge Summary",
+        "custodian": { "reference": "urn:uuid:org-0004" },
+        "section": [
+          {
+            "code": { "coding": [{ "system": "http://snomed.info/sct", "code": "422843007", "display": "Chief complaint section" }] },
+            "entry": [{ "reference": "urn:uuid:condition-cc-0002" }]
+          },
+          {
+            "code": { "coding": [{ "system": "http://snomed.info/sct", "code": "425044008", "display": "Physical exam section" }] },
+            "entry": [{ "reference": "urn:uuid:observation-pe-0002" }]
+          },
+          {
+            "code": { "coding": [{ "system": "http://snomed.info/sct", "code": "722446000", "display": "Allergy record" }] },
+            "entry": [{ "reference": "urn:uuid:allergy-0002" }]
+          },
+          {
+            "code": { "coding": [{ "system": "http://snomed.info/sct", "code": "1003642006", "display": "Past medical history section" }] },
+            "entry": [{ "reference": "urn:uuid:condition-mh-0002" }]
+          },
+          {
+            "code": { "coding": [{ "system": "http://snomed.info/sct", "code": "422432008", "display": "Family history section" }] },
+            "entry": [{ "reference": "urn:uuid:familyhistory-0001" }]
+          },
+          {
+            "code": { "coding": [{ "system": "http://snomed.info/sct", "code": "721981007", "display": "Diagnostic studies report" }] },
+            "entry": [{ "reference": "urn:uuid:diagreport-lab-0002" }]
+          },
+          {
+            "code": { "coding": [{ "system": "http://snomed.info/sct", "code": "1003606003", "display": "Medication history section" }] },
+            "entry": [{ "reference": "urn:uuid:medicationrequest-0004" }]
+          },
+          {
+            "code": { "coding": [{ "system": "http://snomed.info/sct", "code": "1003640003", "display": "History of past procedure section" }] },
+            "entry": [{ "reference": "urn:uuid:procedure-0002" }]
+          },
+          {
+            "code": { "coding": [{ "system": "http://snomed.info/sct", "code": "734163000", "display": "Care plan" }] },
+            "entry": [{ "reference": "urn:uuid:careplan-0001" }]
+          },
+          {
+            "code": { "coding": [{ "system": "http://snomed.info/sct", "code": "373942005", "display": "Discharge summary" }] },
+            "entry": [{ "reference": "urn:uuid:docref-0002" }]
+          }
+        ]
+      }
+    },
+    { "fullUrl": "urn:uuid:patient-0004", "resource": {
+        "resourceType": "Patient", "id": "patient-0004",
+        "name": [{ "text": "Vikram Desai" }], "gender": "male", "birthDate": "1965-02-25"
+    }},
+    { "fullUrl": "urn:uuid:practitioner-0004", "resource": {
+        "resourceType": "Practitioner", "id": "practitioner-0004",
+        "name": [{ "text": "Dr. Neha Kapoor" }]
+    }},
+    { "fullUrl": "urn:uuid:org-0004", "resource": {
+        "resourceType": "Organization", "id": "org-0004",
+        "name": "Sunrise Multispecialty Hospital"
+    }},
+    { "fullUrl": "urn:uuid:encounter-0004", "resource": {
+        "resourceType": "Encounter", "id": "encounter-0004",
+        "status": "finished",
+        "class": { "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode", "code": "IMP", "display": "inpatient encounter" },
+        "subject": { "reference": "urn:uuid:patient-0004" },
+        "period": { "start": "2026-09-01T08:00:00+05:30", "end": "2026-09-09T09:00:00+05:30" }
+    }},
+    { "fullUrl": "urn:uuid:condition-cc-0002", "resource": {
+        "resourceType": "Condition", "id": "condition-cc-0002",
+        "clinicalStatus": { "coding": [{ "system": "http://terminology.hl7.org/CodeSystem/condition-clinical", "code": "active" }] },
+        "code": { "coding": [{ "system": "http://snomed.info/sct", "code": "29857009", "display": "Chest pain" }] },
+        "subject": { "reference": "urn:uuid:patient-0004" }
+    }},
+    { "fullUrl": "urn:uuid:observation-pe-0002", "resource": {
+        "resourceType": "Observation", "id": "observation-pe-0002",
+        "status": "final",
+        "code": { "coding": [{ "system": "http://loinc.org", "code": "8480-6", "display": "Systolic blood pressure" }] },
+        "subject": { "reference": "urn:uuid:patient-0004" },
+        "valueQuantity": { "value": 128, "unit": "mmHg" }
+    }},
+    { "fullUrl": "urn:uuid:allergy-0002", "resource": {
+        "resourceType": "AllergyIntolerance", "id": "allergy-0002",
+        "clinicalStatus": { "coding": [{ "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical", "code": "active" }] },
+        "code": { "coding": [{ "system": "http://snomed.info/sct", "code": "300916003", "display": "Sulfonamide allergy" }] },
+        "patient": { "reference": "urn:uuid:patient-0004" }
+    }},
+    { "fullUrl": "urn:uuid:condition-mh-0002", "resource": {
+        "resourceType": "Condition", "id": "condition-mh-0002",
+        "clinicalStatus": { "coding": [{ "system": "http://terminology.hl7.org/CodeSystem/condition-clinical", "code": "active" }] },
+        "code": { "coding": [{ "system": "http://snomed.info/sct", "code": "38341003", "display": "Hypertension" }] },
+        "subject": { "reference": "urn:uuid:patient-0004" }
+    }},
+    { "fullUrl": "urn:uuid:familyhistory-0001", "resource": {
+        "resourceType": "FamilyMemberHistory", "id": "familyhistory-0001",
+        "status": "completed",
+        "patient": { "reference": "urn:uuid:patient-0004" },
+        "relationship": { "coding": [{ "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode", "code": "FTH", "display": "father" }] },
+        "condition": [{ "code": { "coding": [{ "system": "http://snomed.info/sct", "code": "22298006", "display": "Myocardial infarction" }] } }]
+    }},
+    { "fullUrl": "urn:uuid:diagreport-lab-0002", "resource": {
+        "resourceType": "DiagnosticReport", "id": "diagreport-lab-0002",
+        "meta": { "profile": ["https://nrces.in/ndhm/fhir/r4/StructureDefinition/DiagnosticReportLab"] },
+        "status": "final",
+        "code": { "coding": [{ "system": "http://loinc.org", "code": "10839-9", "display": "Troponin I" }] },
+        "subject": { "reference": "urn:uuid:patient-0004" },
+        "issued": "2026-09-02T07:00:00+05:30",
+        "conclusion": "Elevated on admission, normalized by discharge."
+    }},
+    { "fullUrl": "urn:uuid:medicationrequest-0004", "resource": {
+        "resourceType": "MedicationRequest", "id": "medicationrequest-0004",
+        "status": "active", "intent": "order",
+        "medicationCodeableConcept": { "coding": [{ "system": "http://snomed.info/sct", "code": "387458008", "display": "Aspirin 75mg" }] },
+        "subject": { "reference": "urn:uuid:patient-0004" },
+        "dosageInstruction": [{ "text": "1 tablet once daily, lifelong" }]
+    }},
+    { "fullUrl": "urn:uuid:procedure-0002", "resource": {
+        "resourceType": "Procedure", "id": "procedure-0002",
+        "status": "completed",
+        "code": { "coding": [{ "system": "http://snomed.info/sct", "code": "41976001", "display": "Percutaneous coronary intervention" }] },
+        "subject": { "reference": "urn:uuid:patient-0004" }
+    }},
+    { "fullUrl": "urn:uuid:careplan-0001", "resource": {
+        "resourceType": "CarePlan", "id": "careplan-0001",
+        "status": "active", "intent": "plan",
+        "subject": { "reference": "urn:uuid:patient-0004" },
+        "description": "Cardiac rehab, low-salt diet, follow-up in 2 weeks."
+    }},
+    { "fullUrl": "urn:uuid:docref-0002", "resource": {
+        "resourceType": "DocumentReference", "id": "docref-0002",
+        "status": "current",
+        "subject": { "reference": "urn:uuid:patient-0004" },
+        "content": [{ "attachment": { "contentType": "application/pdf", "title": "Signed discharge summary" } }]
+    }}
+  ]
+}

@@ -1,0 +1,191 @@
+{
+  "resourceType": "Bundle",
+  "id": "DiagnosticReport-R099",
+  "meta": {
+    "profile": [
+      "https://nrces.in/ndhm/fhir/r4/StructureDefinition/DocumentBundle"
+    ]
+  },
+  "identifier": {
+    "system": "http://hip.in",
+    "value": "bundle-R099"
+  },
+  "type": "document",
+  "timestamp": "2026-09-10T05:12:37+05:30",
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:e6cdfc7e-7adc-45e3-b8ba-266e13cc5121",
+      "resource": {
+        "resourceType": "Composition",
+        "id": "e6cdfc7e-7adc-45e3-b8ba-266e13cc5121",
+        "meta": {
+          "profile": [
+            "https://nrces.in/ndhm/fhir/r4/StructureDefinition/DiagnosticReportRecord"
+          ]
+        },
+        "language": "en-IN",
+        "status": "final",
+        "type": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "721981007",
+              "display": "Diagnostic studies report"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:2d84124c-d095-4744-a347-c224a78c8f07"
+        },
+        "date": "2026-09-10T05:12:37+05:30",
+        "title": "DiagnosticReport Record",
+        "section": [
+          {
+            "title": "Investigation",
+            "entry": [
+              {
+                "reference": "urn:uuid:f9d8f046-25f4-459c-9e44-0a376b05e927"
+              },
+              {
+                "reference": "urn:uuid:1c7f8167-908d-4705-853e-248720f5013e"
+              }
+            ],
+            "code": {
+              "coding": [
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "721981007",
+                  "display": "Diagnostic studies report"
+                }
+              ]
+            }
+          }
+        ],
+        "author": [
+          {
+            "reference": "urn:uuid:2e924464-339c-4e03-b20b-1f99e833eba4"
+          }
+        ],
+        "encounter": {
+          "reference": "urn:uuid:388316aa-ef98-4f68-a047-9a43e6fcb2dd"
+        },
+        "custodian": {
+          "reference": "urn:uuid:27962054-1aae-4424-81d3-e1fa0ff204c1"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:2d84124c-d095-4744-a347-c224a78c8f07",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "2d84124c-d095-4744-a347-c224a78c8f07",
+        "identifier": [
+          {
+            "system": "https://healthid.ndhm.gov.in",
+            "value": "testinguser30@sbx"
+          },
+          {
+            "system": "https://abdm.gov.in/abha-number",
+            "value": "91-4780-3472-2359"
+          }
+        ],
+        "name": [
+          {
+            "text": "Neha Pillai"
+          }
+        ],
+        "gender": "male",
+        "birthDate": "1982-01-01",
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "9262455407"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:2e924464-339c-4e03-b20b-1f99e833eba4",
+      "resource": {
+        "resourceType": "Practitioner",
+        "id": "2e924464-339c-4e03-b20b-1f99e833eba4",
+        "name": [
+          {
+            "text": "Dr. Farha Khan"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:27962054-1aae-4424-81d3-e1fa0ff204c1",
+      "resource": {
+        "resourceType": "Organization",
+        "id": "27962054-1aae-4424-81d3-e1fa0ff204c1",
+        "name": "WELLNESS_FAM"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:388316aa-ef98-4f68-a047-9a43e6fcb2dd",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "388316aa-ef98-4f68-a047-9a43e6fcb2dd",
+        "status": "finished",
+        "class": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code": "AMB",
+          "display": "ambulatory"
+        },
+        "subject": {
+          "reference": "urn:uuid:2d84124c-d095-4744-a347-c224a78c8f07"
+        },
+        "period": {
+          "start": "2026-08-21T00:00:00+05:30"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:f9d8f046-25f4-459c-9e44-0a376b05e927",
+      "resource": {
+        "resourceType": "DiagnosticReport",
+        "id": "f9d8f046-25f4-459c-9e44-0a376b05e927",
+        "meta": {
+          "profile": [
+            "https://nrces.in/ndhm/fhir/r4/StructureDefinition/DiagnosticReportImaging"
+          ]
+        },
+        "status": "final",
+        "code": {
+          "text": "MRI"
+        },
+        "subject": {
+          "reference": "urn:uuid:2d84124c-d095-4744-a347-c224a78c8f07"
+        },
+        "issued": "2026-08-21T09:00:00+05:30"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:1c7f8167-908d-4705-853e-248720f5013e",
+      "resource": {
+        "resourceType": "DocumentReference",
+        "id": "1c7f8167-908d-4705-853e-248720f5013e",
+        "status": "current",
+        "subject": {
+          "reference": "urn:uuid:2d84124c-d095-4744-a347-c224a78c8f07"
+        },
+        "content": [
+          {
+            "attachment": {
+              "contentType": "application/pdf",
+              "url": "https://storage.abdm-sandbox.example/178765337186821/mri_report_R099.pdf",
+              "title": "MRI lumbar spine report",
+              "size": 7270400
+            }
+          }
+        ],
+        "type": {
+          "text": "MRI Report"
+        }
+      }
+    }
+  ]
+}

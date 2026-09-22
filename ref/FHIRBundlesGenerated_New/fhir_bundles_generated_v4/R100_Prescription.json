@@ -1,0 +1,154 @@
+{
+  "resourceType": "Bundle",
+  "id": "Prescription-R100",
+  "meta": {
+    "profile": [
+      "https://nrces.in/ndhm/fhir/r4/StructureDefinition/DocumentBundle"
+    ]
+  },
+  "identifier": {
+    "system": "http://hip.in",
+    "value": "bundle-R100"
+  },
+  "type": "document",
+  "timestamp": "2026-09-10T05:12:37+05:30",
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:3a56b9c7-2695-4b42-90ab-437cea7554c5",
+      "resource": {
+        "resourceType": "Composition",
+        "id": "3a56b9c7-2695-4b42-90ab-437cea7554c5",
+        "meta": {
+          "profile": [
+            "https://nrces.in/ndhm/fhir/r4/StructureDefinition/PrescriptionRecord"
+          ]
+        },
+        "language": "en-IN",
+        "status": "final",
+        "type": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "440545006",
+              "display": "Prescription record"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:1179eb75-2eab-410a-92c6-50de2baf7af6"
+        },
+        "date": "2026-09-10T05:12:37+05:30",
+        "title": "Prescription Record",
+        "section": [
+          {
+            "entry": [
+              {
+                "reference": "urn:uuid:a4fc187a-89ed-477f-aba4-0298a466db22"
+              }
+            ]
+          }
+        ],
+        "author": [
+          {
+            "reference": "urn:uuid:dbf308d0-6d3e-4798-876f-e63e4b9a3846"
+          }
+        ],
+        "encounter": {
+          "reference": "urn:uuid:3ba233d2-b6f1-49f9-b82e-d36295b83b76"
+        },
+        "custodian": {
+          "reference": "urn:uuid:9b6d48f6-be9b-4c00-9182-e3ea53fdca73"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:1179eb75-2eab-410a-92c6-50de2baf7af6",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "1179eb75-2eab-410a-92c6-50de2baf7af6",
+        "identifier": [
+          {
+            "system": "https://healthid.ndhm.gov.in",
+            "value": "testinguser31@sbx"
+          },
+          {
+            "system": "https://abdm.gov.in/abha-number",
+            "value": "91-8945-3987-5304"
+          }
+        ],
+        "name": [
+          {
+            "text": "Ajay Reddy"
+          }
+        ],
+        "gender": "female",
+        "birthDate": "1996-01-01",
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "9104395478"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:dbf308d0-6d3e-4798-876f-e63e4b9a3846",
+      "resource": {
+        "resourceType": "Practitioner",
+        "id": "dbf308d0-6d3e-4798-876f-e63e4b9a3846",
+        "name": [
+          {
+            "text": "Dr. Farha Khan"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:9b6d48f6-be9b-4c00-9182-e3ea53fdca73",
+      "resource": {
+        "resourceType": "Organization",
+        "id": "9b6d48f6-be9b-4c00-9182-e3ea53fdca73",
+        "name": "SRM_CHENNAI"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:3ba233d2-b6f1-49f9-b82e-d36295b83b76",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "3ba233d2-b6f1-49f9-b82e-d36295b83b76",
+        "status": "finished",
+        "class": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code": "AMB",
+          "display": "ambulatory"
+        },
+        "subject": {
+          "reference": "urn:uuid:1179eb75-2eab-410a-92c6-50de2baf7af6"
+        },
+        "period": {
+          "start": "2026-08-26T00:00:00+05:30"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:a4fc187a-89ed-477f-aba4-0298a466db22",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "id": "a4fc187a-89ed-477f-aba4-0298a466db22",
+        "status": "active",
+        "intent": "order",
+        "medicationCodeableConcept": {
+          "text": "Amlodipine"
+        },
+        "subject": {
+          "reference": "urn:uuid:1179eb75-2eab-410a-92c6-50de2baf7af6"
+        },
+        "dosageInstruction": [
+          {
+            "text": "5 mg, Once daily, for 30 days"
+          }
+        ]
+      }
+    }
+  ]
+}

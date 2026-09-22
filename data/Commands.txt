@@ -1,9 +1,30 @@
 WORKING COMMANDS:
 ===================
-python scripts/run_phase1_for_row.py --row-id P001 --m1-json "D:\EkaCare\Code\eka_m2_pipeline\M2\m2_pipeline\data\M1.json" --encounter-id ENC-P001-001 --encounter-date 2026-08-27 --hi-type OPConsultation
+python scripts/run_phase1_for_row.py --row-id P001 --m1-json "D:\EkaCare\Code\eka_m2_pipeline\M2\m2_pipeline\data\M1-sandbox.json" --encounter-id ENC-P001-001 --encounter-date 2026-08-31 --hi-type OPConsultation --dry-run
 
-python scripts/run_phase1_for_row.py --row-id P001 --m1-json "D:\EkaCare\Code\eka_m2_pipeline\M2\m2_pipeline\data\M1-sandbox.json" --encounter-id ENC-P001-002 --encounter-date 2026-08-28 --hi-type Prescription --dry-run
+python scripts/run_phase1_for_row.py --row-id P001 --m1-json "D:\EkaCare\Code\eka_m2_pipeline\M2\m2_pipeline\data\M1-sandbox.json" --encounter-id ENC-P001-002 --encounter-date 2026-08-31 --hi-type Prescription --dry-run
 
-python scripts/run_phase1_for_row.py --row-id P001 --m1-json "D:\EkaCare\Code\eka_m2_pipeline\M2\m2_pipeline\data\M1-sandbox.json" --encounter-id ENC-P001-003 --encounter-date 2026-08-28 --hi-type DiagnosticReport
+python scripts/run_phase1_for_row.py --row-id P001 --m1-json "D:\EkaCare\Code\eka_m2_pipeline\M2\m2_pipeline\data\M1-sandbox.json" --encounter-id ENC-P001-011 --encounter-date 2026-09-02 --hi-type OPConsultation
 
-python scripts/run_phase1_for_row.py --row-id P001 --m1-json "D:\EkaCare\Code\eka_m2_pipeline\M2\m2_pipeline\data\M1-sandbox.json" --encounter-id ENC-P001-004 --encounter-date 2026-08-28 --hi-type HealthDocumentRecord
+python scripts/run_phase1_for_row.py --row-id P001 --m1-json "D:\EkaCare\Code\eka_m2_pipeline\M2\m2_pipeline\data\M1-sandbox.json" --encounter-id ENC-P001-012 --encounter-date 2026-09-07 --hi-type HealthDocumentRecord
+
+python scripts/run_phase1_for_row.py --row-id P001 --m1-json "D:\EkaCare\Code\eka_m2_pipeline\M2\m2_pipeline\data\M1-sandbox.json" --encounter-id ENC-P001-013 --encounter-date 2026-09-08 --hi-type OPConsultation
+
+
+python scripts/run_phase1_for_row.py --row-id P001 --m1-json "D:\EkaCare\Code\eka_m2_pipeline\M2\m2_pipeline\data\M1-mani.json" --encounter-id ENC-P002-001 --encounter-date 2026-09-04 --hi-type HealthDocumentRecord
+
+python scripts/run_phase1_for_row.py --row-id P002 --m1-json "D:\EkaCare\Code\eka_m2_pipeline\M2\m2_pipeline\data\M1-mani.json" --encounter-id ENC-P002-002 --encounter-date 2026-09-07 --hi-type DiagnosticReport
+
+python scripts/fetch_hiu.py --care-context-id cc-edc0eb5fd2544a43
+python scripts/fetch_hiu.py --care-context-id cc-d6d7ca05c042413f
+
+https://abdm.dev.eka.care/abdm-records/index.html?
+abha=testing12@sbx&oid=178789437141310&cid=SRM_CHENNAI&consent-view=https://27d7-2409-4091-901c-6203-a588-e50f-4bab-295a.ngrok-free.app/webhooks/eka&token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJFQ18xNzg1OTIzMDg0NDQ3MTEiLCJiLWlkIjoiNzE3ODU5MjMwNDM0MTUzNCIsImMtaWQiOiJFQ18xNzg1OTIzMDg0NDQ3MTEiLCJjYyI6eyJwZXgiOjE3ODY0OTI4MDAsInBzdCI6ImZhbHNlIn0sImV4cCI6MTc4ODc5OTYwOSwiaWF0IjoxNzg4Nzk3ODA5LCJpZHAiOiJhcGkta2V5IiwiaXNzIjoiZW1yLmVrYS5jYXJlIiwib2lkIjoiMTc4NTk5NDY4MTYxODg4IiwicGV4IjoxNzg2NDkyODAwLCJwcyI6IkFQIiwicHN0IjoiZmFsc2UiLCJzY3AiOlsicHI6MGYiXSwidXVpZCI6ImIyYmUxOTIzLTE2ZjEtNDllYi05NGYwLTNhMDg0NDFkMTQzYSIsInctaWQiOiI3MTc4NTkyMzA0MzQxNTM0Iiwidy1uIjoiU1JNIE1lZGljYWwgQ29sbGVnZSJ9.BzS4eA94XgRQashO_N1OyXgvCl_FYTlpwybs8Ggk4Ys
+
+https://abdm.dev.eka.care/abdm-records/index.html?abha=testingmani@sbx&oid=178790135042976&cid=SRM_CHENNAI&consent-view=https://27d7-2409-4091-901c-6203-a588-e50f-4bab-295a.ngrok-free.app/webhooks/eka&token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJFQ18xNzg1OTIzMDg0NDQ3MTEiLCJiLWlkIjoiNzE3ODU5MjMwNDM0MTUzNCIsImMtaWQiOiJFQ18xNzg1OTIzMDg0NDQ3MTEiLCJjYyI6eyJwZXgiOjE3ODY0OTI4MDAsInBzdCI6ImZhbHNlIn0sImV4cCI6MTc4ODc5OTYwOSwiaWF0IjoxNzg4Nzk3ODA5LCJpZHAiOiJhcGkta2V5IiwiaXNzIjoiZW1yLmVrYS5jYXJlIiwib2lkIjoiMTc4NTk5NDY4MTYxODg4IiwicGV4IjoxNzg2NDkyODAwLCJwcyI6IkFQIiwicHN0IjoiZmFsc2UiLCJzY3AiOlsicHI6MGYiXSwidXVpZCI6ImIyYmUxOTIzLTE2ZjEtNDllYi05NGYwLTNhMDg0NDFkMTQzYSIsInctaWQiOiI3MTc4NTkyMzA0MzQxNTM0Iiwidy1uIjoiU1JNIE1lZGljYWwgQ29sbGVnZSJ9.BzS4eA94XgRQashO_N1OyXgvCl_FYTlpwybs8Ggk4Ys
+
+Care Context LINKED → register HIU keyset → create consent → obtain consent ID → approve consent → handle hip_data_fetch → generate/send FHIR Bundle.
+
+We have an Eka Sandbox account configured as a HIP and are successfully able to create/link Care Contexts using our HIP credentials. We are now testing the HIU flow and calling POST /abdm/v1/consents/create, but receiving 404 resource not found.
+
+Does our existing Sandbox account/credentials also support the HIU role, or do we need separate HIU provisioning/credentials? If HIU provisioning is required, please provide the required Sandbox HIU identifiers/credentials and the expected values for clinic_id, d_oid, and requester details.
